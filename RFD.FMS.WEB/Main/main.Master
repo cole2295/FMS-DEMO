@@ -1,0 +1,99 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="RFD.FMS.WEB.Main.main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link type="text/css" href="../StylesNew/main.css" rel="Stylesheet" />
+    <link type="text/css" href="../StylesNew/pager.css" rel="Stylesheet" />
+
+    <script src="../Scripts/base.js" type="text/javascript" charset="gb2312"></script>
+
+    <script src="../Scripts/import/common.js?v=2" type="text/javascript"></script>
+
+    <script src="../Scripts/My.js" type="text/javascript"></script>
+
+    <script src="../Scripts/basefunction.js" type="text/javascript"></script>
+
+    <script src="../Scripts/checkDate.js" type="text/javascript"></script>
+
+    <script src="../Scripts/validator.js" type="text/javascript"></script>
+
+    <script src="../Scripts/jquery-gridhover.js" type="text/javascript"></script>
+
+    <script src="../Scripts/public.js" type="text/javascript"></script>
+
+    <script src="../Scripts/controls/OpenCommon.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function fnOpenModalDialog(url, width, height) {
+            window.showModalDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+        }
+
+        function fnOpenModelessDialog(url, width, height) {
+            window.showModelessDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+        }
+
+        function fnOpenWindow(url, width, height) {
+            window.open(url, 'newwindow', 'height=' + height + ',width=' + width + ',top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no')
+        }
+
+        function ClientConfirm(msg) {
+            return !msg ? false : window.confirm(msg);
+        }
+
+        function fnCheckAllList(LE, E) {
+            LE.find('input:checkbox').attr('checked', !E.checked)
+        }
+
+</script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sm" runat="server" EnablePartialRendering="true">
+        <Services>
+           <%-- <asp:ServiceReference Path="~/BasicSetting/BasicSettingWebService.asmx" InlineScript="true" />--%>
+        </Services>
+    </asp:ScriptManager>
+    <table border="0" cellpadding="0" cellspacing="0" class="content contenttitle">
+        <tr>
+            <td width="300">
+                <!--标题行-->
+                <span class="title" style="color: #4474BB">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
+                    </asp:ContentPlaceHolder>
+                </span>
+            </td>
+            <td align="right">
+                <div id="helpfile">
+                <asp:HyperLink ID="help"  class="help" runat="server" sysname="" menuname="" onclick="return GetHelpFile();">帮助</asp:HyperLink>
+                <div id="helpdiv"></div>
+                </div>
+                <!--快速搜索-->
+                <asp:ContentPlaceHolder ID="QuickSearchContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <!--搜索页面-->
+    <div class="content">
+        <asp:ContentPlaceHolder ID="SearchContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!--内容页-->
+    <div class="content">
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!--分页-->
+    <div class="content">
+        <asp:ContentPlaceHolder ID="PagerContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!--声音控件-->
+    </form>
+</body>
+</html>

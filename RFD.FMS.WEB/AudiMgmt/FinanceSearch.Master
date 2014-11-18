@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FinanceSearch.master.cs"
+	Inherits="RFD.FMS.WEB.AudiMgmt.FinanceSearch" MasterPageFile="~/Main/main.Master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+	<script src="../Scripts/import/search.js" type="text/javascript"></script>
+
+	<asp:ContentPlaceHolder ID="title" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
+<asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+	<div id="search">
+		<div>
+			<div>
+				订单来源：<asp:DropDownList ID="ddlOrderSource" runat="server">
+				</asp:DropDownList>
+			</div>
+			<div>
+				商家来源：<asp:DropDownList ID="ddlMerchantList" runat="server">
+				</asp:DropDownList>
+			</div>
+			<div>
+				<asp:ContentPlaceHolder ID="station" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+			<div id="export">
+				导出格式：<asp:RadioButtonList ID="rblExportFormat" runat="server" RepeatDirection="Horizontal"
+					RepeatLayout="Flow">
+				</asp:RadioButtonList>
+			</div>
+		</div>
+		<div id="container">
+			<asp:ContentPlaceHolder ID="operate" runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+	<div id="summary">
+		<asp:ContentPlaceHolder ID="summaryContent" runat="server">
+		</asp:ContentPlaceHolder>
+	</div>
+	<div id="details">
+		<asp:ContentPlaceHolder ID="detailsContent" runat="server">
+		</asp:ContentPlaceHolder>
+	</div>
+</asp:Content>

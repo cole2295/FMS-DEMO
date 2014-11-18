@@ -1,0 +1,14 @@
+﻿body
+{
+}
+
+div.tableContainer
+{
+    clear: both;
+    overflow: auto;
+}
+.noWrap
+{
+    word-break: keep-all;
+    word-wrap: false;
+}

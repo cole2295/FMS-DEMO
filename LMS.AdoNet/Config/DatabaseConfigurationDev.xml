@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Databases type="测试环境配置">
+	<Database type="SCM主库">
+		<EnumValue>Vancl</EnumValue>
+		<DatabaseName>SCM</DatabaseName>
+		<WarehouseId />
+		<WebCookieValue />
+		<ConnectionString>
+			Z/VRBnnPygbINyrSotbrhBHNDsS2vCmQzMXbmGkF25CfJ9OJR8sOm5ZcP8X5R2o+dDx21ozqXqYDzldws+bV3Q==
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="SCM只读">
+		<EnumValue>Vancl</EnumValue>
+		<DatabaseName>SCM</DatabaseName>
+		<WarehouseId />
+		<WebCookieValue />
+		<ConnectionString>
+			Z/VRBnnPygbINyrSotbrhBHNDsS2vCmQzMXbmGkF25CfJ9OJR8sOm5ZcP8X5R2o+dDx21ozqXqYDzldws+bV3Q==
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_GZ主库">
+		<EnumValue>WMS_GZ</EnumValue>
+		<DatabaseName>WMS_GZ</DatabaseName>
+		<WarehouseId>0301</WarehouseId>
+		<WebCookieValue>0301</WebCookieValue>
+		<ConnectionString>
+			Z/VRBnnPygbINyrSotbrhBHNDsS2vCmQzMXbmGkF25CfJ9OJR8sOm5ZcP8X5R2o+dDx21ozqXqZWNicrlF4t4rOQoW7Lc0ot
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_GZ只读">
+		<EnumValue>WMS_GZ</EnumValue>
+		<DatabaseName>WMS_GZ</DatabaseName>
+		<WarehouseId>0301</WarehouseId>
+		<WebCookieValue>0301</WebCookieValue>
+		<ConnectionString>
+			Z/VRBnnPygbINyrSotbrhBHNDsS2vCmQzMXbmGkF25CfJ9OJR8sOm5ZcP8X5R2o+dDx21ozqXqZWNicrlF4t4rOQoW7Lc0ot
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+</Databases>

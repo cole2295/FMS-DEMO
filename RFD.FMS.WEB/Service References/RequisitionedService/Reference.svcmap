@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2c6151d7-885d-4e2a-8430-366d4445148f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://scm.vancl.com/svc/loanService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LoanService.xsd" MetadataType="Schema" ID="bf27d103-b464-42f1-ae14-2e8df4738bd1" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LoanService1.xsd" MetadataType="Schema" ID="3a73b58f-6372-47e0-af23-01709a0e5179" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LoanService2.xsd" MetadataType="Schema" ID="6170c1ba-d1d2-428a-bc61-2685f5781b61" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LoanService3.xsd" MetadataType="Schema" ID="0106dd89-1a0a-4c26-90f1-fd9d580e4463" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LoanService.disco" MetadataType="Disco" ID="6a781074-4a82-49f6-9157-a307a66a0e29" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?disco" />
+    <MetadataFile FileName="LoanService.wsdl" MetadataType="Wsdl" ID="d370e268-667e-4deb-a9cc-b794c124d810" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LoanService1.wsdl" MetadataType="Wsdl" ID="e05647e3-5d47-4586-9714-fcc876369cdd" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?wsdl" />
+    <MetadataFile FileName="LoanService4.xsd" MetadataType="Schema" ID="687c985c-0960-41d0-9551-2aaa0baf5834" SourceId="1" SourceUrl="http://scm.vancl.com/SVC/LoanService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

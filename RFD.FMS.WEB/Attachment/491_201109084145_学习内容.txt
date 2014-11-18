@@ -1,0 +1,12 @@
+1.学习JQuery使用。
+2.学习SQL语句。
+
+1.开始节点不一定是流程的第一个节点，根据权限定义。
+2.如果流程回退到的节点在开始节点之前，那就把用户回退到开始节点。
+3.如果跳级审批当前节点为结束节点，那审批流程结束。审批通过。
+4.如果跳级回退，如果当前节点为开始节点，那审批流程结束，审批不通过。
+
+
+C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\
+
+installutil /LogFile=d:\myLog.InstallLog D:\work\src\LMS\FMS\RFD.FMS\RFD.FMS.WindowsService\ServiceForSendingMessage\bin\Debug\RFDMessageService.exe

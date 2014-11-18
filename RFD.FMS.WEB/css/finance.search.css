@@ -1,0 +1,44 @@
+﻿#search
+{
+	padding-top: 5px;
+}
+#search div, #search div table, #search #container div
+{
+	padding-left: 5px;
+	display: inline;
+}
+#search .selectStation
+{
+	padding-left: 0px;
+	display: inline;
+}
+#search div table
+{
+	padding-left: 0px;
+	vertical-align: middle;
+}
+#search #container
+{
+	padding-top: 5px;
+	display: block;
+}
+#summary div.totalContainer, #details div.detailsContainer
+{
+	padding: 5px 0 5px 10px;
+}
+.GridView .oddColor
+{
+	background-color: #F5FAFC;
+}
+.GridView .evenColor
+{
+	background-color: #FFFFFF;
+}
+.GridView .hoverColor
+{
+	background-color: #FFF8D2;
+}
+.GridView .selectedColor
+{
+	background-color: #FFCC99;
+}

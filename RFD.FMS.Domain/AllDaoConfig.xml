@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database" xmlns:tx="http://www.springframework.net/tx">
+  <object id="oracle_areaExpressLevelIncomeDao" type="RFD.FMS.DAL.Oracle.BasicSetting.AreaExpressLevelIncomeDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_codWaybillFeeCheckDao" type="RFD.FMS.DAL.Oracle.QueryStatistics.CODWaybillFeeCheckDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_deliveryPriceDao" type="RFD.FMS.DAL.Oracle.BasicSetting.DeliveryPriceDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_statusInfoDao" type="RFD.FMS.DAL.Oracle.BasicSetting.StatusInfoDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_waybillForIncomeBaseInfoDao" type="RFD.FMS.DAL.Oracle.FinancialManage.WaybillForIncomeBaseInfoDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_merchantDao" type="RFD.FMS.DAL.Oracle.BasicSetting.MerchantDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_statusCodeInfoDao" type="RFD.FMS.DAL.Oracle.BasicSetting.StatusCodeInfoDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_areaExpressLevelDao" type="RFD.FMS.DAL.Oracle.BasicSetting.AreaExpressLevelDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_typeRelationDao" type="RFD.FMS.DAL.Oracle.BasicSetting.TypeRelationDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_merchantDeliverFeeDao" type="RFD.FMS.DAL.Oracle.FinancialManage.MerchantDeliverFeeDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_accountOperatorLogDao" type="RFD.FMS.DAL.Oracle.COD.AccountOperatorLogDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_fMS_MerchantDeliverFeeDao" type="RFD.FMS.DAL.Oracle.FinancialManage.FMS_MerchantDeliverFeeDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_expressCompanyDao" type="RFD.FMS.DAL.Oracle.BasicSetting.ExpressCompanyDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_provinceDao" type="RFD.FMS.DAL.Oracle.BasicSetting.ProvinceDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_cityDao" type="RFD.FMS.DAL.Oracle.BasicSetting.CityDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_areaDao" type="RFD.FMS.DAL.Oracle.BasicSetting.AreaDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_incomeaccountDao" type="RFD.FMS.DAL.Oracle.FinancialManage.IncomeAccountDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_cODAccountDao" type="RFD.FMS.DAL.Oracle.COD.CODAccountDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_logisticsDeliveryDao" type="RFD.FMS.DAL.Oracle.COD.LogisticsDeliveryDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_cODTransferDao" type="RFD.FMS.DAL.Oracle.QueryStatistics.CODTransferDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_requisitionedFormDAL" type="RFD.FMS.DAL.Oracle.COD.RequisitionedFormDAL,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_noGenerateDao" type="RFD.FMS.DAL.Oracle.BasicSetting.NoGenerateDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_codbaseinfoDao" type="RFD.FMS.DAL.Oracle.COD.CODBaseInfoDao,RFD.FMS.DAL.Oracle" lazy-init="false"/>
+  <object id="oracle_sortingFeeDao" type="RFD.FMS.DAL.Oracle.SortingManage.SortingFeeDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_distributionDao" type="RFD.FMS.DAL.Oracle.BasicSetting.DistributionDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_accountPeriodDao" type="RFD.FMS.DAL.Oracle.BasicSetting.AccountPeriodDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_fMS_CODDao" type="RFD.FMS.DAL.Oracle.COD.FMS_CODDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_sortingTransferDetailDao" type="RFD.FMS.DAL.Oracle.FinancialManage.SortingTransferDetailDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_sortingTransferSearchingDao" type="RFD.FMS.DAL.Oracle.FinancialManage.SortingTransferSearchingDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_incomeBaseInfoDao" type="RFD.FMS.DAL.Oracle.FinancialManage.IncomeBaseInfoDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="oracle_incomeFeeInfoDao" type="RFD.FMS.DAL.Oracle.FinancialManage.IncomeFeeInfoDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  
+</objects>

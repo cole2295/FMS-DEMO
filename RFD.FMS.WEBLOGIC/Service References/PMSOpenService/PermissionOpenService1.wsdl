@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PermissionOpenService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RFD.PMS.Model" />
+      <xsd:import schemaLocation="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPermissionOpenService_QueryFetchProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchProvince" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchCityByProvinceID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchCityByProvinceID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchCityByProvinceID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchCityByProvinceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchAreaByCityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchAreaByCityID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchAreaByCityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchAreaByCityIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ConnectOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectOnline" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ConnectOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ConnectDownline_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectDownline" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ConnectDownline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectDownlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UpdateEdiParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEdiParameter" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UpdateEdiParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEdiParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDeductValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeductValue" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDeductValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeductValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantInfoByEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantInfoByEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantInfoByEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantInfoByEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_CheckOriginDepot_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOriginDepot" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_CheckOriginDepot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOriginDepotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDisSortingCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisSortingCenter" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDisSortingCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisSortingCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSupCooperationDistributions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupCooperationDistributions" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSupCooperationDistributions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupCooperationDistributionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubCooperationDistributions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCooperationDistributions" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubCooperationDistributions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCooperationDistributionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllOperationGuide_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOperationGuide" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllOperationGuide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOperationGuideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetCitiesOfUserHasAuthority_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesOfUserHasAuthority" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetCitiesOfUserHasAuthority_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesOfUserHasAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetStationsOfUserHasAuthorityByCityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationsOfUserHasAuthorityByCityID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetStationsOfUserHasAuthorityByCityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationsOfUserHasAuthorityByCityIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProvince" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetCityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityList" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetCityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetChildDistribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildDistribution" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetChildDistribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChildDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSortingCenterID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSortingCenterID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSortingCenterID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSortingCenterIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_FromDeliverCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:FromDeliverCenter" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_FromDeliverCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FromDeliverCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ToDeliverCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:ToDeliverCenter" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ToDeliverCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ToDeliverCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDeliverCenterByStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliverCenterByStation" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDeliverCenterByStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliverCenterByStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_IsNeedTmsTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsNeedTmsTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_IsNeedTmsTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsNeedTmsTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UpdateOrderPeak_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderPeak" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UpdateOrderPeak_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderPeakResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAgentRelation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentRelation" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAgentRelation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentRelationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_IsSetRelation_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsSetRelation" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_IsSetRelation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsSetRelationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDeptNameByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptNameByID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetDeptNameByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptNameByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantSortingCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantSortingCenter" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantSortingCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantSortingCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetExpressCompanyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpressCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetExpressCompanyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpressCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_LockEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_LockEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSortingCentersByDistributionCodeWithoutSelf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSortingCentersByDistributionCodeWithoutSelf" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSortingCentersByDistributionCodeWithoutSelf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSortingCentersByDistributionCodeWithoutSelfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchArea" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_QueryFetchArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFetchAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_EmployeeLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeLogin" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_EmployeeLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_EmployeeLoginNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeLoginNew" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_EmployeeLoginNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeLoginNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_AddEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_AddEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_AddExpressCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpressCompany" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_AddExpressCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpressCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_AddEmployeeAndSetRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeAndSetRole" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_AddEmployeeAndSetRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeAndSetRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UpdatePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_UpdatePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_SetEmployeeRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmployeeRole" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_SetEmployeeRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmployeeRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeMenus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeMenus" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeMenus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeMenusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRoles" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeMenuData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeMenuData" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeMenuData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeMenuDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMenuDataByEmployeeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDataByEmployeeID" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMenuDataByEmployeeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDataByEmployeeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeRoleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRoleData" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetEmployeeRoleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRoleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetGoodsCategoryCodeOfMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsCategoryCodeOfMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetGoodsCategoryCodeOfMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsCategoryCodeOfMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetGoodsCategoryNameOfMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsCategoryNameOfMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetGoodsCategoryNameOfMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGoodsCategoryNameOfMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantListHasSubMerchants_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantListHasSubMerchants" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetMerchantListHasSubMerchants_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantListHasSubMerchantsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllGoodsCategoryNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGoodsCategoryNames" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllGoodsCategoryNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGoodsCategoryNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSysNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSysNotice" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSysNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSysNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetOriginDepotByMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOriginDepotByMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetOriginDepotByMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOriginDepotByMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetValidateOriginDepotByMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateOriginDepotByMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetValidateOriginDepotByMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateOriginDepotByMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetPickDepartmentByMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPickDepartmentByMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetPickDepartmentByMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPickDepartmentByMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubMerchantListByMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMerchantListByMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubMerchantListByMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMerchantListByMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllGoodsCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGoodsCategories" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllGoodsCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGoodsCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllGoodsCategoriesByMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGoodsCategoriesByMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetAllGoodsCategoriesByMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGoodsCategoriesByMerchantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubMerchantNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMerchantNames" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubMerchantNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMerchantNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubMerchantNamesByMerchant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMerchantNamesByMerchant" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionOpenService_GetSubMerchantNamesByMerchant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubMerchantNamesByMerchantResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPermissionOpenService">
+    <wsdl:operation name="QueryFetchProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchProvince" message="tns:IPermissionOpenService_QueryFetchProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchProvinceResponse" message="tns:IPermissionOpenService_QueryFetchProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFetchCityByProvinceID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchCityByProvinceID" message="tns:IPermissionOpenService_QueryFetchCityByProvinceID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchCityByProvinceIDResponse" message="tns:IPermissionOpenService_QueryFetchCityByProvinceID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFetchAreaByCityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchAreaByCityID" message="tns:IPermissionOpenService_QueryFetchAreaByCityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchAreaByCityIDResponse" message="tns:IPermissionOpenService_QueryFetchAreaByCityID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectOnline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/ConnectOnline" message="tns:IPermissionOpenService_ConnectOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/ConnectOnlineResponse" message="tns:IPermissionOpenService_ConnectOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectDownline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/ConnectDownline" message="tns:IPermissionOpenService_ConnectDownline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/ConnectDownlineResponse" message="tns:IPermissionOpenService_ConnectDownline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEdiParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/UpdateEdiParameter" message="tns:IPermissionOpenService_UpdateEdiParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/UpdateEdiParameterResponse" message="tns:IPermissionOpenService_UpdateEdiParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeductValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDeductValue" message="tns:IPermissionOpenService_GetDeductValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDeductValueResponse" message="tns:IPermissionOpenService_GetDeductValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantInfoByEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantInfoByEmployee" message="tns:IPermissionOpenService_GetMerchantInfoByEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantInfoByEmployeeResponse" message="tns:IPermissionOpenService_GetMerchantInfoByEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOriginDepot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/CheckOriginDepot" message="tns:IPermissionOpenService_CheckOriginDepot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/CheckOriginDepotResponse" message="tns:IPermissionOpenService_CheckOriginDepot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisSortingCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDisSortingCenter" message="tns:IPermissionOpenService_GetDisSortingCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDisSortingCenterResponse" message="tns:IPermissionOpenService_GetDisSortingCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupCooperationDistributions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSupCooperationDistributions" message="tns:IPermissionOpenService_GetSupCooperationDistributions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSupCooperationDistributionsResponse" message="tns:IPermissionOpenService_GetSupCooperationDistributions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCooperationDistributions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubCooperationDistributions" message="tns:IPermissionOpenService_GetSubCooperationDistributions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubCooperationDistributionsResponse" message="tns:IPermissionOpenService_GetSubCooperationDistributions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOperationGuide">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllOperationGuide" message="tns:IPermissionOpenService_GetAllOperationGuide_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllOperationGuideResponse" message="tns:IPermissionOpenService_GetAllOperationGuide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantInfo" message="tns:IPermissionOpenService_GetMerchantInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantInfoResponse" message="tns:IPermissionOpenService_GetMerchantInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesOfUserHasAuthority">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetCitiesOfUserHasAuthority" message="tns:IPermissionOpenService_GetCitiesOfUserHasAuthority_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetCitiesOfUserHasAuthorityResponse" message="tns:IPermissionOpenService_GetCitiesOfUserHasAuthority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationsOfUserHasAuthorityByCityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetStationsOfUserHasAuthorityByCityID" message="tns:IPermissionOpenService_GetStationsOfUserHasAuthorityByCityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetStationsOfUserHasAuthorityByCityIDResponse" message="tns:IPermissionOpenService_GetStationsOfUserHasAuthorityByCityID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllProvince" message="tns:IPermissionOpenService_GetAllProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllProvinceResponse" message="tns:IPermissionOpenService_GetAllProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetCityList" message="tns:IPermissionOpenService_GetCityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetCityListResponse" message="tns:IPermissionOpenService_GetCityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllDistribution" message="tns:IPermissionOpenService_GetAllDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllDistributionResponse" message="tns:IPermissionOpenService_GetAllDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildDistribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetChildDistribution" message="tns:IPermissionOpenService_GetChildDistribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetChildDistributionResponse" message="tns:IPermissionOpenService_GetChildDistribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSortingCenterID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSortingCenterID" message="tns:IPermissionOpenService_GetSortingCenterID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSortingCenterIDResponse" message="tns:IPermissionOpenService_GetSortingCenterID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/UserLogin" message="tns:IPermissionOpenService_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/UserLoginResponse" message="tns:IPermissionOpenService_UserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FromDeliverCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/FromDeliverCenter" message="tns:IPermissionOpenService_FromDeliverCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/FromDeliverCenterResponse" message="tns:IPermissionOpenService_FromDeliverCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ToDeliverCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/ToDeliverCenter" message="tns:IPermissionOpenService_ToDeliverCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/ToDeliverCenterResponse" message="tns:IPermissionOpenService_ToDeliverCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliverCenterByStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDeliverCenterByStation" message="tns:IPermissionOpenService_GetDeliverCenterByStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDeliverCenterByStationResponse" message="tns:IPermissionOpenService_GetDeliverCenterByStation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsNeedTmsTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/IsNeedTmsTransfer" message="tns:IPermissionOpenService_IsNeedTmsTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/IsNeedTmsTransferResponse" message="tns:IPermissionOpenService_IsNeedTmsTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderPeak">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/UpdateOrderPeak" message="tns:IPermissionOpenService_UpdateOrderPeak_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/UpdateOrderPeakResponse" message="tns:IPermissionOpenService_UpdateOrderPeak_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentRelation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAgentRelation" message="tns:IPermissionOpenService_GetAgentRelation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAgentRelationResponse" message="tns:IPermissionOpenService_GetAgentRelation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSetRelation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/IsSetRelation" message="tns:IPermissionOpenService_IsSetRelation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/IsSetRelationResponse" message="tns:IPermissionOpenService_IsSetRelation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeByID" message="tns:IPermissionOpenService_GetEmployeeByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeByIDResponse" message="tns:IPermissionOpenService_GetEmployeeByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptNameByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDeptNameByID" message="tns:IPermissionOpenService_GetDeptNameByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetDeptNameByIDResponse" message="tns:IPermissionOpenService_GetDeptNameByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantSortingCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantSortingCenter" message="tns:IPermissionOpenService_GetMerchantSortingCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantSortingCenterResponse" message="tns:IPermissionOpenService_GetMerchantSortingCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressCompanyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetExpressCompanyID" message="tns:IPermissionOpenService_GetExpressCompanyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetExpressCompanyIDResponse" message="tns:IPermissionOpenService_GetExpressCompanyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/LockEmployee" message="tns:IPermissionOpenService_LockEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/LockEmployeeResponse" message="tns:IPermissionOpenService_LockEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSortingCentersByDistributionCodeWithoutSelf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSortingCentersByDistributionCodeWithoutSelf" message="tns:IPermissionOpenService_GetSortingCentersByDistributionCodeWithoutSelf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSortingCentersByDistributionCodeWithoutSelfResponse" message="tns:IPermissionOpenService_GetSortingCentersByDistributionCodeWithoutSelf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFetchArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchArea" message="tns:IPermissionOpenService_QueryFetchArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/QueryFetchAreaResponse" message="tns:IPermissionOpenService_QueryFetchArea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/EmployeeLogin" message="tns:IPermissionOpenService_EmployeeLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/EmployeeLoginResponse" message="tns:IPermissionOpenService_EmployeeLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeLoginNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/EmployeeLoginNew" message="tns:IPermissionOpenService_EmployeeLoginNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/EmployeeLoginNewResponse" message="tns:IPermissionOpenService_EmployeeLoginNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/AddEmployee" message="tns:IPermissionOpenService_AddEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/AddEmployeeResponse" message="tns:IPermissionOpenService_AddEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExpressCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/AddExpressCompany" message="tns:IPermissionOpenService_AddExpressCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/AddExpressCompanyResponse" message="tns:IPermissionOpenService_AddExpressCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeAndSetRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/AddEmployeeAndSetRole" message="tns:IPermissionOpenService_AddEmployeeAndSetRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/AddEmployeeAndSetRoleResponse" message="tns:IPermissionOpenService_AddEmployeeAndSetRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/UpdatePassword" message="tns:IPermissionOpenService_UpdatePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/UpdatePasswordResponse" message="tns:IPermissionOpenService_UpdatePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/ResetPassword" message="tns:IPermissionOpenService_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/ResetPasswordResponse" message="tns:IPermissionOpenService_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployee" message="tns:IPermissionOpenService_GetEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeResponse" message="tns:IPermissionOpenService_GetEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEmployeeRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/SetEmployeeRole" message="tns:IPermissionOpenService_SetEmployeeRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/SetEmployeeRoleResponse" message="tns:IPermissionOpenService_SetEmployeeRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeMenus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeMenus" message="tns:IPermissionOpenService_GetEmployeeMenus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeMenusResponse" message="tns:IPermissionOpenService_GetEmployeeMenus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeRoles" message="tns:IPermissionOpenService_GetEmployeeRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeRolesResponse" message="tns:IPermissionOpenService_GetEmployeeRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeMenuData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeMenuData" message="tns:IPermissionOpenService_GetEmployeeMenuData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeMenuDataResponse" message="tns:IPermissionOpenService_GetEmployeeMenuData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDataByEmployeeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMenuDataByEmployeeID" message="tns:IPermissionOpenService_GetMenuDataByEmployeeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMenuDataByEmployeeIDResponse" message="tns:IPermissionOpenService_GetMenuDataByEmployeeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRoleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeRoleData" message="tns:IPermissionOpenService_GetEmployeeRoleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetEmployeeRoleDataResponse" message="tns:IPermissionOpenService_GetEmployeeRoleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsCategoryCodeOfMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetGoodsCategoryCodeOfMerchant" message="tns:IPermissionOpenService_GetGoodsCategoryCodeOfMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetGoodsCategoryCodeOfMerchantResponse" message="tns:IPermissionOpenService_GetGoodsCategoryCodeOfMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsCategoryNameOfMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetGoodsCategoryNameOfMerchant" message="tns:IPermissionOpenService_GetGoodsCategoryNameOfMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetGoodsCategoryNameOfMerchantResponse" message="tns:IPermissionOpenService_GetGoodsCategoryNameOfMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchant" message="tns:IPermissionOpenService_GetMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantResponse" message="tns:IPermissionOpenService_GetMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantListHasSubMerchants">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantListHasSubMerchants" message="tns:IPermissionOpenService_GetMerchantListHasSubMerchants_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetMerchantListHasSubMerchantsResponse" message="tns:IPermissionOpenService_GetMerchantListHasSubMerchants_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGoodsCategoryNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoryNames" message="tns:IPermissionOpenService_GetAllGoodsCategoryNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoryNamesResponse" message="tns:IPermissionOpenService_GetAllGoodsCategoryNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSysNotice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSysNotice" message="tns:IPermissionOpenService_GetSysNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSysNoticeResponse" message="tns:IPermissionOpenService_GetSysNotice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOriginDepotByMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetOriginDepotByMerchant" message="tns:IPermissionOpenService_GetOriginDepotByMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetOriginDepotByMerchantResponse" message="tns:IPermissionOpenService_GetOriginDepotByMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateOriginDepotByMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetValidateOriginDepotByMerchant" message="tns:IPermissionOpenService_GetValidateOriginDepotByMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetValidateOriginDepotByMerchantResponse" message="tns:IPermissionOpenService_GetValidateOriginDepotByMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDepartmentByMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetPickDepartmentByMerchant" message="tns:IPermissionOpenService_GetPickDepartmentByMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetPickDepartmentByMerchantResponse" message="tns:IPermissionOpenService_GetPickDepartmentByMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMerchantListByMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubMerchantListByMerchant" message="tns:IPermissionOpenService_GetSubMerchantListByMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubMerchantListByMerchantResponse" message="tns:IPermissionOpenService_GetSubMerchantListByMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGoodsCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategories" message="tns:IPermissionOpenService_GetAllGoodsCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoriesResponse" message="tns:IPermissionOpenService_GetAllGoodsCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGoodsCategoriesByMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoriesByMerchant" message="tns:IPermissionOpenService_GetAllGoodsCategoriesByMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoriesByMerchantResponse" message="tns:IPermissionOpenService_GetAllGoodsCategoriesByMerchant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMerchantNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubMerchantNames" message="tns:IPermissionOpenService_GetSubMerchantNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubMerchantNamesResponse" message="tns:IPermissionOpenService_GetSubMerchantNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMerchantNamesByMerchant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubMerchantNamesByMerchant" message="tns:IPermissionOpenService_GetSubMerchantNamesByMerchant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionOpenService/GetSubMerchantNamesByMerchantResponse" message="tns:IPermissionOpenService_GetSubMerchantNamesByMerchant_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPermissionOpenService" type="tns:IPermissionOpenService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryFetchProvince">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/QueryFetchProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFetchCityByProvinceID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/QueryFetchCityByProvinceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFetchAreaByCityID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/QueryFetchAreaByCityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectOnline">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/ConnectOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectDownline">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/ConnectDownline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEdiParameter">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/UpdateEdiParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeductValue">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetDeductValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantInfoByEmployee">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetMerchantInfoByEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOriginDepot">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/CheckOriginDepot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisSortingCenter">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetDisSortingCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupCooperationDistributions">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSupCooperationDistributions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCooperationDistributions">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSubCooperationDistributions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOperationGuide">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAllOperationGuide" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantInfo">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetMerchantInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesOfUserHasAuthority">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetCitiesOfUserHasAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationsOfUserHasAuthorityByCityID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetStationsOfUserHasAuthorityByCityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProvince">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAllProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityList">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetCityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDistribution">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAllDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildDistribution">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetChildDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSortingCenterID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSortingCenterID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/UserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FromDeliverCenter">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/FromDeliverCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ToDeliverCenter">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/ToDeliverCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliverCenterByStation">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetDeliverCenterByStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsNeedTmsTransfer">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/IsNeedTmsTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderPeak">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/UpdateOrderPeak" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentRelation">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAgentRelation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSetRelation">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/IsSetRelation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetEmployeeByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptNameByID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetDeptNameByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantSortingCenter">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetMerchantSortingCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressCompanyID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetExpressCompanyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockEmployee">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/LockEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSortingCentersByDistributionCodeWithoutSelf">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSortingCentersByDistributionCodeWithoutSelf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFetchArea">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/QueryFetchArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeLogin">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/EmployeeLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeLoginNew">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/EmployeeLoginNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/AddEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExpressCompany">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/AddExpressCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeAndSetRole">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/AddEmployeeAndSetRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEmployeeRole">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/SetEmployeeRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeMenus">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetEmployeeMenus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRoles">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetEmployeeRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeMenuData">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetEmployeeMenuData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDataByEmployeeID">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetMenuDataByEmployeeID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRoleData">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetEmployeeRoleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsCategoryCodeOfMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetGoodsCategoryCodeOfMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsCategoryNameOfMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetGoodsCategoryNameOfMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantListHasSubMerchants">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetMerchantListHasSubMerchants" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGoodsCategoryNames">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoryNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSysNotice">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSysNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOriginDepotByMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetOriginDepotByMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidateOriginDepotByMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetValidateOriginDepotByMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDepartmentByMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetPickDepartmentByMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMerchantListByMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSubMerchantListByMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGoodsCategories">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGoodsCategoriesByMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetAllGoodsCategoriesByMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMerchantNames">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSubMerchantNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubMerchantNamesByMerchant">
+      <soap:operation soapAction="http://tempuri.org/IPermissionOpenService/GetSubMerchantNamesByMerchant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PermissionOpenService">
+    <wsdl:port name="BasicHttpBinding_IPermissionOpenService" binding="tns:BasicHttpBinding_IPermissionOpenService">
+      <soap:address location="http://pmsapi.wuliusys.com/PMSOpenService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

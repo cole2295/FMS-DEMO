@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RFD.LMS.Model.Permission" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RFD.LMS.Model.Permission" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAccessPermissionNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccessPermissionNode" nillable="true" type="tns:AccessPermissionNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccessPermissionNode" nillable="true" type="tns:ArrayOfAccessPermissionNode" />
+  <xs:complexType name="AccessPermissionNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessPermissionType" type="tns:AccessPermissionTypeEnum" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccessPermissionNode" nillable="true" type="tns:AccessPermissionNode" />
+  <xs:simpleType name="AccessPermissionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SubSystem" />
+      <xs:enumeration value="Admin" />
+      <xs:enumeration value="PageUrl" />
+      <xs:enumeration value="PageDom" />
+      <xs:enumeration value="Function" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccessPermissionTypeEnum" nillable="true" type="tns:AccessPermissionTypeEnum" />
+  <xs:complexType name="DataPermissionNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataPermissionNodes" nillable="true" type="tns:ArrayOfDataPermissionNode" />
+      <xs:element minOccurs="0" name="HasAllChildren" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataPermissionNode" nillable="true" type="tns:DataPermissionNode" />
+  <xs:complexType name="ArrayOfDataPermissionNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataPermissionNode" nillable="true" type="tns:DataPermissionNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataPermissionNode" nillable="true" type="tns:ArrayOfDataPermissionNode" />
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6100e5b4-5496-46b8-b75e-e5dfa99145c0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://exchange.vancldb.com/PermissionProviderService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="08ff1212-0b88-487e-a238-183f9f16f601" SourceId="1" SourceUrl="http://exchange.vancldb.com/PermissionProviderService.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="fb94130d-07f2-4c48-8a2a-1f405ff464b4" SourceId="1" SourceUrl="http://exchange.vancldb.com/PermissionProviderService.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="df8db95d-7b0d-4a49-8667-84d7b18db921" SourceId="1" SourceUrl="http://exchange.vancldb.com/PermissionProviderService.svc/mex" />
+    <MetadataFile FileName="RFD.LMS.Model.Permission1.xsd" MetadataType="Schema" ID="8cb1632f-c0b1-4997-85d7-c4cb596f8d6a" SourceId="1" SourceUrl="http://exchange.vancldb.com/PermissionProviderService.svc/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="e8df50cf-2bed-45e9-a8e8-78c6eb9510f5" SourceId="1" SourceUrl="http://exchange.vancldb.com/PermissionProviderService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b39b72a0-14a4-471c-9b3c-5ade524fa075" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://pmsapi.wuliusys.com/PMSOpenService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PMSOpenService5.xsd" MetadataType="Schema" ID="295bd87b-62cb-486f-9d60-1054f9c14597" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PMSOpenService51.xsd" MetadataType="Schema" ID="686d97fb-7577-4cec-bee8-d5d5d4ffe661" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PMSOpenService52.xsd" MetadataType="Schema" ID="57f0c9cb-2950-4ca1-8295-b409e0bd59a6" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PMSOpenService53.xsd" MetadataType="Schema" ID="48964e0c-ad0b-454f-bfb9-13ad18ced8e9" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PermissionOpenService1.wsdl" MetadataType="Wsdl" ID="faf68da1-f387-4beb-92af-b5716f9bafcc" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?wsdl" />
+    <MetadataFile FileName="PMSOpenService54.xsd" MetadataType="Schema" ID="cbd21a99-1f4b-419f-98dc-4bb0583bd4bd" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PMSOpenService1.disco" MetadataType="Disco" ID="81e88242-34e7-4154-b651-71dcb30ff578" SourceId="1" SourceUrl="http://pmsapi.wuliusys.com/PMSOpenService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

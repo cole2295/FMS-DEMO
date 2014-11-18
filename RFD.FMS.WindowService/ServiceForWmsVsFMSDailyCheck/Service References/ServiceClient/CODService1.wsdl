@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CODService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vfss.vancldb.com/ExternalApp/COD.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vfss.vancldb.com/ExternalApp/COD.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vfss.vancldb.com/ExternalApp/COD.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICOD_GetCODDelivery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODDelivery" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODDelivery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODDeliveryDaily_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODDeliveryDaily" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODDeliveryDaily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODDeliveryDailyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODReturns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODReturns" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODReturns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODReturnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODReturnsDaily_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODReturnsDaily" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODReturnsDaily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODReturnsDailyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODVisit" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODVisitDaily_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODVisitDaily" />
+  </wsdl:message>
+  <wsdl:message name="ICOD_GetCODVisitDaily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCODVisitDailyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICOD">
+    <wsdl:operation name="GetCODDelivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICOD/GetCODDelivery" message="tns:ICOD_GetCODDelivery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICOD/GetCODDeliveryResponse" message="tns:ICOD_GetCODDelivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODDeliveryDaily">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICOD/GetCODDeliveryDaily" message="tns:ICOD_GetCODDeliveryDaily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICOD/GetCODDeliveryDailyResponse" message="tns:ICOD_GetCODDeliveryDaily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODReturns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICOD/GetCODReturns" message="tns:ICOD_GetCODReturns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICOD/GetCODReturnsResponse" message="tns:ICOD_GetCODReturns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODReturnsDaily">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICOD/GetCODReturnsDaily" message="tns:ICOD_GetCODReturnsDaily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICOD/GetCODReturnsDailyResponse" message="tns:ICOD_GetCODReturnsDaily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICOD/GetCODVisit" message="tns:ICOD_GetCODVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICOD/GetCODVisitResponse" message="tns:ICOD_GetCODVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODVisitDaily">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICOD/GetCODVisitDaily" message="tns:ICOD_GetCODVisitDaily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICOD/GetCODVisitDailyResponse" message="tns:ICOD_GetCODVisitDaily_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICOD" type="tns:ICOD">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCODDelivery">
+      <soap:operation soapAction="http://tempuri.org/ICOD/GetCODDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODDeliveryDaily">
+      <soap:operation soapAction="http://tempuri.org/ICOD/GetCODDeliveryDaily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODReturns">
+      <soap:operation soapAction="http://tempuri.org/ICOD/GetCODReturns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODReturnsDaily">
+      <soap:operation soapAction="http://tempuri.org/ICOD/GetCODReturnsDaily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODVisit">
+      <soap:operation soapAction="http://tempuri.org/ICOD/GetCODVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODVisitDaily">
+      <soap:operation soapAction="http://tempuri.org/ICOD/GetCODVisitDaily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CODService">
+    <wsdl:port name="BasicHttpBinding_ICOD" binding="tns:BasicHttpBinding_ICOD">
+      <soap:address location="http://vfss.vancldb.com/ExternalApp/COD.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

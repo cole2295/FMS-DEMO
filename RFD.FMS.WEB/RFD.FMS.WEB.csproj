@@ -1,0 +1,1943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D6389F1-B14E-46A9-857E-DAF0CEA8C475}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.FMS.WEB</RootNamespace>
+    <AssemblyName>RFD.FMS.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\Lib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=1.1.0.188, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="DropDownCheckList">
+      <HintPath>..\Lib\DropDownCheckList.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.DDF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.DDF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HPSF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.HPSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HSSF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.HSSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.POIFS, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.POIFS.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Util, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="RFD.SSO.WebClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\RFD.SSO.WebClient\RFD.SSO.WebClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.3.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services, Version=1.3.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AudiMgmt\ExternalOrdersSummary.aspx" />
+    <Content Include="BasicSetting\AccountPeriodEdit.aspx" />
+    <Content Include="BasicSetting\AccountPeriodSet.aspx" />
+    <Content Include="BasicSetting\AreaExpressLevelAudit.aspx" />
+    <Content Include="BasicSetting\GenerateFile.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelAudit.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelAuditV2.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelSearch.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelSearchV2.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelSetV2.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelViewLog.aspx" />
+    <Content Include="BasicSetting\AreaExpressLevelSearch.aspx" />
+    <Content Include="BasicSetting\AreaExpressLevelSet.aspx" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevelSet.aspx" />
+    <Content Include="BasicSetting\AreaExpressLevelViewLog.aspx" />
+    <Content Include="BasicSetting\OperateLogView.aspx" />
+    <Content Include="BasicSetting\OperrateLogViewByNo.aspx" />
+    <Content Include="BasicSetting\StatusCodeEdit.aspx" />
+    <Content Include="BasicSetting\TypeRelationSet.aspx" />
+    <Content Include="COD\LogisticsDeliveryDaily.aspx" />
+    <Content Include="COD\LogisticsDeliveryDetailCheck.aspx" />
+    <Content Include="css\boxy.css" />
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudiMgmt\BankPosChecked.aspx.cs">
+      <DependentUpon>BankPosChecked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\BankPosChecked.aspx.designer.cs">
+      <DependentUpon>BankPosChecked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\DelayOrderChecked.aspx.cs">
+      <DependentUpon>DelayOrderChecked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\DelayOrderChecked.aspx.designer.cs">
+      <DependentUpon>DelayOrderChecked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\ExternalOrdersDetails.aspx.cs">
+      <DependentUpon>ExternalOrdersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\ExternalOrdersDetails.aspx.designer.cs">
+      <DependentUpon>ExternalOrdersDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\ExternalOrdersSummary.aspx.cs">
+      <DependentUpon>ExternalOrdersSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\ExternalOrdersSummary.aspx.designer.cs">
+      <DependentUpon>ExternalOrdersSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\FinanceCompare.aspx.cs">
+      <DependentUpon>FinanceCompare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\FinanceCompare.aspx.designer.cs">
+      <DependentUpon>FinanceCompare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\FinancePaymentConfirm.aspx.cs">
+      <DependentUpon>FinancePaymentConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\FinancePaymentConfirm.aspx.designer.cs">
+      <DependentUpon>FinancePaymentConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\FinancePaymentSearch.aspx.cs">
+      <DependentUpon>FinancePaymentSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\FinancePaymentSearch.aspx.designer.cs">
+      <DependentUpon>FinancePaymentSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\FinanceSearch.Master.cs">
+      <DependentUpon>FinanceSearch.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\FinanceSearch.Master.designer.cs">
+      <DependentUpon>FinanceSearch.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\MountModify.aspx.cs">
+      <DependentUpon>MountModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\MountModify.aspx.designer.cs">
+      <DependentUpon>MountModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\OrderMoneyStoreReport.aspx.cs">
+      <DependentUpon>OrderMoneyStoreReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\OrderMoneyStoreReport.aspx.designer.cs">
+      <DependentUpon>OrderMoneyStoreReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\ThirdWaybillDetails.aspx.cs">
+      <DependentUpon>ThirdWaybillDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\ThirdWaybillDetails.aspx.designer.cs">
+      <DependentUpon>ThirdWaybillDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AudiMgmt\ThirdWaybillStat.aspx.cs">
+      <DependentUpon>ThirdWaybillStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AudiMgmt\ThirdWaybillStat.aspx.designer.cs">
+      <DependentUpon>ThirdWaybillStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\AccountPeriodEdit.aspx.cs">
+      <DependentUpon>AccountPeriodEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\AccountPeriodEdit.aspx.designer.cs">
+      <DependentUpon>AccountPeriodEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\AccountPeriodSet.aspx.cs">
+      <DependentUpon>AccountPeriodSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\AccountPeriodSet.aspx.designer.cs">
+      <DependentUpon>AccountPeriodSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelAudit.aspx.cs">
+      <DependentUpon>AreaExpressLevelAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelAudit.aspx.designer.cs">
+      <DependentUpon>AreaExpressLevelAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\GenerateFile.aspx.cs">
+      <DependentUpon>GenerateFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\GenerateFile.aspx.designer.cs">
+      <DependentUpon>GenerateFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevel.Master.cs">
+      <DependentUpon>IncomeAreaExpressLevel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevel.Master.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelAudit.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelAudit.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelAuditV2.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelAuditV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelAuditV2.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelAuditV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSearch.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSearch.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSearchV2.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelSearchV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSearchV2.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelSearchV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSetV2.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelSetV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSetV2.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelSetV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelViewLog.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelViewLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelViewLog.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelViewLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelSearch.aspx.cs">
+      <DependentUpon>AreaExpressLevelSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelSearch.aspx.designer.cs">
+      <DependentUpon>AreaExpressLevelSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelSet.aspx.cs">
+      <DependentUpon>AreaExpressLevelSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelSet.aspx.designer.cs">
+      <DependentUpon>AreaExpressLevelSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSet.aspx.cs">
+      <DependentUpon>IncomeAreaExpressLevelSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IncomeAreaExpressLevelSet.aspx.designer.cs">
+      <DependentUpon>IncomeAreaExpressLevelSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelViewLog.aspx.cs">
+      <DependentUpon>AreaExpressLevelViewLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\AreaExpressLevelViewLog.aspx.designer.cs">
+      <DependentUpon>AreaExpressLevelViewLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\OperateLogView.aspx.cs">
+      <DependentUpon>OperateLogView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\OperateLogView.aspx.designer.cs">
+      <DependentUpon>OperateLogView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\OperrateLogViewByNo.aspx.cs">
+      <DependentUpon>OperrateLogViewByNo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\OperrateLogViewByNo.aspx.designer.cs">
+      <DependentUpon>OperrateLogViewByNo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\StatusCodeEdit.aspx.cs">
+      <DependentUpon>StatusCodeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\StatusCodeEdit.aspx.designer.cs">
+      <DependentUpon>StatusCodeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\TypeRelationSet.aspx.cs">
+      <DependentUpon>TypeRelationSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\TypeRelationSet.aspx.designer.cs">
+      <DependentUpon>TypeRelationSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPrice.Master.cs">
+      <DependentUpon>DeliveryPrice.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPrice.Master.designer.cs">
+      <DependentUpon>DeliveryPrice.Master</DependentUpon>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliveryDaily.aspx.cs">
+      <DependentUpon>LogisticsDeliveryDaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliveryDaily.aspx.designer.cs">
+      <DependentUpon>LogisticsDeliveryDaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliveryDetailCheck.aspx.cs">
+      <DependentUpon>LogisticsDeliveryDetailCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliveryDetailCheck.aspx.designer.cs">
+      <DependentUpon>LogisticsDeliveryDetailCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\ExpressFinanceSearch.aspx.cs">
+      <DependentUpon>ExpressFinanceSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\ExpressFinanceSearch.aspx.designer.cs">
+      <DependentUpon>ExpressFinanceSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliveryDetail.aspx.cs">
+      <DependentUpon>LogisticsDeliveryDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliveryDetail.aspx.designer.cs">
+      <DependentUpon>LogisticsDeliveryDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliverySummary.aspx.cs">
+      <DependentUpon>LogisticsDeliverySummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\LogisticsDeliverySummary.aspx.designer.cs">
+      <DependentUpon>LogisticsDeliverySummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\FinancePaymentSearch.aspx.cs">
+      <DependentUpon>FinancePaymentSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\FinancePaymentSearch.aspx.designer.cs">
+      <DependentUpon>FinancePaymentSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\FinancePaymentSearchDM.aspx.cs">
+      <DependentUpon>FinancePaymentSearchDM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\FinancePaymentSearchDM.aspx.designer.cs">
+      <DependentUpon>FinancePaymentSearchDM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\SortingTransferDetail.aspx.cs">
+      <DependentUpon>SortingTransferDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\SortingTransferDetail.aspx.designer.cs">
+      <DependentUpon>SortingTransferDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\SortingTransferSearching.aspx.cs">
+      <DependentUpon>SortingTransferSearching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\SortingTransferSearching.aspx.designer.cs">
+      <DependentUpon>SortingTransferSearching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\IncomeDailyReport.aspx.cs">
+      <DependentUpon>IncomeDailyReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\IncomeDailyReport.aspx.designer.cs">
+      <DependentUpon>IncomeDailyReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\ChangeIncomeDeliverFee.aspx.cs">
+      <DependentUpon>ChangeIncomeDeliverFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\ChangeIncomeDeliverFee.aspx.designer.cs">
+      <DependentUpon>ChangeIncomeDeliverFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\ChangeCODDeliverFee.aspx.cs">
+      <DependentUpon>ChangeCODDeliverFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\ChangeCODDeliverFee.aspx.designer.cs">
+      <DependentUpon>ChangeCODDeliverFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Common\HttpHandlerBase.cs" />
+    <Compile Include="Main\Frame.aspx.cs">
+      <DependentUpon>Frame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\Frame.aspx.designer.cs">
+      <DependentUpon>Frame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Interfaces\ISearchable.cs" />
+    <Compile Include="Main\main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\TabPage.aspx.cs">
+      <DependentUpon>TabPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\TabPage.aspx.designer.cs">
+      <DependentUpon>TabPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\WebSiteConst.cs" />
+    <Compile Include="QueryStatistics\CODTransferDetails.aspx.cs">
+      <DependentUpon>CODTransferDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStatistics\CODTransferDetails.aspx.designer.cs">
+      <DependentUpon>CODTransferDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryStatistics\CODTransferSummary.aspx.cs">
+      <DependentUpon>CODTransferSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStatistics\CODTransferSummary.aspx.designer.cs">
+      <DependentUpon>CODTransferSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSetting\BasicSettingWebService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="COD\COD.Master.cs">
+      <DependentUpon>COD.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\COD.Master.designer.cs">
+      <DependentUpon>COD.Master</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAccountDetailView.aspx.cs">
+      <DependentUpon>CODAccountDetailView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAccountDetailView.aspx.designer.cs">
+      <DependentUpon>CODAccountDetailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAccountAudit.aspx.cs">
+      <DependentUpon>CODAccountAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAccountAudit.aspx.designer.cs">
+      <DependentUpon>CODAccountAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAccountEdit.aspx.cs">
+      <DependentUpon>CODAccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAccountEdit.aspx.designer.cs">
+      <DependentUpon>CODAccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAccountFeeEdit.aspx.cs">
+      <DependentUpon>CODAccountFeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAccountFeeEdit.aspx.designer.cs">
+      <DependentUpon>CODAccountFeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAccountMain.aspx.cs">
+      <DependentUpon>CODAccountMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAccountMain.aspx.designer.cs">
+      <DependentUpon>CODAccountMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAccountSearch.aspx.cs">
+      <DependentUpon>CODAccountSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAccountSearch.aspx.designer.cs">
+      <DependentUpon>CODAccountSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODAreaFareSummary.aspx.cs">
+      <DependentUpon>CODAreaFareSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODAreaFareSummary.aspx.designer.cs">
+      <DependentUpon>CODAreaFareSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\CODDetailView.aspx.cs">
+      <DependentUpon>CODDetailView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\CODDetailView.aspx.designer.cs">
+      <DependentUpon>CODDetailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceAudit.aspx.cs">
+      <DependentUpon>DeliveryPriceAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceAudit.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceChoose.aspx.cs">
+      <DependentUpon>DeliveryPriceChoose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceChoose.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceChoose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceEdit.aspx.cs">
+      <DependentUpon>DeliveryPriceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceEdit.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceHistory.aspx.cs">
+      <DependentUpon>DeliveryPriceHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceHistory.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceLog.aspx.cs">
+      <DependentUpon>DeliveryPriceLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceLog.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceMain.aspx.cs">
+      <DependentUpon>DeliveryPriceMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceMain.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceSearch.aspx.cs">
+      <DependentUpon>DeliveryPriceSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\DeliveryPriceSearch.aspx.designer.cs">
+      <DependentUpon>DeliveryPriceSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COD\RequisitionedFormSearch.aspx.cs">
+      <DependentUpon>RequisitionedFormSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="COD\RequisitionedFormSearch.aspx.designer.cs">
+      <DependentUpon>RequisitionedFormSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\Account.Master.cs">
+      <DependentUpon>Account.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\Account.Master.designer.cs">
+      <DependentUpon>Account.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountAreaSummary.aspx.cs">
+      <DependentUpon>AccountAreaSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountAreaSummary.aspx.designer.cs">
+      <DependentUpon>AccountAreaSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountAudit.aspx.cs">
+      <DependentUpon>AccountAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountAudit.aspx.designer.cs">
+      <DependentUpon>AccountAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountBuild.aspx.cs">
+      <DependentUpon>AccountBuild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountBuild.aspx.designer.cs">
+      <DependentUpon>AccountBuild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountDetailView.aspx.cs">
+      <DependentUpon>AccountDetailView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountDetailView.aspx.designer.cs">
+      <DependentUpon>AccountDetailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountFeeEdit.aspx.cs">
+      <DependentUpon>AccountFeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountFeeEdit.aspx.designer.cs">
+      <DependentUpon>AccountFeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountMain.aspx.cs">
+      <DependentUpon>AccountMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountMain.aspx.designer.cs">
+      <DependentUpon>AccountMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AccountSearch.aspx.cs">
+      <DependentUpon>AccountSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AccountSearch.aspx.designer.cs">
+      <DependentUpon>AccountSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeAudit.aspx.cs">
+      <DependentUpon>MerchantDeliverFeeAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeAudit.aspx.designer.cs">
+      <DependentUpon>MerchantDeliverFeeAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeEdit.aspx.cs">
+      <DependentUpon>MerchantDeliverFeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeEdit.aspx.designer.cs">
+      <DependentUpon>MerchantDeliverFeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeSearch.aspx.cs">
+      <DependentUpon>MerchantDeliverFeeSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeSearch.aspx.designer.cs">
+      <DependentUpon>MerchantDeliverFeeSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PMSOpenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RequisitionedService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SortingManage\SortingFee.aspx.cs">
+      <DependentUpon>SortingFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SortingManage\SortingFee.aspx.designer.cs">
+      <DependentUpon>SortingFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SortingManage\SortingFeeAudit.aspx.cs">
+      <DependentUpon>SortingFeeAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SortingManage\SortingFeeAudit.aspx.designer.cs">
+      <DependentUpon>SortingFeeAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SortingManage\UpadeSortingFee.aspx.cs">
+      <DependentUpon>UpadeSortingFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SortingManage\UpadeSortingFee.aspx.designer.cs">
+      <DependentUpon>UpadeSortingFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SsoAuthHandler.aspx.cs">
+      <DependentUpon>SsoAuthHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SsoAuthHandler.aspx.designer.cs">
+      <DependentUpon>SsoAuthHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\SortingTransferModify.aspx.cs">
+      <DependentUpon>SortingTransferModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\SortingTransferModify.aspx.designer.cs">
+      <DependentUpon>SortingTransferModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AccountPeriodTreeView.aspx.cs">
+      <DependentUpon>AccountPeriodTreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AccountPeriodTreeView.aspx.designer.cs">
+      <DependentUpon>AccountPeriodTreeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AccountPeriodTV.ascx.cs">
+      <DependentUpon>AccountPeriodTV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AccountPeriodTV.ascx.designer.cs">
+      <DependentUpon>AccountPeriodTV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CitySelected.ascx.cs">
+      <DependentUpon>CitySelected.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CitySelected.ascx.designer.cs">
+      <DependentUpon>CitySelected.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DistributionSelect.ascx.cs">
+      <DependentUpon>DistributionSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DistributionSelect.ascx.designer.cs">
+      <DependentUpon>DistributionSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ExpressCompanyChooseTV.ascx.cs">
+      <DependentUpon>ExpressCompanyChooseTV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ExpressCompanyChooseTV.ascx.designer.cs">
+      <DependentUpon>ExpressCompanyChooseTV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ExpressCompanyTreeView.aspx.cs">
+      <DependentUpon>ExpressCompanyTreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ExpressCompanyTreeView.aspx.designer.cs">
+      <DependentUpon>ExpressCompanyTreeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ExpressCompanyTV.ascx.cs">
+      <DependentUpon>ExpressCompanyTV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ExpressCompanyTV.ascx.designer.cs">
+      <DependentUpon>ExpressCompanyTV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GoodsCategoryCheckBox.ascx.cs">
+      <DependentUpon>GoodsCategoryCheckBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\GoodsCategoryCheckBox.ascx.designer.cs">
+      <DependentUpon>GoodsCategoryCheckBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MerchantSource.ascx.cs">
+      <DependentUpon>MerchantSource.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MerchantSource.ascx.designer.cs">
+      <DependentUpon>MerchantSource.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MerchantSourceTV.ascx.cs">
+      <DependentUpon>MerchantSourceTV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MerchantSourceTV.ascx.designer.cs">
+      <DependentUpon>MerchantSourceTV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MerchantTreeView.aspx.cs">
+      <DependentUpon>MerchantTreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MerchantTreeView.aspx.designer.cs">
+      <DependentUpon>MerchantTreeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PCASerach.ascx.cs">
+      <DependentUpon>PCASerach.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\PCASerach.ascx.designer.cs">
+      <DependentUpon>PCASerach.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StationCheckBox.ascx.cs">
+      <DependentUpon>StationCheckBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StationCheckBox.ascx.designer.cs">
+      <DependentUpon>StationCheckBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\validate.aspx.cs">
+      <DependentUpon>validate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\validate.aspx.designer.cs">
+      <DependentUpon>validate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\WareHouseCheckBox.ascx.cs">
+      <DependentUpon>WareHouseCheckBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\WareHouseCheckBox.ascx.designer.cs">
+      <DependentUpon>WareHouseCheckBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\AuditDeliverFee.aspx.cs">
+      <DependentUpon>AuditDeliverFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\AuditDeliverFee.aspx.designer.cs">
+      <DependentUpon>AuditDeliverFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\DeliverFee.Master.cs">
+      <DependentUpon>DeliverFee.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\DeliverFee.Master.designer.cs">
+      <DependentUpon>DeliverFee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MaintainDeliverFee.aspx.cs">
+      <DependentUpon>MaintainDeliverFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MaintainDeliverFee.aspx.designer.cs">
+      <DependentUpon>MaintainDeliverFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFee.Master.cs">
+      <DependentUpon>MerchantDeliverFee.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFee.Master.designer.cs">
+      <DependentUpon>MerchantDeliverFee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeHistory.aspx.cs">
+      <DependentUpon>MerchantDeliverFeeHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeHistory.aspx.designer.cs">
+      <DependentUpon>MerchantDeliverFeeHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeMain.aspx.cs">
+      <DependentUpon>MerchantDeliverFeeMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\MerchantDeliverFeeMain.aspx.designer.cs">
+      <DependentUpon>MerchantDeliverFeeMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\QueryDeliverFee.aspx.cs">
+      <DependentUpon>QueryDeliverFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\QueryDeliverFee.aspx.designer.cs">
+      <DependentUpon>QueryDeliverFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\StationDeliverFeeHistory.aspx.cs">
+      <DependentUpon>StationDeliverFeeHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\StationDeliverFeeHistory.aspx.designer.cs">
+      <DependentUpon>StationDeliverFeeHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\UpdateDeliverFee.aspx.cs">
+      <DependentUpon>UpdateDeliverFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\UpdateDeliverFee.aspx.designer.cs">
+      <DependentUpon>UpdateDeliverFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\DeliverFeeStatReport.aspx.cs">
+      <DependentUpon>DeliverFeeStatReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\DeliverFeeStatReport.aspx.designer.cs">
+      <DependentUpon>DeliverFeeStatReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialManage\ExpressPriceManage.aspx.cs">
+      <DependentUpon>ExpressPriceManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\ExpressPriceManage.aspx.designer.cs">
+      <DependentUpon>ExpressPriceManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FMSBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DropDownListExtend.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Common\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Msg.aspx.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Msg.aspx.designer.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\EmployeeListPop.aspx.cs">
+      <DependentUpon>EmployeeListPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\EmployeeListPop.aspx.designer.cs">
+      <DependentUpon>EmployeeListPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ExpressListPop.aspx.cs">
+      <DependentUpon>ExpressListPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ExpressListPop.aspx.designer.cs">
+      <DependentUpon>ExpressListPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ExpressListPopTmp.aspx.cs">
+      <DependentUpon>ExpressListPopTmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ExpressListPopTmp.aspx.designer.cs">
+      <DependentUpon>ExpressListPopTmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectEmployee.ascx.cs">
+      <DependentUpon>SelectEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectEmployee.ascx.designer.cs">
+      <DependentUpon>SelectEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectStation.ascx.cs">
+      <DependentUpon>SelectStation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectStation.ascx.designer.cs">
+      <DependentUpon>SelectStation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectStationTmp.ascx.cs">
+      <DependentUpon>SelectStationTmp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectStationTmp.ascx.designer.cs">
+      <DependentUpon>SelectStationTmp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ExpressListPopCommon.aspx.cs">
+      <DependentUpon>ExpressListPopCommon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ExpressListPopCommon.aspx.designer.cs">
+      <DependentUpon>ExpressListPopCommon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectStationCommon.ascx.cs">
+      <DependentUpon>SelectStationCommon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectStationCommon.ascx.designer.cs">
+      <DependentUpon>SelectStationCommon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectEmployeeTemp.ascx.cs">
+      <DependentUpon>SelectEmployeeTemp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectEmployeeTemp.ascx.designer.cs">
+      <DependentUpon>SelectEmployeeTemp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\EmployeeListPopTemp.aspx.cs">
+      <DependentUpon>EmployeeListPopTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\EmployeeListPopTemp.aspx.designer.cs">
+      <DependentUpon>EmployeeListPopTemp.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.AdoNet\RFD.FMS.AdoNet.csproj">
+      <Project>{605AAD38-A148-45AE-9423-DC18E3FAF6DC}</Project>
+      <Name>RFD.FMS.AdoNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMS.Util\RFD.FMS.Util.csproj">
+      <Project>{C03634A1-391C-4E80-9611-6F666AEE72F2}</Project>
+      <Name>RFD.FMS.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.DAL.Oracle\RFD.FMS.DAL.Oracle.csproj">
+      <Project>{2A5D98F3-225A-475A-B168-F8A7B16A96A3}</Project>
+      <Name>RFD.FMS.DAL.Oracle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.DAL\RFD.FMS.DAL.csproj">
+      <Project>{E3B5DFB5-E710-4858-BBDC-8B155D273ADE}</Project>
+      <Name>RFD.FMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.Domain\RFD.FMS.Domain.csproj">
+      <Project>{D37AAD95-DCA2-4D51-9533-098C32D8C22D}</Project>
+      <Name>RFD.FMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.MODEL\RFD.FMS.MODEL.csproj">
+      <Project>{C01A862A-8684-4A4C-B478-999BC5C8BF75}</Project>
+      <Name>RFD.FMS.MODEL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.ServiceImpl\RFD.FMS.ServiceImpl.csproj">
+      <Project>{41A72037-9DB9-4D7A-B06D-BF04EA787D79}</Project>
+      <Name>RFD.FMS.ServiceImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.Service\RFD.FMS.Service.csproj">
+      <Project>{226AD3C4-2CCB-4ABB-91EB-01E2D1D0CC66}</Project>
+      <Name>RFD.FMS.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.WEBLOGIC\RFD.FMS.WEBLOGIC.csproj">
+      <Project>{0AAC6D97-1473-4868-B5E9-EB563DE42B7D}</Project>
+      <Name>RFD.FMS.WEBLOGIC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Error.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FinancialManage\SortingTransferDetail.aspx" />
+    <Content Include="FinancialManage\SortingTransferSearching.aspx" />
+    <Content Include="FinancialManage\IncomeDailyReport.aspx" />
+    <Content Include="FinancialManage\ChangeIncomeDeliverFee.aspx" />
+    <Content Include="FinancialManage\ChangeCODDeliverFee.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Main\Welcome.aspx" />
+    <Content Include="QueryStatistics\CODTransferDetails.aspx" />
+    <Content Include="QueryStatistics\CODTransferSummary.aspx" />
+    <Content Include="RFD.FMS.WEB.Publish.xml" />
+    <Content Include="Scripts\controls\IframeDownLoad.js" />
+    <Content Include="Scripts\controls\OpenCommon.js" />
+    <Content Include="Scripts\import\fms.helpfile.js" />
+    <Content Include="Scripts\jquery-1.2.6.pack.js" />
+    <Content Include="Scripts\jquery-1.3.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.4.min.js" />
+    <Content Include="Scripts\jquery-1.6.min.js" />
+    <Content Include="Scripts\jQuery.timers.js" />
+    <Content Include="Scripts\My97DatePicker\calendar.js" />
+    <Content Include="Scripts\My97DatePicker\config.js" />
+    <Content Include="Scripts\My97DatePicker\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\basefunction.js" />
+    <Content Include="Scripts\checkDate.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\done.wav" />
+    <Content Include="Scripts\error.wav" />
+    <Content Include="Scripts\grayscale.js" />
+    <Content Include="Scripts\help.js" />
+    <Content Include="Scripts\jquery-calendar.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Scripts\jquery.ajaxfileupload.js" />
+    <Content Include="Scripts\jquery.boxy.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.FwpTabs.js" />
+    <Content Include="Scripts\jquery.hoveraccordion.min.js" />
+    <Content Include="Scripts\jquery.jgrowl_compressed.js" />
+    <Content Include="Scripts\jquery.pack.js" />
+    <Content Include="Scripts\jquery.tablednd_0_5.js" />
+    <Content Include="Scripts\jquery.tmpl.js" />
+    <Content Include="Scripts\jquery.treeview.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.min_bak.js" />
+    <Content Include="Scripts\JsUtil.js" />
+    <Content Include="Scripts\JSValidate.js" />
+    <Content Include="Scripts\menu.js" />
+    <Content Include="Scripts\moo.fx.js" />
+    <Content Include="Scripts\moo.fx.pack.js" />
+    <Content Include="Scripts\prototype.lite.js" />
+    <Content Include="Scripts\Root.Xml.js" />
+    <Content Include="Scripts\superTables_compressed.js" />
+    <Content Include="Scripts\tab.js" />
+    <Content Include="Scripts\table.js" />
+    <Content Include="Scripts\trHighLight.js" />
+    <Content Include="Scripts\ui.js" />
+    <Content Include="Scripts\url.js" />
+    <Content Include="Scripts\User.js" />
+    <Content Include="Scripts\validator.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BasicSetting\BasicSettingWebService.asmx" />
+    <Content Include="css\login.css" />
+    <Content Include="SortingManage\SortingFee.aspx" />
+    <Content Include="SortingManage\SortingFeeAudit.aspx" />
+    <Content Include="SortingManage\UpadeSortingFee.aspx" />
+    <Content Include="test\SortingTransferModify.aspx" />
+    <Content Include="test\WebForm11.aspx" />
+    <Content Include="test\WebForm2.aspx" />
+    <Content Include="UserControl\AccountPeriodTreeView.aspx" />
+    <Content Include="UserControl\AccountPeriodTV.ascx" />
+    <Content Include="UserControl\CitySelected.ascx" />
+    <Content Include="UserControl\DistributionSelect.ascx" />
+    <Content Include="UserControl\ExpressCompanyChooseTV.ascx" />
+    <Content Include="UserControl\ExpressCompanyTreeView.aspx" />
+    <Content Include="UserControl\ExpressCompanyTV.ascx" />
+    <Content Include="UserControl\GoodsCategoryCheckBox.ascx" />
+    <Content Include="UserControl\MerchantSourceTV.ascx" />
+    <Content Include="UserControl\MerchantTreeView.aspx" />
+    <Content Include="UserControl\PCASerach.ascx" />
+    <Content Include="images\button_bg.jpg" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\icon.gif" />
+    <Content Include="images\jianbian.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\out.gif" />
+    <Content Include="images\title_bg.jpg" />
+    <Content Include="images\vie.gif" />
+    <Content Include="images\yuanjiao.gif" />
+    <Content Include="Msg.aspx" />
+    <Content Include="Scripts\My.js" />
+    <Content Include="Scripts\tab_jquery.js" />
+    <Content Include="Scripts\tab_juqery.css" />
+    <Content Include="UserControl\EmployeeListPop.aspx" />
+    <Content Include="UserControl\ExpressListPop.aspx" />
+    <Content Include="UserControl\ExpressListPopTmp.aspx" />
+    <Content Include="UserControl\Pager.ascx" />
+    <Content Include="UserControl\SelectEmployee.ascx" />
+    <Content Include="UserControl\SelectStation.ascx" />
+    <Content Include="UserControl\SelectStationTmp.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\default\BlackWeb2.0.skin" />
+    <Content Include="jquery-easyui-1.2.4\changelog.txt" />
+    <Content Include="jquery-easyui-1.2.4\demo\accordion.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\calendar.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\combo.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\combobox.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\combogrid.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\combotree.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datagrid.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datagrid2.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datagrid3.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datagrid4.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datagrid5.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datebox.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\datetimebox.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\demo.css" />
+    <Content Include="jquery-easyui-1.2.4\demo\dialog.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\draggable.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\droppable.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\droppable1.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\droppable2.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\easyloader.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\form.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\layout.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\layout1.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\layout2.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\linkbutton.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\menu.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\menubutton.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\messager.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\numberbox.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\numberspinner.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\pagination.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\panel.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\progressbar.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\propertygrid.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\resizable.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\searchbox.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\splitbutton.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\tabs.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\tabs_href_test.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\timespinner.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\tree.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\tree2.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\treegrid.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\treegrid2.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\treegrid3.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\validatebox.html" />
+    <Content Include="jquery-easyui-1.2.4\demo\window.html" />
+    <Content Include="jquery-easyui-1.2.4\easyloader.js" />
+    <Content Include="jquery-easyui-1.2.4\jquery.easyui.min.js" />
+    <Content Include="jquery-easyui-1.2.4\licence_gpl.txt" />
+    <Content Include="jquery-easyui-1.2.4\license_commercial.txt" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-af.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-bg.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-ca.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-cs.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-da.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-de.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-en.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-fr.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-nl.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-zh_CN.js" />
+    <Content Include="jquery-easyui-1.2.4\locale\easyui-lang-zh_TW.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.accordion.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.calendar.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.combo.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.combobox.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.combogrid.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.combotree.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.datagrid.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.datebox.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.datetimebox.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.dialog.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.draggable.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.droppable.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.form.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.layout.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.linkbutton.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.menu.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.menubutton.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.messager.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.numberbox.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.numberspinner.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.pagination.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.panel.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.parser.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.progressbar.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.propertygrid.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.resizable.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.searchbox.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.spinner.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.splitbutton.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.tabs.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.timespinner.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.tree.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.treegrid.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.validatebox.js" />
+    <Content Include="jquery-easyui-1.2.4\plugins\jquery.window.js" />
+    <Content Include="jquery-easyui-1.2.4\readme.txt" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\accordion.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\calendar.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\combo.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\combobox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\datagrid.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\datebox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\dialog.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\easyui.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\accordion_collapse.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\accordion_expand.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\blank.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\button_a_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\button_plain_hover.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\button_span_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\combo_arrow.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\layout_button_down.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\layout_button_left.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\layout_button_right.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\layout_button_up.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\menu.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\menu_downarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\menu_rightarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\menu_sep.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\messager_error.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\messager_info.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\messager_question.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\messager_warning.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\pagination_first.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\pagination_last.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\pagination_load.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\pagination_loading.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\pagination_next.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\pagination_prev.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\panel_loading.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\panel_title.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\panel_tools.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\panel_tool_collapse.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\panel_tool_expand.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tabs_active.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tabs_close.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tabs_enabled.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_arrows.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_dnd_no.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_file.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_folder.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_folder_open.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\tree_loading.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\layout.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\linkbutton.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\menu.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\menubutton.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\messager.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\pagination.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\panel.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\progressbar.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\propertygrid.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\searchbox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\spinner.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\splitbutton.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\tabs.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\tree.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\validatebox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\default\window.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\accordion.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\calendar.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\combo.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\combobox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\datagrid.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\datebox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\dialog.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\easyui.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\accordion_collapse.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\accordion_expand.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\blank.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\button_a_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\button_plain_hover.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\button_span_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\calendar_nextmonth.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\calendar_nextyear.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\calendar_prevmonth.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\calendar_prevyear.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\combo_arrow.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datagrid_header_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datagrid_row_expand.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datagrid_title_bg.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\layout_button_down.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\layout_button_left.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\layout_button_right.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\layout_button_up.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\menu.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\menu_downarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\menu_rightarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\menu_sep.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\menu_split_downarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\messager_error.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\messager_info.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\messager_question.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\messager_warning.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\pagination_first.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\pagination_last.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\pagination_load.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\pagination_loading.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\pagination_next.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\pagination_prev.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\panel_loading.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\panel_title.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\panel_tools.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\panel_tool_collapse.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\panel_tool_expand.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\spinner_arrow_down.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\spinner_arrow_up.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tabs_close.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tabs_enabled.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tabs_leftarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tabs_rightarrow.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_arrows.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_checkbox_0.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_checkbox_1.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_checkbox_2.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_dnd_no.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_dnd_yes.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_file.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_folder.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_folder_open.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\tree_loading.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\validatebox_pointer.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\layout.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\linkbutton.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\menu.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\menubutton.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\messager.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\pagination.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\panel.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\progressbar.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\propertygrid.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\searchbox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\spinner.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\splitbutton.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\tabs.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\tree.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\validatebox.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\gray\window.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\icon.css" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\back.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\blank.gif" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\cancel.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\cut.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\edit_add.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\edit_remove.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\filesave.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\help.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\no.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\ok.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\pencil.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\print.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\redo.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\reload.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\search.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\sum.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\tip.png" />
+    <Content Include="jquery-easyui-1.2.4\themes\icons\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AudiMgmt\BankPosChecked.aspx" />
+    <Content Include="AudiMgmt\DelayOrderChecked.aspx" />
+    <Content Include="AudiMgmt\ExternalOrdersDetails.aspx" />
+    <Content Include="AudiMgmt\FinanceCompare.aspx" />
+    <Content Include="AudiMgmt\FinancePaymentConfirm.aspx" />
+    <Content Include="AudiMgmt\FinancePaymentSearch.aspx" />
+    <Content Include="AudiMgmt\MountModify.aspx" />
+    <Content Include="AudiMgmt\ThirdWaybillDetails.aspx" />
+    <Content Include="AudiMgmt\ThirdWaybillStat.aspx" />
+    <Content Include="COD\LogisticsDeliveryDetail.aspx" />
+    <Content Include="COD\LogisticsDeliverySummary.aspx" />
+    <Content Include="css\left.css" />
+    <Content Include="FinancialManage\ExpressFinanceSearch.aspx" />
+    <Content Include="FinancialManage\FinancePaymentSearch.aspx" />
+    <Content Include="FinancialManage\FinancePaymentSearchDM.aspx" />
+    <Content Include="images\error2.jpg" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\menu_bottom.gif" />
+    <Content Include="images\menu_left.gif" />
+    <Content Include="images\menu_right.gif" />
+    <Content Include="images\menu_top.gif" />
+    <Content Include="Lib\7z.dll" />
+    <Content Include="Lib\7z64.dll" />
+    <Content Include="Main\Frame.aspx" />
+    <Content Include="Main\HeadTop.htm" />
+    <Content Include="Main\LeftLine.htm" />
+    <Content Include="Main\Menu.aspx" />
+    <Content Include="Main\TabPage.aspx" />
+    <Content Include="Main\TopLine.htm" />
+    <Content Include="COD\CODAccountDetailView.aspx" />
+    <Content Include="COD\CODAccountAudit.aspx" />
+    <Content Include="COD\CODAccountEdit.aspx" />
+    <Content Include="COD\CODAccountFeeEdit.aspx" />
+    <Content Include="COD\CODAccountMain.aspx" />
+    <Content Include="COD\CODAccountSearch.aspx" />
+    <Content Include="COD\CODAreaFareSummary.aspx" />
+    <Content Include="COD\CODDetailView.aspx" />
+    <Content Include="COD\DeliveryPriceAudit.aspx" />
+    <Content Include="COD\DeliveryPriceChoose.aspx" />
+    <Content Include="COD\DeliveryPriceEdit.aspx" />
+    <Content Include="COD\DeliveryPriceHistory.aspx" />
+    <Content Include="COD\DeliveryPriceLog.aspx" />
+    <Content Include="COD\DeliveryPriceMain.aspx" />
+    <Content Include="COD\DeliveryPriceSearch.aspx" />
+    <Content Include="COD\RequisitionedFormSearch.aspx" />
+    <Content Include="FinancialManage\AccountAreaSummary.aspx" />
+    <Content Include="FinancialManage\AccountAudit.aspx" />
+    <Content Include="FinancialManage\AccountBuild.aspx" />
+    <Content Include="FinancialManage\AccountDetailView.aspx" />
+    <Content Include="FinancialManage\AccountFeeEdit.aspx" />
+    <Content Include="FinancialManage\AccountMain.aspx" />
+    <Content Include="FinancialManage\AccountSearch.aspx" />
+    <Content Include="FinancialManage\MerchantDeliverFeeAudit.aspx" />
+    <Content Include="FinancialManage\MerchantDeliverFeeEdit.aspx" />
+    <Content Include="FinancialManage\MerchantDeliverFeeSearch.aspx" />
+    <Content Include="FinancialManage\Account.Master" />
+    <Content Include="COD\DeliveryPrice.Master" />
+    <Content Include="Main\main.Master" />
+    <Content Include="BasicSetting\IncomeAreaExpressLevel.Master" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\PMSOpenService\PermissionOpenService.wsdl" />
+    <None Include="Service References\PMSOpenService\PMSOpenService.xsd" />
+    <None Include="Service References\PMSOpenService\PMSOpenService1.xsd" />
+    <None Include="Service References\PMSOpenService\PMSOpenService2.xsd" />
+    <None Include="Service References\PMSOpenService\PMSOpenService3.xsd" />
+    <None Include="Service References\PMSOpenService\PMSOpenService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.AgentRelationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.ArrayOfKeyValueOfintstringKeyValueOfintstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.ArrayOfKeyValueOfstringstringKeyValueOfstringstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Distribution.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.ExpressCompany.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.FetchArea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.FetchAreaInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.FetchCity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.FetchProvince.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Menu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.MerchantBaseInfoModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Notice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.OperationGuide.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.OutMerchantSortingCenter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Province.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.RoleCity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEB.PMSOpenService.Station.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RequisitionedService\LoanService.wsdl" />
+    <None Include="Service References\RequisitionedService\LoanService.xsd" />
+    <None Include="Service References\RequisitionedService\LoanService1.wsdl" />
+    <None Include="Service References\RequisitionedService\LoanService1.xsd" />
+    <None Include="Service References\RequisitionedService\LoanService2.xsd" />
+    <None Include="Service References\RequisitionedService\LoanService3.xsd" />
+    <None Include="Service References\RequisitionedService\LoanService4.xsd" />
+    <None Include="Service References\RequisitionedService\RFD.FMS.WEB.RequisitionedService.DealResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RequisitionedService\RFD.FMS.WEB.RequisitionedService.LoanInfoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RequisitionedService\LoanService.disco" />
+    <None Include="Service References\RequisitionedService\configuration91.svcinfo" />
+    <None Include="Service References\RequisitionedService\configuration.svcinfo" />
+    <None Include="Service References\RequisitionedService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ScriptsNew\frame.js" />
+    <Content Include="ScriptsNew\Images\16\attach.gif" />
+    <Content Include="ScriptsNew\Images\16\mark.gif" />
+    <Content Include="ScriptsNew\Images\16\roll.gif" />
+    <Content Include="ScriptsNew\Images\blank.gif" />
+    <Content Include="ScriptsNew\Images\childmenu.gif" />
+    <Content Include="ScriptsNew\Images\close.gif" />
+    <Content Include="ScriptsNew\Images\collapse.gif" />
+    <Content Include="ScriptsNew\Images\colorpalette_close.gif" />
+    <Content Include="ScriptsNew\Images\colorpalette_nocolor.gif" />
+    <Content Include="ScriptsNew\Images\colorpalette_over140.gif" />
+    <Content Include="ScriptsNew\Images\colorpalette_over216.gif" />
+    <Content Include="ScriptsNew\Images\colorpalette_switch.gif" />
+    <Content Include="ScriptsNew\Images\colorpicker_down.gif" />
+    <Content Include="ScriptsNew\Images\colorpicker_up.gif" />
+    <Content Include="ScriptsNew\Images\dropdown.gif" />
+    <Content Include="ScriptsNew\Images\dropleft.gif" />
+    <Content Include="ScriptsNew\Images\dropup.gif" />
+    <Content Include="ScriptsNew\Images\expand.gif" />
+    <Content Include="ScriptsNew\Images\switch_1.gif" />
+    <Content Include="ScriptsNew\Images\switch_2.gif" />
+    <Content Include="ScriptsNew\Images\vista\burl_0a.gif" />
+    <Content Include="ScriptsNew\Images\vista\burl_0b.gif" />
+    <Content Include="ScriptsNew\Images\vista\burl_1a.gif" />
+    <Content Include="ScriptsNew\Images\vista\burl_1b.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_0a.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_0b.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_0c.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_1a.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_1b.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_1c.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_2a.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_2b.gif" />
+    <Content Include="ScriptsNew\Images\vista\checkbox_2c.gif" />
+    <Content Include="ScriptsNew\Images\vista\gif\folder.gif" />
+    <Content Include="ScriptsNew\Images\vista\gif\html.gif" />
+    <Content Include="ScriptsNew\Images\vista\gif\mute.gif" />
+    <Content Include="ScriptsNew\Images\vista\gif\rollback.gif" />
+    <Content Include="ScriptsNew\Images\vista\gif\site.gif" />
+    <Content Include="ScriptsNew\Images\vista\gif\user.gif" />
+    <Content Include="ScriptsNew\Images\vista\png\folder.png" />
+    <Content Include="ScriptsNew\Images\vista\png\html.png" />
+    <Content Include="ScriptsNew\Images\vista\png\mute.png" />
+    <Content Include="ScriptsNew\Images\vista\png\rollback.png" />
+    <Content Include="ScriptsNew\Images\vista\png\site.png" />
+    <Content Include="ScriptsNew\Images\vista\png\user.png" />
+    <Content Include="ScriptsNew\Images\vista\radio_0a.gif" />
+    <Content Include="ScriptsNew\Images\vista\radio_0b.gif" />
+    <Content Include="ScriptsNew\Images\vista\radio_0c.gif" />
+    <Content Include="ScriptsNew\Images\vista\radio_1a.gif" />
+    <Content Include="ScriptsNew\Images\vista\radio_1b.gif" />
+    <Content Include="ScriptsNew\Images\vista\radio_1c.gif" />
+    <Content Include="ScriptsNew\Navigation.js" />
+    <Content Include="ScriptsNew\Root.TreeView.js" />
+    <Content Include="Scripts\finance\finance.search.new.js" />
+    <Content Include="Scripts\finance\finance.search.page.new.js" />
+    <Content Include="Scripts\imgs\btn.gif" />
+    <Content Include="Scripts\imgs\btnleft.gif" />
+    <Content Include="Scripts\imgs\btnright.gif" />
+    <Content Include="Scripts\imgs\close.gif" />
+    <Content Include="Scripts\imgs\loading.gif" />
+    <Content Include="Scripts\imgs\tab1.gif" />
+    <Content Include="Scripts\imgs\tab1_bottom.gif" />
+    <Content Include="Scripts\imgs\tab2.gif" />
+    <Content Include="Scripts\imgs\tab2_bottom.gif" />
+    <Content Include="Scripts\imgs\tab3.gif" />
+    <Content Include="Scripts\imgs\tab3_bottom.gif" />
+    <Content Include="Scripts\import\container.js" />
+    <Content Include="Scripts\import\left.js" />
+    <Content Include="Scripts\import\menu.js" />
+    <Content Include="Scripts\import\menubar.js" />
+    <Content Include="Scripts\plugins\tab\jquery-tab.css" />
+    <Content Include="Scripts\plugins\tab\jquery.tab.js" />
+    <Content Include="Scripts\public.js" />
+    <None Include="Service References\PMSOpenService\PMSOpenService.disco" />
+    <None Include="Service References\PMSOpenService\configuration91.svcinfo" />
+    <None Include="Service References\PMSOpenService\configuration.svcinfo" />
+    <None Include="Service References\PMSOpenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SsoAuthHandler.aspx" />
+    <Content Include="StylesNew\frame.css" />
+    <Content Include="StylesNew\main.css" />
+    <Content Include="StylesNew\pager.css" />
+    <Content Include="StylesNew\tabpage.css" />
+    <Content Include="UserControl\MerchantSource.ascx" />
+    <Content Include="UserControl\StationCheckBox.ascx" />
+    <Content Include="UserControl\validate.aspx" />
+    <Content Include="UserControl\WareHouseCheckBox.ascx" />
+    <Content Include="css\finance.search.css" />
+    <Content Include="css\mainTmp.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\skin.css" />
+    <Content Include="css\superTables_compressed.css" />
+    <Content Include="FinancialManage\AuditDeliverFee.aspx" />
+    <Content Include="FinancialManage\DeliverFee.Master" />
+    <Content Include="AudiMgmt\FinanceSearch.Master" />
+    <Content Include="COD\COD.Master" />
+    <Content Include="FinancialManage\MerchantDeliverFee.Master" />
+    <None Include="jquery-easyui-1.2.4\demo\combobox_data.json" />
+    <None Include="jquery-easyui-1.2.4\demo\datagrid_data.json" />
+    <None Include="jquery-easyui-1.2.4\demo\datagrid_data2.json" />
+    <None Include="jquery-easyui-1.2.4\demo\datagrid_data3.json" />
+    <None Include="jquery-easyui-1.2.4\demo\form_data.json" />
+    <None Include="jquery-easyui-1.2.4\demo\propertygrid_data.json" />
+    <None Include="jquery-easyui-1.2.4\demo\treegrid_data.json" />
+    <None Include="jquery-easyui-1.2.4\demo\treegrid_data2.json" />
+    <None Include="jquery-easyui-1.2.4\demo\treegrid_data3.json" />
+    <None Include="jquery-easyui-1.2.4\demo\treegrid_subdata.json" />
+    <None Include="jquery-easyui-1.2.4\demo\tree_data.json" />
+    <None Include="jquery-easyui-1.2.4\themes\default\images\Thumbs.db" />
+    <None Include="jquery-easyui-1.2.4\themes\gray\images\Thumbs.db" />
+    <Content Include="FinancialManage\MerchantDeliverFeeMain.aspx" />
+    <Content Include="Scripts\controls\selectStationCommon.js" />
+    <None Include="UpFile\LogisticsDeliverycheck.xlsx" />
+    <None Include="UpFile\POS对账银行数据模板.xls" />
+    <None Include="UpFile\批量查询模板.xls" />
+    <None Include="UpFile\支出区域类型导入模板.xls" />
+    <None Include="UpFile\收入区域类型导入模板.xls" />
+    <None Include="UpFile\收入配送价格导入模板.xls" />
+    <None Include="UpFile\滞留订单数据模板.xls" />
+    <None Include="UpFile\滞留订单数据模板.xlsx" />
+    <None Include="UpFile\站点基本配送费模板.xls" />
+    <None Include="UpFile\记录回单时间模版.xls" />
+    <None Include="UpFile\费用月统计报表模板.xls" />
+    <None Include="UpFile\运单信息模板.xls" />
+    <None Include="UpFile\配送价格导入模板.xls" />
+    <Content Include="UserControl\ExpressListPopCommon.aspx" />
+    <Content Include="UserControl\SelectStationCommon.ascx" />
+    <Content Include="UserControl\SelectEmployeeTemp.ascx" />
+    <Content Include="UserControl\EmployeeListPopTemp.aspx" />
+    <Content Include="images\expand.gif" />
+    <Content Include="images\expandCheck.gif" />
+    <Content Include="Scripts\controls\selectStation.js" />
+    <Content Include="Scripts\DropDownCheckList.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AudiMgmt\OrderMoneyStoreReport.aspx" />
+    <Content Include="css\Report.css" />
+    <Content Include="css\main.css" />
+    <Content Include="FinancialManage\MaintainDeliverFee.aspx" />
+    <Content Include="FinancialManage\MerchantDeliverFeeHistory.aspx" />
+    <Content Include="FinancialManage\QueryDeliverFee.aspx" />
+    <Content Include="FinancialManage\StationDeliverFeeHistory.aspx" />
+    <Content Include="FinancialManage\UpdateDeliverFee.aspx" />
+    <Content Include="FinancialManage\DeliverFeeStatReport.aspx" />
+    <Content Include="FinancialManage\ExpressPriceManage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\QueryList.gif" />
+    <Content Include="Scripts\extends\array.extends.js" />
+    <Content Include="Scripts\extends\jquery.extends.js" />
+    <Content Include="Scripts\extends\object.extends.js" />
+    <Content Include="Scripts\finance\finance.check.page.js" />
+    <Content Include="Scripts\finance\finance.deliverfee.js" />
+    <Content Include="Scripts\finance\finance.deliverfee.page.js" />
+    <Content Include="Scripts\finance\finance.deliverfee.validate.js" />
+    <Content Include="images\menu_bg.gif" />
+    <Content Include="images\menu_bg1.gif" />
+    <Content Include="images\menu_bg2.gif" />
+    <Content Include="images\menu_bgs.gif" />
+    <Content Include="images\menu_topline.gif" />
+    <Content Include="images\rfd_excel_logo1.jpg" />
+    <Content Include="images\rfd_excel_logo2.jpg" />
+    <Content Include="Scripts\finance\finance.search.page.js" />
+    <Content Include="Scripts\finance\finance.search.js" />
+    <Content Include="Scripts\finance\finance.util.js" />
+    <Content Include="Scripts\base.js" />
+    <Content Include="Scripts\import\check.js" />
+    <Content Include="Scripts\import\common.js" />
+    <Content Include="Scripts\import\deliverfee.update.js" />
+    <Content Include="Scripts\import\deliverfee.js" />
+    <Content Include="Scripts\import\search.js" />
+    <Content Include="Scripts\jquery-gridhover.js" />
+    <Content Include="Scripts\lib\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\lib\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\plugins\alert\images\help.gif" />
+    <Content Include="Scripts\plugins\alert\images\important.gif" />
+    <Content Include="Scripts\plugins\alert\images\info.gif" />
+    <Content Include="Scripts\plugins\alert\images\title.gif" />
+    <Content Include="Scripts\plugins\alert\jquery.alerts.css" />
+    <Content Include="Scripts\plugins\alert\jquery.alerts.js" />
+    <Content Include="Scripts\plugins\table\jquery.supertable.compressed.js" />
+    <Content Include="Scripts\plugins\table\jquery.supertable.js" />
+    <Content Include="Scripts\plugins\progress\jquery.waterfall.js" />
+    <None Include="UpFile\配送商发货导入模板.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PMSOpenService\" />
+    <WCFMetadataStorage Include="Service References\RequisitionedService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="css\images\" />
+    <Folder Include="file\Excel\2012\10\16\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13596</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

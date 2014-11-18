@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object id="oracle_areaExpressLevelIncomeService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaExpressLevelIncomeService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_areaExpressLevelIncomeDao"  ref="oracle_areaExpressLevelIncomeDao"/>
+  </object>
+  <object id ="oracle_codWaybillFeeCheckService" type="RFD.FMS.SerivceImpl.QueryStatistics.CODWaybillFeeCheckService,RFD.FMS.ServiceImpl" lazy-init ="true">
+    <property name="Dao" ref="oracle_codWaybillFeeCheckDao"/>
+  </object>
+  <object id="oracle_deliveryPriceService" type="RFD.FMS.ServiceImpl.BasicSetting.DeliveryPriceService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_deliveryPriceDao"  ref="oracle_deliveryPriceDao"/>
+  </object>
+  <object id ="oracle_statusInfoService" type="RFD.FMS.ServiceImpl.BasicSetting.StatusInfoService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_statusInfoDao" ref="oracle_statusInfoDao"/>
+  </object>
+  <object id ="oracle_waybillForIncomeBaseInfoService" type="RFD.FMS.ServiceImpl.FinancialManage.WaybillForIncomeBaseInfoService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_waybillForIncomeBaseInfoDao" ref="oracle_waybillForIncomeBaseInfoDao"/>
+  </object>
+  <object id ="oracle_merchantService" type="RFD.FMS.ServiceImpl.BasicSetting.MerchantService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_merchantDao" ref="oracle_merchantDao"/>
+  </object>
+
+  <object id ="oracle_statusCodeService" type="RFD.FMS.ServiceImpl.BasicSetting.StatusCodeService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_statusCodeInfoDao"  ref="oracle_statusCodeInfoDao"/>
+  </object>
+  <object id="oracle_areaExpressLevelService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaExpressLevelService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_areaExpressLevelDao"  ref="oracle_areaExpressLevelDao"/>
+  </object>
+  <object id="oracle_AreaExpressLevelService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaExpressLevelService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_areaExpressLevelDao"  ref="oracle_areaExpressLevelDao"/>
+  </object>
+  <object id="oracle_typeRelationService" type="RFD.FMS.ServiceImpl.BasicSetting.TypeRelationService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_typeRelationDao"  ref="oracle_typeRelationDao"/>
+  </object>
+
+  <object id="oracle_merchantDeliverFee" type="RFD.FMS.ServiceImpl.FinancialManage.MerchantDeliverFee,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_merchantDeliverFeeDao"  ref="oracle_merchantDeliverFeeDao"/>
+    <property name="_accountOperatorLogDao"  ref="oracle_accountOperatorLogDao"></property>
+  </object>
+
+  <object id="oracle_deliverFeeService" type="RFD.FMS.ServiceImpl.BasicSetting.DeliverFeeService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_fMS_MerchantDeliverFeeDao"  ref="oracle_fMS_MerchantDeliverFeeDao"/>
+    <property name="_accountOperatorLogDao"  ref="oracle_accountOperatorLogDao"/>
+  </object>
+
+   <object id="oracle_expressCompanyService" type="RFD.FMS.ServiceImpl.BasicSetting.ExpressCompanyService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="expressCompanyDao" ref="oracle_expressCompanyDao"/>
+  </object>
+
+  <object id="oracle_province" type="RFD.FMS.ServiceImpl.BasicSetting.Province,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_provinceDao"  ref="oracle_provinceDao"></property>
+  </object>
+  <object id="oracle_cityService" type="RFD.FMS.ServiceImpl.BasicSetting.CityService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cityDao"  ref="oracle_cityDao"></property>
+  </object>
+  <object id="oracle_areaService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_areaDao"  ref="oracle_areaDao"></property>
+  </object>
+  <object id="oracle_incomeAccountService" type="RFD.FMS.ServiceImpl.FinancialManage.IncomeAccountService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name ="_incomeAccountDao" ref="oracle_incomeaccountDao"></property>
+  </object>
+  <object id="oracle_cODAccountService" type="RFD.FMS.ServiceImpl.COD.CODAccountService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cODAccountDao"  ref="oracle_cODAccountDao"></property>
+  </object>
+
+  <object id="oracle_logisticsDeliveryService" type="RFD.FMS.ServiceImpl.COD.LogisticsDeliveryService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_logisticsDeliveryDao"  ref="oracle_logisticsDeliveryDao"></property>
+  </object>
+
+  <object id="oracle_cODTransferService" type="RFD.FMS.ServiceImpl.QueryStatistics.CODTransferService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cODTransferDao"  ref="oracle_cODTransferDao"></property>
+  </object>
+
+  <object id="oracle_requisitionedForm" type="RFD.FMS.ServiceImpl.COD.RequisitionedForm,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_requisitionedFormDAL"  ref="oracle_requisitionedFormDAL"></property>
+  </object>
+  
+  <object id="oracle_iDGenerateService" type="RFD.FMS.ServiceImpl.BasicSetting.IDGenerateService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_noGenerateDao"  ref="oracle_noGenerateDao"/>
+  </object>
+
+  <object id="oracle_accountOperatorLogService" type="RFD.FMS.ServiceImpl.COD.AccountOperatorLogService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_accountOperatorLogDao"  ref="oracle_accountOperatorLogDao"/>
+  </object>
+  <object id="oracle_codBaseInfoService" type="RFD.FMS.ServiceImpl.COD.CODBaseInfoService,RFD.FMS.ServiceImpl" lazy-init ="true" >
+    <property name ="_cODBaseInfoDao" ref ="oracle_codbaseinfoDao" />
+  </object>
+
+  <object id="oracle_sortingFeeService" type="RFD.FMS.ServiceImpl.SortingManage.SortingFeeService,RFD.FMS.ServiceImpl" lazy-init ="true">
+    <property name ="_feeDao" ref="oracle_sortingFeeDao"></property>
+    <property name ="_accountOperatorLogDao" ref="oracle_accountOperatorLogDao"></property>
+  </object>
+
+  <object id="oracle_distributionService" type="RFD.FMS.ServiceImpl.BasicSetting.DistributionService,RFD.FMS.ServiceImpl" lazy-init ="true">
+    <property name ="distributionDao" ref="oracle_distributionDao"></property>
+  </object>
+
+  <object id="oracle_accountPeriodService" type="RFD.FMS.ServiceImpl.BasicSetting.AccountPeriodService,RFD.FMS.ServiceImpl" lazy-init ="true">
+    <property name ="_accountPeriodDao" ref="oracle_accountPeriodDao"></property>
+  </object>
+
+  <object id="oracle_fMS_CODService" type="RFD.FMS.ServiceImpl.COD.FMS_CODService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <constructor-arg name="dao" ref="oracle_fMS_CODDao" />
+  </object>
+
+  <object id ="oracle_SortingTransferDetailService" type="RFD.FMS.ServiceImpl.FinancialManage.SortingTransferDetailService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_sortingTransferDetailDao" ref="oracle_sortingTransferDetailDao"/>
+  </object>
+
+  <object id="oracle_SortingTransferSearchingService" type ="RFD.FMS.ServiceImpl.FinancialManage.SortingTransferSearchingService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_sortingTransferSearchingDao" ref="oracle_sortingTransferSearchingDao"/>
+  </object>
+
+  <object id="oracle_IncomeBaseInfoService" type="RFD.FMS.ServiceImpl.FinancialManage.IncomeBaseInfoService,RFD.FMS.ServiceImpl">
+    <property name="Dao" ref="oracle_incomeBaseInfoDao"/>
+    <property name="FeeDao" ref="oracle_incomeFeeInfoDao"/>
+  </object>
+</objects>

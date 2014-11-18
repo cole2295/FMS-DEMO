@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vancl.SCMS.CommonModel.Stock" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vancl.SCMS.CommonModel.Stock" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLoanInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LoanInfoDto" nillable="true" type="tns:LoanInfoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoanInfoDto" nillable="true" type="tns:ArrayOfLoanInfoDto" />
+  <xs:complexType name="LoanInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Addressee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddresseePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Borrower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cashier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Maker" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProductTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PurposeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurposeNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoanInfoDto" nillable="true" type="tns:LoanInfoDto" />
+  <xs:complexType name="LoanModelDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddrType" type="tns:AddressType" />
+      <xs:element minOccurs="0" name="Borrower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ForeignAddress" nillable="true" type="tns:ForeignAddressInfo" />
+      <xs:element minOccurs="0" name="HomeAddress" nillable="true" type="tns:HomeAddressInfo" />
+      <xs:element minOccurs="0" name="Maker" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductList" nillable="true" type="tns:ArrayOfProductView" />
+      <xs:element minOccurs="0" name="PurposeNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransferID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransferWay" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoanModelDto" nillable="true" type="tns:LoanModelDto" />
+  <xs:simpleType name="AddressType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HomeAddr" />
+      <xs:enumeration value="ForeignAddr" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressType" nillable="true" type="tns:AddressType" />
+  <xs:complexType name="ForeignAddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postalcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ForeignAddressInfo" nillable="true" type="tns:ForeignAddressInfo" />
+  <xs:complexType name="HomeAddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Addressee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postalcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HomeAddressInfo" nillable="true" type="tns:HomeAddressInfo" />
+  <xs:complexType name="ArrayOfProductView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductView" nillable="true" type="tns:ProductView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductView" nillable="true" type="tns:ArrayOfProductView" />
+  <xs:complexType name="ProductView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SellPrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductView" nillable="true" type="tns:ProductView" />
+</xs:schema>

@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="IncomeAreaExpressLevel.master.cs" Inherits="RFD.FMS.WEB.BasicSetting.IncomeAreaExpressLevel" MasterPageFile="~/Main/main.Master"  %>
+
+<%@ Import Namespace="System.Data" %>
+<%@ Register Src="~/UserControl/PCASerach.ascx" TagName="UCPCASerach" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/MerchantSourceTV.ascx" TagName="UCMerchantSourceTV" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControl/WareHouseCheckBox.ascx" TagName="UCWareHouseCheckBox" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControl/Pager.ascx" TagName="UCPager" TagPrefix="uc4" %>
+<%@ Register Src="~/UserControl/GoodsCategoryCheckBox.ascx" TagName="UCGoodsCategoryCheckBox" TagPrefix="uc5" %>
+<%@ Register Src="~/UserControl/ExpressCompanyTV.ascx"  TagName="UCExpressCompanyTV"  TagPrefix="uc6" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript" src="~/Scripts/jquery-1.4.1.js"></script> 
+    <script language="javascript" type="text/javascript" >
+        var progressDialogFlag = true;
+        $(function () {
+            var buttons = {
+                btSearch: $.dom("btSearch", "input"),
+                btExprot: $.dom("btExport", "input")
+            };
+            buttons.btExprot.click(function () {
+                $(document).progressDialog.showDialog("导出中，请稍后...");
+            });
+            buttons.btSearch.click(function () {
+                if(progressDialogFlag)
+                    $(document).progressDialog.showDialog("查询中，请稍后...");
+            });
+        });
+
+        $(document).ready(function () {
+            $('#form1').submit(function () {
+                blockUIForDownload($('#<% =download_token_value.ClientID%>'), $('#<% =download_token_name.ClientID%>'));
+            });
+        });
+        var fileDownloadCheckTimer;
+        function blockUIForDownload(value, name) {
+            var token = new Date().getTime(); //use the current timestamp as the token value
+            value.val(token);
+            name.val(token + "token");
+            fileDownloadCheckTimer = window.setInterval(function () {
+                var cookieValue = $.cookie(name.val());
+                if (cookieValue == token)
+                    finishDownload(name);
+            }, 1000);
+        }
+
+        function finishDownload(name) {
+            window.clearInterval(fileDownloadCheckTimer);
+            $.cookie(name.val(), null);
+            $(document).progressDialog.hideDialog();
+            //alert("导出查询完成，点击保存");
+        }  
+
+        function JudgeInput() {
+            var checkBox = $('#<%= gvList.ClientID %>').find('input:checkbox[checked]').length;
+            if (checkBox <= 0) {
+                alert("没有选择行");
+                return false;
+            }
+
+            return true;
+        }
+
+        function JudgeInputSearch() {
+            var merchant = GetUseMerchantID();
+            if (merchant == "") {
+                alert("商家必选");
+                progressDialogFlag = false;
+                return false;
+            }
+
+            return true;
+        }
+
+        function ClientConfirm(msg) {
+            return !msg ? false : window.confirm(msg);
+        }
+
+        function fnOpenModalDialog(url, width, height) {
+            window.showModalDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+        }
+ 
+</script>
+
+<asp:ContentPlaceHolder ID="ContentPlaceHead" runat="server">
+</asp:ContentPlaceHolder>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <asp:HiddenField ID="download_token_name" runat="server" /> 
+    <asp:HiddenField ID="download_token_value" runat="server" />
+    <table>
+	<tr>
+		<td>省市区：</td>
+		<td><uc1:UCPCASerach ID="UCPCASerach" runat="server" /></td>
+		<td>区域类型：</td>
+		<td><asp:DropDownList ID="ddlAreaType" runat="server"></asp:DropDownList></td>
+		<td>商家：</td>
+		<td><uc2:UCMerchantSourceTV ID="UCMerchantSourceTV" runat="server" MerchantLoadType="All" MerchantShowCheckBox="False" MerchantTypeSource="jc_Merchant_Income" /></td>
+         
+        <td align="right">配送商：</td>
+        
+         <td><uc6:ucexpresscompanytv ID="UCExpressCompanyTV" runat="server" 
+                 ExpressLoadType="ThirdCompany" ExpressTypeSource="nk_Express" 
+                 ExpressCompanyShowCheckBox="False"  />
+         </td>
+	</tr>
+	<tr>
+		<td>分拣中心：</td>
+		<td><uc3:UCWareHouseCheckBox ID="UCWareHouseCheckBox" runat="server" LoadDataType="SortCenter" HouseCheckType="all" /></td>
+		<td>审批状态：</td>
+		<td><asp:DropDownList ID="ddlAudit" runat="server">
+                <asp:ListItem Value="">请选择</asp:ListItem>
+                <asp:ListItem Value="-1">待维护</asp:ListItem>
+                <asp:ListItem Value="0">未审核</asp:ListItem>
+                <asp:ListItem Value="1">已审核</asp:ListItem>
+                <asp:ListItem Value="2">已生效</asp:ListItem>
+                <asp:ListItem Value="3">已置回</asp:ListItem>
+        </asp:DropDownList></td>
+        <td>货物品类：</td>
+		<td>
+			<uc5:UCGoodsCategoryCheckBox ID="UCGoodsCategoryCheckBox" runat="server" />
+		</td>
+        <td colspan="2">
+            <asp:Button ID="btSearch" runat="server" Text="查询" onclick="btSearch_Click" OnClientClick="return JudgeInputSearch();" />
+			<asp:Button ID="btExport" runat="server" Text="导出" onclick="btExport_Click" />
+            <asp:Label ID="lbMsg" runat="server" ForeColor="Red"></asp:Label>
+        </td>
+	</tr>
+</table>
+<asp:ContentPlaceHolder ID="OperateContent" runat="server">
+</asp:ContentPlaceHolder>
+<uc4:UCPager ID="UCPager" runat="server" />
+<asp:Label ID="noData" runat="server" ForeColor="Red"></asp:Label>
+<asp:GridView ID="gvList" runat="server" AutoGenerateColumns="false" DataKeyNames="AutoID,AreaID,ExpressCompanyID,MerchantID,CityID,ProvinceID,ExpressID,ExpressName">
+	<Columns>
+        <asp:TemplateField HeaderText="选择">
+			<HeaderTemplate>
+				<input type="checkbox" id="cbCheckAll" onclick="fnCheckAllList($('#<%= gvList.ClientID %>'),this)" />全选
+			</HeaderTemplate>
+			<ItemTemplate>
+				<asp:CheckBox ID="cbCheckBox" runat="server" />
+			</ItemTemplate>
+		</asp:TemplateField>
+        <asp:BoundField HeaderText="序号" DataField="SerialNo" />
+		<asp:BoundField HeaderText="省份" DataField="ProvinceName" />
+		<asp:BoundField HeaderText="城市" DataField="CityName" />
+		<asp:BoundField HeaderText="地区" DataField="AreaName" />
+		<asp:BoundField HeaderText="分拣中心" DataField="CompanyName" />
+		<asp:BoundField HeaderText="商家" DataField="MerchantName" />
+        <asp:BoundField HeaderText="货物品类" DataField="goodscategoryname" />
+         <asp:BoundField HeaderText="配送商" DataField="ExpressName" />	
+		<asp:BoundField HeaderText="生效区域类型" DataField="AreaTypeStr" />
+		<asp:BoundField HeaderText="待生效区域类型" DataField="EffectAreaType" />
+		<asp:BoundField HeaderText="生效状态" DataField="EnableStr" />
+		<asp:BoundField HeaderText="审批状态" DataField="AuditStatusStr" />	
+        <asp:BoundField HeaderText="生效日期" DataField="DoDate" />	
+      
+        <asp:TemplateField HeaderText="查看操作日志">
+			<ItemTemplate>
+                <asp:PlaceHolder ID="PlaceHolder1" runat="server" Visible='<%# string.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "AutoID").ToString())?false:true %>'>
+				<a href="javascript:fnOpenModalDialog('OperateLogView.aspx?PK_NO=<%#((DataRowView)Container.DataItem)["AutoID"] %>&LogType=6',800,400);">查看操作日志</a>
+                </asp:PlaceHolder>
+			</ItemTemplate>
+		</asp:TemplateField>
+	</Columns>
+</asp:GridView>
+</asp:Content>

@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DeliveryPrice.master.cs" Inherits="RFD.FMS.WEB.COD.DeliveryPrice" MasterPageFile="~/Main/main.Master" %>
+
+<%@ Register Src="~/UserControl/SelectStationCommon.ascx" TagName="UCSelectStation" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/MerchantSourceTV.ascx" TagName="UCMerchantSourceTV" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControl/Pager.ascx" TagName="UCPager" TagPrefix="uc2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script type="text/javascript">
+	function fnOpenModalDialog(url, width, height) {
+		window.showModalDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+	}
+
+	function fnOpenModelessDialog(url, width, height) {
+		window.showModelessDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+	}
+
+	function fnOpenWindow(url, width, height) {
+		window.open(url, 'newwindow', 'height=' + height + ',width=' + width + ',top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no') 
+	}
+
+	function ClientConfirm(msg) {
+		return !msg ? false : window.confirm(msg);
+	}
+
+	function fnCheckAllList(LE,E) {
+		LE.find('input:checkbox').attr('checked', !E.checked)
+	}
+
+</script>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
+<asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+	<table style="margin:5px; line-height:25px;">
+		<tr>
+			<td>配送商：</td>
+			<td><uc1:UCSelectStation runat="server" ID="ucSelectStation" LoadDataType="OnlySite" /></td>
+			<td>线路状态：</td>
+			<td><asp:DropDownList ID="LineStatus" runat="server">
+				</asp:DropDownList></td>
+			<td>审核状态：</td>
+			<td><asp:DropDownList ID="AuditStatus" runat="server">
+				</asp:DropDownList></td>
+		</tr>
+		<tr>
+			<td>区域类型：</td>
+			<td><asp:DropDownList ID="AreaType" runat="server">
+				</asp:DropDownList></td>
+			<%--<td>发货仓库：</td>
+			<td><asp:DropDownList ID="wareHouse" runat="server">
+				</asp:DropDownList></td>--%>
+			<td>商家：</td>
+			<td>
+			    <uc3:UCMerchantSourceTV ID="UCMerchantSourceTV" runat="server" MerchantLoadType="All" MerchantShowCheckBox="False" MerchantTypeSource="jc_Merchant_Expense" />
+			</td>
+			<td>
+                <asp:CheckBox runat="server" ID="cbWaitEffect" Text="待生效" />
+                <asp:DropDownList ID="ddlIsCod" runat="server">
+                    <asp:ListItem Value="-1">全部</asp:ListItem>
+                    <asp:ListItem Value="0">不区分COD</asp:ListItem>
+                    <asp:ListItem Value="1">区分COD</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+			<td><asp:Button runat="server" ID="btSearch" Text="查询" onclick="btSearch_Click" /></td>
+		</tr>
+	</table>
+	
+	<asp:ContentPlaceHolder ID="OperateContent" runat="server">
+	</asp:ContentPlaceHolder>
+	
+	<uc2:UCPager ID="pager" runat="server" PageSize="100" />
+	<asp:Label ID="noData" runat="server" ForeColor="Red"></asp:Label>
+	<asp:GridView runat="server" ID="gvList" AutoGenerateColumns="false" DataKeyNames="CODLineNO,LineID">
+		<Columns>
+			<asp:TemplateField HeaderText="选择">
+				<HeaderTemplate>
+					<input type="checkbox" id="cbCheckAll" onclick="fnCheckAllList($('#<%= gvList.ClientID %>'),this)" />全选
+				</HeaderTemplate>
+				<ItemTemplate>
+					<asp:CheckBox ID="cbCheck" runat="server" />
+				</ItemTemplate>
+			</asp:TemplateField>
+			<asp:BoundField HeaderText="LineID" DataField="LineID" Visible="false" />
+			<asp:BoundField HeaderText="价格配置编号" DataField="CODLineNO" />
+			<asp:BoundField HeaderText="ExpressCompanyID" DataField="ExpressCompanyID" Visible="false" />
+			<asp:BoundField HeaderText="配送商" DataField="CompanyName" />
+			<%--<asp:BoundField HeaderText="IsEchelon" DataField="IsEchelon" Visible="false" />
+			<asp:BoundField HeaderText="是否按发货地梯次收费" DataField="IsEchelonStr" />
+			<asp:BoundField HeaderText="WareHouseID" DataField="WareHouseID" Visible="false" />
+			<asp:BoundField HeaderText="仓库/分拣中心" DataField="WarehouseName" />--%>
+			<asp:BoundField HeaderText="商家" DataField="MerchantName" />
+			<asp:BoundField HeaderText="区域类型" DataField="AreaType" />
+            <asp:BoundField HeaderText="是否区分COD" DataField="IsCODStr" />
+			<asp:BoundField HeaderText="COD计算公式（元|票）" DataField="PriceFormula" />
+            <asp:BoundField HeaderText="非COD计算公式（元|票）" DataField="Formula" />
+			<asp:BoundField HeaderText="LineStatus" DataField="LineStatus" Visible="false" />
+			<asp:BoundField HeaderText="线路状态" DataField="LineStatusStr" />
+			<asp:BoundField HeaderText="AuditStatus" DataField="AuditStatus" Visible="false" />
+			<asp:BoundField HeaderText="审核状态" DataField="AuditStatusStr" />
+			<asp:BoundField HeaderText="生效日期" DataField="EffectDate" DataFormatString="{0:yyyy-MM-dd}" />
+			<asp:BoundField HeaderText="最后修改" DataField="UpdateBy" />
+		</Columns>
+	</asp:GridView>
+</asp:Content>

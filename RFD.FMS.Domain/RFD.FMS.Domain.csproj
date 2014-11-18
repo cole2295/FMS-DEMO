@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D37AAD95-DCA2-4D51-9533-098C32D8C22D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.FMS.Domain</RootNamespace>
+    <AssemblyName>RFD.FMS.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudiMgmt\IBankPosCheckDao.cs" />
+    <Compile Include="AudiMgmt\IFinanceDao.cs" />
+    <Compile Include="AudiMgmt\IMoneyStoreDao.cs" />
+    <Compile Include="BasicSetting\IAccountPeriodDao.cs" />
+    <Compile Include="BasicSetting\IAreaDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IAreaExpressLevelDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IAreaExpressLevelIncomeDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\ICityDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IDeliveryPriceDao.cs" />
+    <Compile Include="BasicSetting\IExpressCompanyDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IExpressPriceDao.cs" />
+    <Compile Include="BasicSetting\IGoodsCategoryDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IMenuDao.cs" />
+    <Compile Include="BasicSetting\IMerchantDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\INoGenerateDao.cs" />
+    <Compile Include="BasicSetting\IProvinceDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IStatusCodeInfoDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IStatusInfoDao.cs" />
+    <Compile Include="BasicSetting\ITypeRelationDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IUserDao.cs" />
+    <Compile Include="BasicSetting\IWareHouseDao.cs" />
+    <Compile Include="BasicSetting\IWarehouseSortRelationDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSetting\IWaybillStatusChangeLogDao.cs" />
+    <Compile Include="COD\IAccountOperatorLogDao.cs" />
+    <Compile Include="COD\ICODAccountDao.cs" />
+    <Compile Include="COD\IFMS_CODDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="COD\IDistributionFeeDao.cs" />
+    <Compile Include="COD\ICODBaseInfoDao.cs" />
+    <Compile Include="COD\IRequisitionedFormDAL.cs" />
+    <Compile Include="FinancialManage\IAreaDeductErrorInfoService.cs" />
+    <Compile Include="FinancialManage\IDeliverFeeStatDao.cs" />
+    <Compile Include="FinancialManage\IExpressChangeDataDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\IFMS_DeductBaseInfoDao.cs" />
+    <Compile Include="FinancialManage\IFMS_MerchantDeliverFeeDao.cs" />
+    <Compile Include="FinancialManage\IFMS_StationDailyFinanceDetailsDao.cs" />
+    <Compile Include="FinancialManage\IFMS_StationDailyFinanceSumDao.cs" />
+    <Compile Include="FinancialManage\IIncomeAccountDao.cs" />
+    <Compile Include="FinancialManage\IIncomeBaseInfoDao.cs" />
+    <Compile Include="FinancialManage\IIncomeFeeInfoDao.cs" />
+    <Compile Include="FinancialManage\IMerchantDeliverFeeDao.cs" />
+    <Compile Include="FinancialManage\IReceiveFeeInfoDao.cs" />
+    <Compile Include="FinancialManage\ISortingTransferDetailDao.cs" />
+    <Compile Include="FinancialManage\ISortingTransferSearchingDao.cs" />
+    <Compile Include="FinancialManage\IWaybillDao.cs" />
+    <Compile Include="FinancialManage\IWaybillForIncomeBaseInfoDao.cs" />
+    <Compile Include="COD\ILogisticsDeliveryDao.cs" />
+    <Compile Include="FinancialManage\IFMS_ReceiveFeeInfoDao.cs" />
+    <Compile Include="BasicSetting\IDistributionDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStatistics\ICODTransferDao.cs" />
+    <Compile Include="QueryStatistics\ICODWaybillFeeCheckDao.cs" />
+    <Compile Include="SortingManage\ISortingFeeDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.Util\RFD.FMS.Util.csproj">
+      <Project>{C03634A1-391C-4E80-9611-6F666AEE72F2}</Project>
+      <Name>RFD.FMS.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.MODEL\RFD.FMS.MODEL.csproj">
+      <Project>{C01A862A-8684-4A4C-B478-999BC5C8BF75}</Project>
+      <Name>RFD.FMS.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SqlDaoConfig.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OracleDaoConfig.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AllDaoConfig.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

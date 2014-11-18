@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C03634A1-391C-4E80-9611-6F666AEE72F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.FMS.Util</RootNamespace>
+    <AssemblyName>RFD.FMS.Util</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsian, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\iTextAsian.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.2.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Vbe.Interop\14.0.0.0__71e9bce111e9429c\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.DDF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.DDF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HPSF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.HPSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HSSF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.HSSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.POIFS, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.POIFS.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Util, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp, Version=0.64.3890.29348, Culture=neutral, PublicKeyToken=20de82c62b055c88, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.0.20001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vancl.LMS.Framework.Caching, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Vancl.LMS.Framework.Caching.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConfigHelper.cs" />
+    <Compile Include="AsyncTaskHelper.cs" />
+    <Compile Include="CodeTimer.cs" />
+    <Compile Include="ConfigUtil.cs" />
+    <Compile Include="ConRalationList.cs" />
+    <Compile Include="DateHelper.cs" />
+    <Compile Include="Export\ExportModel.cs" />
+    <Compile Include="FtpControl.cs" />
+    <Compile Include="ArrayUtil.cs" />
+    <Compile Include="BarCode\Code128Content.cs" />
+    <Compile Include="BarCode\Code128Rendering.cs" />
+    <Compile Include="BaseTypeExtension.cs" />
+    <Compile Include="Cache\ICacheProvider.cs" />
+    <Compile Include="Cache\MemcachedProvider.cs" />
+    <Compile Include="Cache\StaticMemcachedClient.cs" />
+    <Compile Include="ChsSpell.cs" />
+    <Compile Include="MemoryTributary.cs" />
+    <Compile Include="OraclePageCommon\IPagedList.cs" />
+    <Compile Include="OraclePageCommon\PageCommon.cs" />
+    <Compile Include="OraclePageCommon\PagedList.cs" />
+    <Compile Include="OraclePageCommon\PaginatorDTO.cs" />
+    <Compile Include="ReflectionHelp.cs" />
+    <Compile Include="ControlHelper\DataTableHelper.cs" />
+    <Compile Include="ControlHelper\TreeViewHelper.cs" />
+    <Compile Include="DataConvert.cs" />
+    <Compile Include="EnumDescription.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Context\NeutralContext.cs" />
+    <Compile Include="ControlHelper\DropDownListHelper.cs">
+    </Compile>
+    <Compile Include="ControlHelper\GridViewHelper.cs" />
+    <Compile Include="CookieUtil.cs" />
+    <Compile Include="CSVExport.cs" />
+    <Compile Include="Debug\Assert.cs" />
+    <Compile Include="EnumUtil.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="ExcelWriter.cs" />
+    <Compile Include="Export\HtmlToPdfBuilder.cs" />
+    <Compile Include="FileIO.cs" />
+    <Compile Include="HttpPostUtil.cs" />
+    <Compile Include="JasonHelper.cs" />
+    <Compile Include="JsonObjectFormatter.cs" />
+    <Compile Include="LinqExtension.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="LoginUser.cs" />
+    <Compile Include="MailContentUtil.cs" />
+    <Compile Include="Money.cs" />
+    <Compile Include="ObjectSqlGenerator.cs" />
+    <Compile Include="GDIPlusPrinterHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CrossDomainProxyObject.cs" />
+    <Compile Include="RegexHelper.cs" />
+    <Compile Include="SearchControlHelper.cs" />
+    <Compile Include="SearchControlHelperOracle.cs" />
+    <Compile Include="Security\CookiesEncrypt.cs" />
+    <Compile Include="Security\DES.cs" />
+    <Compile Include="Security\MD5.cs" />
+    <Compile Include="SerializeHelper.cs" />
+    <Compile Include="ServiceLocator.cs" />
+    <Compile Include="Service\ServiceFilePathManager.cs" />
+    <Compile Include="Service\WindowsServiceException.cs" />
+    <Compile Include="SqlSecurity\SqlInjectionBaseTypeExtension.cs" />
+    <Compile Include="SqlSecurity\SqlInjectionRegexFilter.cs" />
+    <Compile Include="SqlSecurity\CheckUserLoginModule.cs" />
+    <Compile Include="StringUtil.cs" />
+    <Compile Include="Trace\LogTracker.cs" />
+    <Compile Include="Trace\TraceLevel.cs" />
+    <Compile Include="Trace\TrackModel.cs" />
+    <Compile Include="UICustomerException.cs" />
+    <Compile Include="WebExtension\WebHttpContext.cs" />
+    <Compile Include="XmlHelper.cs" />
+    <Compile Include="ZipUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oracle.ApplicationBlocks.Data\Oracle.ApplicationBlocks.Data.csproj">
+      <Project>{77AEFE9A-2029-4E7B-A868-B057BE4E85EA}</Project>
+      <Name>Oracle.ApplicationBlocks.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

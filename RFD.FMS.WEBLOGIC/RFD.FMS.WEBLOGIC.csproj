@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AAC6D97-1473-4868-B5E9-EB563DE42B7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.FMS.WEBLOGIC</RootNamespace>
+    <AssemblyName>RFD.FMS.WEBLOGIC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\RFD.FMS.WEB\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="NPOI, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.DDF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.DDF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HPSF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.HPSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.HSSF, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.HSSF.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.POIFS, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.POIFS.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Util, Version=1.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vancl.TML.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Vancl.TML.ServiceInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudiMgmt\BankPosCheckService.cs" />
+    <Compile Include="BasicSetting\AccountPeriodService.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelIncomeService.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelService.cs" />
+    <Compile Include="BasicSetting\AreaService.cs" />
+    <Compile Include="BasicSetting\CityService.cs" />
+    <Compile Include="BasicSetting\DistributionService.cs" />
+    <Compile Include="BasicSetting\ExpressCompanyService.cs" />
+    <Compile Include="BasicSetting\Province.cs" />
+    <Compile Include="BasicSetting\StatusInfoService.cs" />
+    <Compile Include="BasicSetting\TypeRelationService.cs" />
+    <Compile Include="BasicSetting\WarehouseSortRelationService.cs" />
+    <Compile Include="BasicSetting\GoodsCategoryService.cs" />
+    <Compile Include="BasicSetting\WaybillStatusChangeLogService.cs" />
+    <Compile Include="BasicSetting\WaybillStatusDeal.cs" />
+    <Compile Include="BusinessFacade\EmailService.cs" />
+    <Compile Include="COD\AccountOperatorLogService.cs" />
+    <Compile Include="COD\CODAccountService.cs" />
+    <Compile Include="COD\CODBaseInfoService.cs" />
+    <Compile Include="COD\FMS_CODService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="COD\DistributionFeeContractService.cs" />
+    <Compile Include="COD\DistributionFeeService.cs" />
+    <Compile Include="BasicSetting\DeliverFeeService.cs" />
+    <Compile Include="BasicSetting\DeliveryPriceService.cs" />
+    <Compile Include="FinancialManage\ExpressChangeDataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\ExpressPriceService.cs" />
+    <Compile Include="FinancialManage\DeductService.cs" />
+    <Compile Include="AudiMgmt\FinanceService.cs" />
+    <Compile Include="FinancialManage\DeliverFeeStatService.cs" />
+    <Compile Include="FinancialManage\FMSInterfaceService.cs" />
+    <Compile Include="FinancialManage\IncomeExpressReceiveFeeInfoObserver.cs" />
+    <Compile Include="FinancialManage\IncomeReceiveFeeInfoObserver.cs" />
+    <Compile Include="FinancialManage\MerchantDeliverFee.cs" />
+    <Compile Include="FinancialManage\SortingTransferDetailService.cs" />
+    <Compile Include="FinancialManage\SortingTransferSearchingService.cs" />
+    <Compile Include="FinancialManage\StationDailyService.cs" />
+    <Compile Include="FinancialManage\WaybillForIncomeBaseInfoService.cs" />
+    <Compile Include="FinancialManage\IncomeAccountService.cs" />
+    <Compile Include="BusinessFacade\LogService.cs" />
+    <Compile Include="FinancialManage\WaybillService.cs" />
+    <Compile Include="COD\LogisticsDeliveryService.cs" />
+    <Compile Include="BasicSetting\MerchantService.cs" />
+    <Compile Include="FinancialManage\IncomeBaseInfoService.cs" />
+    <Compile Include="Mail\Mail.cs" />
+    <Compile Include="AudiMgmt\MoneyStoreService.cs" />
+    <Compile Include="BasicSetting\NoGenerate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStatistics\CODTransferService.cs" />
+    <Compile Include="QueryStatistics\CODWaybillFeeCheckService.cs" />
+    <Compile Include="COD\RequisitionedForm.cs" />
+    <Compile Include="BasicSetting\Roleservice.cs" />
+    <Compile Include="BasicSetting\StatusCodeService.cs" />
+    <Compile Include="BasicSetting\UserService.cs" />
+    <Compile Include="BusinessFacade\FtpService.cs" />
+    <Compile Include="BasicSetting\WareHouseService.cs" />
+    <Compile Include="Service References\PMSOpenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SortingManage\SortingFeeService.cs" />
+    <Compile Include="SortingTransfer\WaybillStatusForSortingTransfer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.AdoNet\RFD.FMS.AdoNet.csproj">
+      <Project>{605AAD38-A148-45AE-9423-DC18E3FAF6DC}</Project>
+      <Name>RFD.FMS.AdoNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMS.Util\RFD.FMS.Util.csproj">
+      <Project>{C03634A1-391C-4E80-9611-6F666AEE72F2}</Project>
+      <Name>RFD.FMS.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.DAL.Oracle\RFD.FMS.DAL.Oracle.csproj">
+      <Project>{2A5D98F3-225A-475A-B168-F8A7B16A96A3}</Project>
+      <Name>RFD.FMS.DAL.Oracle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.DAL\RFD.FMS.DAL.csproj">
+      <Project>{E3B5DFB5-E710-4858-BBDC-8B155D273ADE}</Project>
+      <Name>RFD.FMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.Domain\RFD.FMS.Domain.csproj">
+      <Project>{D37AAD95-DCA2-4D51-9533-098C32D8C22D}</Project>
+      <Name>RFD.FMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.MODEL\RFD.FMS.MODEL.csproj">
+      <Project>{C01A862A-8684-4A4C-B478-999BC5C8BF75}</Project>
+      <Name>RFD.FMS.MODEL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.Proxy\RFD.FMS.Proxy.csproj">
+      <Project>{E9A0557A-F7D9-4CFA-8793-4EC4AB2311E2}</Project>
+      <Name>RFD.FMS.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.Service\RFD.FMS.Service.csproj">
+      <Project>{226AD3C4-2CCB-4ABB-91EB-01E2D1D0CC66}</Project>
+      <Name>RFD.FMS.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SqlForServiceConfig.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AllForServiceConfig.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.AgentRelationModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.City1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Distribution1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Employee1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.ExpressCompany1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.FetchArea1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.FetchAreaInfo1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.FetchCity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.FetchProvince1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Menu1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.MerchantBaseInfoModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Notice1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.OperationGuide1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.OutMerchantSortingCenter1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Province1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Role1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.RoleCity1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PMSOpenService\RFD.FMS.WEBLOGIC.PMSOpenService.Station1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PMSOpenService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PMSOpenService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PMSOpenService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PMSOpenService\PermissionOpenService1.wsdl" />
+    <None Include="Service References\PMSOpenService\PMSOpenService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PMSOpenService\PMSOpenService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PMSOpenService\PMSOpenService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PMSOpenService\PMSOpenService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PMSOpenService\PMSOpenService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PMSOpenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PMSOpenService\PMSOpenService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

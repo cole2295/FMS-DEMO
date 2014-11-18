@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<objects xmlns="http://www.springframework.net">
+
+  <!--基础信息设置-->
+  <object id="expressCompanyService" type="RFD.FMS.ServiceImpl.BasicSetting.ExpressCompanyService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="expressCompanyDao"  ref="expressCompanyDao"></property>
+  </object>
+  <object id="province" type="RFD.FMS.ServiceImpl.BasicSetting.Province,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_provinceDao"  ref="provinceDao"></property>
+  </object>
+  <object id="cityService" type="RFD.FMS.ServiceImpl.BasicSetting.CityService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cityDao"  ref="cityDao"></property>
+  </object>
+  <object id="areaService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_areaDao"  ref="areaDao"></property>
+  </object>
+  <object id="warehouseSortRelationService" type="RFD.FMS.ServiceImpl.BasicSetting.WarehouseSortRelationService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_warehouseSortRelationDao"  ref="warehouseSortRelationDao"></property>
+  </object>
+  <object id="merchantService" type="RFD.FMS.ServiceImpl.BasicSetting.MerchantService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_merchantDao"  ref="merchantDao"></property>
+  </object>
+  <object id="areaExpressLevelService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaExpressLevelService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_areaExpressLevelDao"  ref="areaExpressLevelDao"></property>
+  </object>
+  <object id="areaExpressLevelIncomeService" type="RFD.FMS.ServiceImpl.BasicSetting.AreaExpressLevelIncomeService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_areaExpressLevelIncomeDao"  ref="areaExpressLevelIncomeDao"/>
+  </object>
+  <object id="goodsCategoryService" type="RFD.FMS.ServiceImpl.BasicSetting.GoodsCategoryService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="Dao"  ref="goodsCategoryDao"/>
+  </object>
+  <object id="statusCodeService" type="RFD.FMS.ServiceImpl.BasicSetting.StatusCodeService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_statusCodeInfoDao"  ref="statusCodeInfoDao"/>
+  </object>
+  <object id="typeRelationService" type="RFD.FMS.ServiceImpl.BasicSetting.TypeRelationService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_typeRelationDao"  ref="typeRelationDao"/>
+  </object>
+
+  <object id="statusInfoService" type="RFD.FMS.ServiceImpl.BasicSetting.StatusInfoService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_statusInfoDao"  ref="statusInfoDao"/>
+  </object>
+  <object id="deliverFeeService" type="RFD.FMS.ServiceImpl.BasicSetting.DeliverFeeService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_fMS_MerchantDeliverFeeDao"  ref="fMS_MerchantDeliverFeeDao"/>
+    <property name="_accountOperatorLogDao"  ref="accountOperatorLogDao"/>
+  </object>
+  <object id="deliveryPriceService" type="RFD.FMS.ServiceImpl.BasicSetting.DeliveryPriceService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_deliveryPriceDao"  ref="deliveryPriceDao"/>
+  </object>
+  <object id="noGenerate" type="RFD.FMS.ServiceImpl.BasicSetting.NoGenerate,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_noGenerateDao"  ref="noGenerateDao"/>
+  </object>
+  <object id="userService" type="RFD.FMS.ServiceImpl.BasicSetting.UserService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_userDao"  ref="userDao"/>
+  </object>
+  <object id="wareHouseService" type="RFD.FMS.ServiceImpl.BasicSetting.WareHouseService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_wareHouseDao"  ref="wareHouseDao"/>
+  </object>
+  <object id="roleservice" type="RFD.FMS.ServiceImpl.BasicSetting.Roleservice,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_menuDao"  ref="menuDao"/>
+  </object>
+  <object id="iDGenerateService" type="RFD.FMS.ServiceImpl.BasicSetting.IDGenerateService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_noGenerateDao"  ref="noGenerateDao"/>
+  </object>
+  <object id="distributionService" type="RFD.FMS.ServiceImpl.BasicSetting.DistributionService,RFD.FMS.ServiceImpl" lazy-init="true" >
+    <property name="distributionDao" ref="distributionDao"/>
+  </object>
+  
+  <object id="accountOperatorLogService" type="RFD.FMS.ServiceImpl.COD.AccountOperatorLogService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_accountOperatorLogDao"  ref="accountOperatorLogDao"/>
+  </object>
+
+  <object id="accountPeriodService" type="RFD.FMS.ServiceImpl.COD.AccountPeriodService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_accountPeriodDao"  ref="accountPeriodDao"/>
+  </object>
+  
+  <!--财务相关-->
+  <object id="deductService" type="RFD.FMS.ServiceImpl.FinancialManage.DeductService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_fmsDeductBaseInfoDao"  ref="fmsDeductBaseInfoDao"/>
+  </object>
+  <object id="waybillService" type="RFD.FMS.ServiceImpl.FinancialManage.WaybillService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_waybillDao"  ref="waybillDao"/>
+  </object>
+  <object id="waybillForIncomeBaseInfoService" type="RFD.FMS.ServiceImpl.FinancialManage.WaybillForIncomeBaseInfoService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_waybillForIncomeBaseInfoDao"  ref="waybillForIncomeBaseInfoDao"/>
+  </object>
+  <object id="expressPriceService" type="RFD.FMS.ServiceImpl.FinancialManage.ExpressPriceService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_expressPriceDao"  ref="expressPriceDao"/>
+  </object>
+  <object id="deliverFeeStatService" type="RFD.FMS.ServiceImpl.FinancialManage.DeliverFeeStatService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_deliverFeeStatDao"  ref="deliverFeeStatDao"/>
+  </object>
+  <object id="incomeAccountService" type="RFD.FMS.ServiceImpl.FinancialManage.IncomeAccountService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_incomeAccountDao"  ref="incomeAccountDao"/>
+  </object>
+  <object id="merchantDeliverFee" type="RFD.FMS.ServiceImpl.FinancialManage.MerchantDeliverFee,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_merchantDeliverFeeDao"  ref="merchantDeliverFeeDao"></property>
+    <property name="_accountOperatorLogDao"  ref="accountOperatorLogDao"></property>
+  </object>
+
+  <!--COD-->
+  <object id="logisticsDeliveryService" type="RFD.FMS.ServiceImpl.COD.LogisticsDeliveryService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_logisticsDeliveryDao"  ref="logisticsDeliveryDao"></property>
+  </object>
+  <object id="distributionFeeService" type="RFD.FMS.ServiceImpl.COD.DistributionFeeService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_distributionFeeDao"  ref="distributionFeeDao"></property>
+  </object>
+  <object id="cODAccountService" type="RFD.FMS.ServiceImpl.COD.CODAccountService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cODAccountDao"  ref="cODAccountDao"></property>
+  </object>
+  <object id="requisitionedForm" type="RFD.FMS.ServiceImpl.COD.RequisitionedForm,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_requisitionedFormDAL"  ref="requisitionedFormDAL"></property>
+  </object>
+  <object id="cODBaseInfoService" type="RFD.FMS.ServiceImpl.COD.CODBaseInfoService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cODBaseInfoDao"  ref="cODBaseInfoDao"></property>
+  </object>
+
+  <!--查询统计-->
+  <object id="cODTransferService" type="RFD.FMS.ServiceImpl.QueryStatistics.CODTransferService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="_cODTransferDao"  ref="cODTransferDao"></property>
+  </object>
+
+  <object id="cODWaybillFeeCheckService" type="RFD.FMS.ServiceImpl.QueryStatistics.CODWaybillFeeCheckService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <property name="Dao"  ref="cODWaybillFeeCheckDao"></property>
+  </object>
+  
+  <object id="fMS_CODService" type="RFD.FMS.ServiceImpl.COD.FMS_CODService,RFD.FMS.ServiceImpl"  lazy-init="true">
+    <constructor-arg name="dao" ref="fMS_CODDao" />
+  </object>
+
+  <!--核对相关-->
+  <object id="bankPosCheckService" type="RFD.FMS.ServiceImpl.AudiMgmt.BankPosCheckService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_bankPosCheckDao"  ref="bankPosCheckDao"></property>
+  </object>
+  <object id="moneyStoreService" type="RFD.FMS.ServiceImpl.AudiMgmt.MoneyStoreService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_moneyStoreDao"  ref="moneyStoreDao"></property>
+  </object>
+  <object id="financeService" type="RFD.FMS.ServiceImpl.AudiMgmt.FinanceService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_financeDao"  ref="financeDao"></property>
+  </object>
+  <object id="stationDailyService" type="RFD.FMS.ServiceImpl.AudiMgmt.StationDailyService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_fMS_StationDailyFinanceDetailsDao"  ref="fMS_StationDailyFinanceDetailsDao"></property>
+    <property name="_fMS_StationDailyFinanceSumDao"  ref="fMS_StationDailyFinanceSumDao"></property>
+  </object>
+  <!--拣运相关-->
+  <object id="sortingFeeService" type="RFD.FMS.ServiceImpl.SortingManage.SortingFeeService,RFD.FMS.ServiceImpl" lazy-init ="true">
+    <property name ="_feeDao" ref="sortingFeeDao"></property>
+    <property name ="_accountOperatorLogDao" ref="accountOperatorLogDao"></property>
+  </object>
+  <object id="sortingTransferDetailService" type ="RFD.FMS.ServiceImpl.FinancialManage.SortingTransferDetailService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_sortingTransferDetailDao" ref="sortingTransferDetailDao">
+    </property>
+  </object>
+  <object id="sortingTransferSearchingService" type ="RFD.FMS.ServiceImpl.FinancialManage.SortingTransferSearchingService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_sortingTransferSearchingDao" ref="sortingTransferSearchingDao">
+    </property>
+  </object>
+  <!--邮件-->
+  <object id="mail" type="RFD.FMS.ServiceImpl.Mail.Mail,RFD.FMS.ServiceImpl" lazy-init="true"/>
+
+  <!--推数-->
+  <!--<object id="waybillStatusDeal" type="RFD.FMS.ServiceImpl.BasicSetting.WaybillStatusDeal,RFD.FMS.ServiceImpl">
+    <property name="LogService" ref="waybillStatusChangeLogService" />
+    <property name="Observers">
+      <list element-type="RFD.FMS.Service.BasicSetting.IWaybillStatusObserver,RFD.FMS.Service">
+        <ref object="waybillForIncomeBaseInfoService"/>
+        <ref object="incomeReceiveFeeInfoObserver"/>
+        <ref object="incomeExpressReceiveFeeInfoObserver"/>
+        <ref object="waybillStatusForSortingTransfer"/>
+      </list>
+    </property>
+  </object>
+
+  <object id="incomeReceiveFeeInfoObserver" type="RFD.FMS.ServiceImpl.FinancialManage.IncomeReceiveFeeInfoObserver,RFD.FMS.ServiceImpl">
+    <property name="oracleDao"  ref="fMS_ReceiveFeeInfoDao"/>
+    <property name="sqlServerDao"  ref="receiveFeeInfoDao"/>
+  </object>
+  <object id="incomeExpressReceiveFeeInfoObserver" type="RFD.FMS.ServiceImpl.FinancialManage.IncomeExpressReceiveFeeInfoObserver,RFD.FMS.ServiceImpl">
+    <property name="oracleDao"  ref="fMS_ReceiveFeeInfoDao"/>
+    <property name="sqlServerDao"  ref="receiveFeeInfoDao"/>
+  </object>
+  <object id="waybillStatusChangeLogService" type="RFD.FMS.ServiceImpl.BasicSetting.WaybillStatusChangeLogService,RFD.FMS.ServiceImpl">
+    <property name="Dao" ref="waybillStatusChangeLogDao" />
+  </object>
+  <object id="waybillStatusForSortingTransfer" type="RFD.FMS.ServiceImpl.SortingTransfer.WaybillStatusForSortingTransfer,RFD.FMS.ServiceImpl">
+    <property name="stdDao" ref="sortingTransferDetailDao" />
+  </object>-->
+  <!--推数end-->
+  <object id="fMSInterfaceService" type="RFD.FMS.ServiceImpl.FinancialManage.FMSInterfaceService,RFD.FMS.ServiceImpl"/>
+  <object id="fMSInterfaceForEDIService" type="RFD.FMS.ServiceImpl.FinancialManage.FMSInterfaceForEDIService,RFD.FMS.ServiceImpl"/>
+ 
+    <object id="incomeBaseInfoService" type ="RFD.FMS.ServiceImpl.FinancialManage.IncomeBaseInfoService,RFD.FMS.ServiceImpl" lazy-init="true">
+      <property name="FeeDao" ref="incomeFeeInfoDao"/>
+      <property name="Dao" ref="incomeBaseInfoDao"/>
+    </object>
+  
+  <!--快递修改接口-->
+  <object id="expressChangeDataService" type="RFD.FMS.ServiceImpl.FinancialManage.ExpressChangeDataService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="Dao" ref="expressChangeDataDao"/>
+  </object>
+</objects>

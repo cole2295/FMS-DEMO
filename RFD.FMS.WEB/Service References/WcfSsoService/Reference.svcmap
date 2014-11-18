@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3444fc32-417e-413f-a113-96219cad035c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.251.17.27:8877" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="25444625-118e-494d-8f73-32484f118b96" SourceId="1" SourceUrl="http://10.251.17.27:8877/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="ba76d377-ed70-4bff-bf66-9ca41a39fcda" SourceId="1" SourceUrl="http://10.251.17.27:8877/?xsd=xsd3" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="993452aa-aa82-4386-96fd-b8806b16291a" SourceId="1" SourceUrl="http://10.251.17.27:8877/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="905ad080-9adc-4428-9751-9e87c2b91d4a" SourceId="1" SourceUrl="http://10.251.17.27:8877/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="1082d46e-8a26-4251-b7f3-db7be9351458" SourceId="1" SourceUrl="http://10.251.17.27:8877/?xsd=xsd1" />
+    <MetadataFile FileName="SSOService.wsdl" MetadataType="Wsdl" ID="6f01dea0-0859-457f-8950-42862e2230b8" SourceId="1" SourceUrl="http://10.251.17.27:8877/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

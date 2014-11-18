@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C01A862A-8684-4A4C-B478-999BC5C8BF75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.FMS.MODEL</RootNamespace>
+    <AssemblyName>RFD.FMS.MODEL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="BaseReportCondition.cs" />
+    <Compile Include="BasicSetting\AccountPeriod.cs" />
+    <Compile Include="BasicSetting\Area.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevel.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelIncome.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelIncomeLog.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelLog.cs" />
+    <Compile Include="BasicSetting\City.cs" />
+    <Compile Include="BasicSetting\Distribution.cs" />
+    <Compile Include="BasicSetting\Employee.cs" />
+    <Compile Include="BasicSetting\ExpressCompany.cs" />
+    <Compile Include="BasicSetting\ExpressCompanyDeduct.cs" />
+    <Compile Include="BasicSetting\ExpressCompanyGoodsDeduct.cs" />
+    <Compile Include="BasicSetting\Province.cs" />
+    <Compile Include="BasicSetting\SearchCondition.cs" />
+    <Compile Include="BasicSetting\StatusCodeInfo.cs" />
+    <Compile Include="BasicSetting\ThirdPartyWaybillSearchConditons.cs" />
+    <Compile Include="BasicSetting\TypeRelationModel.cs" />
+    <Compile Include="BasicSetting\WarehouseSort.cs" />
+    <Compile Include="BasicSetting\WaybillStatusChangeLog.cs" />
+    <Compile Include="BizEnums.cs" />
+    <Compile Include="CODConditions.cs" />
+    <Compile Include="COD\CODConditions.cs" />
+    <Compile Include="COD\DistributionFeeDTO.cs" />
+    <Compile Include="COD\FMS_CODBaseInfo.cs" />
+    <Compile Include="COD\FMS_CODBaseInfoCheck.cs" />
+    <Compile Include="EnumCommon.cs" />
+    <Compile Include="FinancialManage\AreaDeductErrorInfo.cs" />
+    <Compile Include="FinancialManage\FMS_IncomeExpressReceiveFeeInfo.cs" />
+    <Compile Include="FinancialManage\FMS_IncomeReceiveFeeInfo.cs" />
+    <Compile Include="FinancialManage\FMS_SortingFeeModel.cs" />
+    <Compile Include="FinancialManage\FMS_SortingTransferDetail.cs" />
+    <Compile Include="COD\LMS_Syn_FMS_COD.cs" />
+    <Compile Include="FinancialManage\FMS_DeductBaseInfo.cs" />
+    <Compile Include="FinancialManage\FMS_IncomeBaseInfo.cs" />
+    <Compile Include="FinancialManage\FMS_IncomeFeeInfo.cs" />
+    <Compile Include="FinancialManage\IncomeOtherFeeCount.cs" />
+    <Compile Include="FinancialManage\IncomeReturnsCount.cs" />
+    <Compile Include="FinancialManage\IncomeDeliveryCount.cs" />
+    <Compile Include="FinancialManage\IncomeStatLog.cs" />
+    <Compile Include="FinancialManage\IncomeVisitReturnsCount.cs" />
+    <Compile Include="FinancialManage\FMS_DeductSubBaseInfo.cs" />
+    <Compile Include="CODAccountDetail.cs" />
+    <Compile Include="CODSearchCondition.cs" />
+    <Compile Include="Enumeration\EnumList.cs" />
+    <Compile Include="FinancialManage\FMS_StationDailyFinanceDetails.cs" />
+    <Compile Include="FinancialManage\FMS_StationDailyFinanceSum.cs" />
+    <Compile Include="FinancialManage\ProxyCollectReportCdt.cs" />
+    <Compile Include="FinancialManage\SortingDetail.cs" />
+    <Compile Include="FinancialManage\WaybillDistribution.cs" />
+    <Compile Include="FinancialManage\DeliverFeeModel.cs" />
+    <Compile Include="FMS_CodLine.cs" />
+    <Compile Include="FMS_DeliverFee.cs" />
+    <Compile Include="FMS_MerchantDeliverFee.cs" />
+    <Compile Include="FMS_StationDeliverFee.cs" />
+    <Compile Include="BaseDataModel.cs" />
+    <Compile Include="Formula.cs" />
+    <Compile Include="FinancialManage\IncomeAccountModel.cs" />
+    <Compile Include="MenuLibrary.cs" />
+    <Compile Include="PageInfo.cs" />
+    <Compile Include="PageParameterTransfer.cs" />
+    <Compile Include="PCSReportcdt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStatistics\FMSCodDaily.cs" />
+    <Compile Include="QueryStatistics\CodDailyModel.cs" />
+    <Compile Include="RequisitionedFormModel.cs" />
+    <Compile Include="SearchModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

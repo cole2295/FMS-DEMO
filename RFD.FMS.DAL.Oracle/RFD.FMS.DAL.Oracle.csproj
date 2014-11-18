@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A5D98F3-225A-475A-B168-F8A7B16A96A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.FMS.DAL.Oracle</RootNamespace>
+    <AssemblyName>RFD.FMS.DAL.Oracle</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Oracle.DataAccess.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicSetting\AccountPeriodDao.cs" />
+    <Compile Include="BasicSetting\DistributionDao.cs" />
+    <Compile Include="BasicSetting\WaybillStatusChangeLogDao.cs" />
+    <Compile Include="COD\AccountOperatorLogDao.cs" />
+    <Compile Include="BasicSetting\AreaDao.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelDao.cs" />
+    <Compile Include="BasicSetting\AreaExpressLevelIncomeDao.cs" />
+    <Compile Include="AudiMgmt\BankPosCheckDao.cs" />
+    <Compile Include="BasicSetting\CityDao.cs" />
+    <Compile Include="BasicSetting\EmployeeDao.cs" />
+    <Compile Include="BasicSetting\ExpressCompanyDao.cs" />
+    <Compile Include="BasicSetting\ExpressCompanyDeductDao.cs" />
+    <Compile Include="BasicSetting\ExpressCompanyGoodsDeductDao.cs" />
+    <Compile Include="BasicSetting\ExpressPriceDao.cs" />
+    <Compile Include="BasicSetting\GoodsCategoryDao.cs" />
+    <Compile Include="BasicSetting\MenuDao.cs" />
+    <Compile Include="BasicSetting\MerchantDao.cs" />
+    <Compile Include="AudiMgmt\MoneyStoreDao.cs" />
+    <Compile Include="BasicSetting\ProvinceDao.cs" />
+    <Compile Include="BasicSetting\StatusCodeInfoDao.cs" />
+    <Compile Include="BasicSetting\StatusInfoDao.cs" />
+    <Compile Include="BasicSetting\TypeRelationDao.cs" />
+    <Compile Include="BasicSetting\UserDao.cs" />
+    <Compile Include="BasicSetting\WarehouseSortRelationDao.cs" />
+    <Compile Include="FinancialManage\AreaDeductErrorInfoDao.cs" />
+    <Compile Include="FinancialManage\ExpressChangeDataDao.cs" />
+    <Compile Include="FinancialManage\FMS_ReceiveFeeInfoDao.cs" />
+    <Compile Include="FinancialManage\SortingTransferDetailDao.cs" />
+    <Compile Include="FinancialManage\SortingTransferSearchingDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinancialManage\WaybillDao.cs" />
+    <Compile Include="COD\CODAccountDao.cs" />
+    <Compile Include="COD\CODBaseInfoDao.cs" />
+    <Compile Include="COD\DistributionFeeDao.cs" />
+    <Compile Include="COD\FMS_CODDao.cs" />
+    <Compile Include="BasicSetting\DeliveryPriceDao.cs" />
+    <Compile Include="FinancialManage\DeliverFeeStatDao.cs" />
+    <Compile Include="AudiMgmt\FinanceDao.cs" />
+    <Compile Include="FinancialManage\FMS_DeductBaseInfoDao.cs" />
+    <Compile Include="FinancialManage\FMS_MerchantDeliverFeeDao.cs" />
+    <Compile Include="FinancialManage\FMS_StationDailyFinanceDetailsDao.cs" />
+    <Compile Include="FinancialManage\FMS_StationDailyFinanceSumDao.cs" />
+    <Compile Include="FinancialManage\IncomeAccountDao.cs" />
+    <Compile Include="FinancialManage\IncomeBaseInfoDao.cs" />
+    <Compile Include="FinancialManage\IncomeFeeInfoDao.cs" />
+    <Compile Include="FinancialManage\WaybillForIncomeBaseInfoDao.cs" />
+    <Compile Include="COD\LogisticsDeliveryDao.cs" />
+    <Compile Include="FinancialManage\MerchantDeliverFeeDao.cs" />
+    <Compile Include="BasicSetting\NoGenerateDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStatistics\CODTransferDao.cs" />
+    <Compile Include="QueryStatistics\CODWaybillFeeCheckDao.cs" />
+    <Compile Include="COD\RequisitionedFormDAL.cs" />
+    <Compile Include="BasicSetting\WareHouseDao.cs" />
+    <Compile Include="SortingManage\SortingFeeDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.AdoNet\RFD.FMS.AdoNet.csproj">
+      <Project>{605AAD38-A148-45AE-9423-DC18E3FAF6DC}</Project>
+      <Name>RFD.FMS.AdoNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMS.Util\RFD.FMS.Util.csproj">
+      <Project>{C03634A1-391C-4E80-9611-6F666AEE72F2}</Project>
+      <Name>RFD.FMS.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oracle.ApplicationBlocks.Data\Oracle.ApplicationBlocks.Data.csproj">
+      <Project>{77AEFE9A-2029-4E7B-A868-B057BE4E85EA}</Project>
+      <Name>Oracle.ApplicationBlocks.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.Domain\RFD.FMS.Domain.csproj">
+      <Project>{D37AAD95-DCA2-4D51-9533-098C32D8C22D}</Project>
+      <Name>RFD.FMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.FMS.MODEL\RFD.FMS.MODEL.csproj">
+      <Project>{C01A862A-8684-4A4C-B478-999BC5C8BF75}</Project>
+      <Name>RFD.FMS.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

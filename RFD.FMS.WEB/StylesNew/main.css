@@ -1,0 +1,204 @@
+body, div, input, select, textarea, td
+{
+    font-size: 12px;
+    font-family: 'Microsoft YaHei' , 'Tahoma' , 'ËÎÌו';
+}
+body, form
+{
+    margin: 0px;
+    white-space: nowrap;
+}
+.content
+{
+    margin-left: 12px;
+    width: 96%;
+    white-space: nowrap;
+    table-layout:fixed;
+}
+.contenttitle
+{
+    border-bottom: 2px solid #4474BB;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+a
+{
+    text-decoration: none;
+    color: #0000FF;
+}
+a:link
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+hr
+{
+    border-top: solid 1px #B5D6E6;
+    height: -14px;
+    line-height: 0;
+    margin-bottom: 5px;
+    color: #FF00FF;
+}
+.title
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.seperator
+{
+    color: #990000;
+}
+
+.row
+{
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.rowOver
+{
+    background-color: #FFEEBB;
+    cursor: default;
+}
+.rowFocus
+{
+    background-color: #FFDDAA;
+    cursor: default;
+}
+
+.tab
+{
+    background-color: #FFFFFF;
+    text-align: center;
+    border-bottom: 2px solid #990000;
+    font-weight: bold;
+    cursor: default;
+}
+.tabFocus
+{
+    border-bottom-width: 0px;
+    border-top: 1px solid #990000;
+    border-right: 1px solid #990000;
+    border-left: 1px solid #990000;
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+}
+
+.tab2
+{
+    background-color: #FFFFFF;
+    padding-left: 30px;
+    font-weight: bold;
+    height: 30px;
+    border-right: 2px solid #990000;
+    border-bottom: 1px solid #CCCCCC;
+    cursor: default;
+}
+
+.tab2Focus
+{
+    background-color: #FFFFFF;
+    padding-left: 30px;
+    font-weight: bold;
+    height: 30px;
+    border-right-width: 0px;
+    border-left: 1px solid #990000;
+    border-top: 1px solid #990000;
+    border-bottom: 1px solid #990000;
+    cursor: default;
+}
+
+.tab3
+{
+    background-color: #FFFFFF;
+    text-align: center;
+    border-bottom: 1px solid #990000;
+    font-weight: bold;
+    cursor: default;
+    color: #000000;
+}
+.tab3Focus
+{
+    /*color:#FFFFFF; 	background-color:#990000;*/
+    border-bottom-width: 0px;
+    border-top: 1px solid #990000;
+    border-right: 1px solid #990000;
+    border-left: 1px solid #990000;
+    text-align: center;
+    font-weight: bold;
+    color: #990000;
+}
+
+.graybborder
+{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.gray
+{
+    color: #666666;
+}
+
+.red
+{
+    color: #CC0000;
+}
+
+.blue
+{
+    color: #0000CC;
+}
+
+.green
+{
+    color: #009900;
+}
+
+.uInput
+{
+    border-width: 0px;
+    background-color: transparent;
+}
+.GridView
+{
+    white-space: nowrap;
+    line-height: 22px;
+    width: 100%;
+    border-left: solid 1px gray;
+    border-top: solid 1px gray;
+}
+.GridView td
+{
+    padding: 2px 2px 2px 3px;
+    border-right: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+.GridView th
+{
+    padding: 2px 2px 2px 3px;
+    background-color: #EEEEEE;
+    border-right: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+div.tableContainer
+{
+    clear: both;
+    overflow: auto;
+    height: 405px;
+}
+.BodyPop
+{
+    padding: 5px 5px 0px 5px;
+}
+.tableContainer .GridView
+{
+    white-space: nowrap;
+    line-height: 18px;
+    width: 100%;
+    border-left: solid 1px gray;
+    border-top: solid 1px gray;
+}

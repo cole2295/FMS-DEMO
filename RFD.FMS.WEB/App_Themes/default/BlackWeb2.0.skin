@@ -1,0 +1,8 @@
+
+<asp:GridView runat="server"
+    CellPadding="0"
+    CellSpacing="0"
+    CssClass="GridView"
+    GridLines="none"
+    >
+</asp:GridView>

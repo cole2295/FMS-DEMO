@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="PMS_PermissionManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IPermissionProvider_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/RFD.LMS.Model.Permission" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPermissionProvider_LoadAccessPermissionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAccessPermissionData" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadAccessPermissionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAccessPermissionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadAccessPermissionDataByRuleKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAccessPermissionDataByRuleKey" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadAccessPermissionDataByRuleKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAccessPermissionDataByRuleKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadDataPermissionNodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataPermissionNodes" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadDataPermissionNodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataPermissionNodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadDataPermissionDicByLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataPermissionDicByLevel" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadDataPermissionDicByLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataPermissionDicByLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadHasAllChildDataPermissionDic_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadHasAllChildDataPermissionDic" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadHasAllChildDataPermissionDic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadHasAllChildDataPermissionDicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadDataPermissionDicByParentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataPermissionDicByParentId" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadDataPermissionDicByParentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataPermissionDicByParentIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadAllDataPermissionSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllDataPermissionSource" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_LoadAllDataPermissionSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllDataPermissionSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_CheckAccessSubSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAccessSubSystem" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_CheckAccessSubSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAccessSubSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_CheckIsAdminRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsAdminRole" />
+  </wsdl:message>
+  <wsdl:message name="IPermissionProvider_CheckIsAdminRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsAdminRoleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPermissionProvider">
+    <wsdl:operation name="LoadAccessPermissionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadAccessPermissionData" message="tns:IPermissionProvider_LoadAccessPermissionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadAccessPermissionDataResponse" message="tns:IPermissionProvider_LoadAccessPermissionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAccessPermissionDataByRuleKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadAccessPermissionDataByRuleKey" message="tns:IPermissionProvider_LoadAccessPermissionDataByRuleKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadAccessPermissionDataByRuleKeyResponse" message="tns:IPermissionProvider_LoadAccessPermissionDataByRuleKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataPermissionNodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadDataPermissionNodes" message="tns:IPermissionProvider_LoadDataPermissionNodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadDataPermissionNodesResponse" message="tns:IPermissionProvider_LoadDataPermissionNodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataPermissionDicByLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadDataPermissionDicByLevel" message="tns:IPermissionProvider_LoadDataPermissionDicByLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadDataPermissionDicByLevelResponse" message="tns:IPermissionProvider_LoadDataPermissionDicByLevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadHasAllChildDataPermissionDic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadHasAllChildDataPermissionDic" message="tns:IPermissionProvider_LoadHasAllChildDataPermissionDic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadHasAllChildDataPermissionDicResponse" message="tns:IPermissionProvider_LoadHasAllChildDataPermissionDic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataPermissionDicByParentId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadDataPermissionDicByParentId" message="tns:IPermissionProvider_LoadDataPermissionDicByParentId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadDataPermissionDicByParentIdResponse" message="tns:IPermissionProvider_LoadDataPermissionDicByParentId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllDataPermissionSource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/LoadAllDataPermissionSource" message="tns:IPermissionProvider_LoadAllDataPermissionSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/LoadAllDataPermissionSourceResponse" message="tns:IPermissionProvider_LoadAllDataPermissionSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAccessSubSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/CheckAccessSubSystem" message="tns:IPermissionProvider_CheckAccessSubSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/CheckAccessSubSystemResponse" message="tns:IPermissionProvider_CheckAccessSubSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsAdminRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPermissionProvider/CheckIsAdminRole" message="tns:IPermissionProvider_CheckIsAdminRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPermissionProvider/CheckIsAdminRoleResponse" message="tns:IPermissionProvider_CheckIsAdminRole_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IPermissionProvider" type="tns:IPermissionProvider">
+    <wsp:PolicyReference URI="#WSHttpBinding_IPermissionProvider_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadAccessPermissionData">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadAccessPermissionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAccessPermissionDataByRuleKey">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadAccessPermissionDataByRuleKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataPermissionNodes">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadDataPermissionNodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataPermissionDicByLevel">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadDataPermissionDicByLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHasAllChildDataPermissionDic">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadHasAllChildDataPermissionDic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataPermissionDicByParentId">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadDataPermissionDicByParentId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllDataPermissionSource">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/LoadAllDataPermissionSource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAccessSubSystem">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/CheckAccessSubSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsAdminRole">
+      <soap12:operation soapAction="http://tempuri.org/IPermissionProvider/CheckIsAdminRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PMS_PermissionManager">
+    <wsdl:port name="WSHttpBinding_IPermissionProvider" binding="tns:WSHttpBinding_IPermissionProvider">
+      <soap12:address location="http://exchange.vancldb.com/PermissionProviderService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://exchange.vancldb.com/PermissionProviderService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

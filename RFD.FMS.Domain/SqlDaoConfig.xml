@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database" xmlns:tx="http://www.springframework.net/tx">
+
+  <!--基础设置-->
+  <object id="expressCompanyDao" type="RFD.FMS.DAL.BasicSetting.ExpressCompanyDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="provinceDao" type="RFD.FMS.DAL.BasicSetting.ProvinceDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="cityDao" type="RFD.FMS.DAL.BasicSetting.CityDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="areaDao" type="RFD.FMS.DAL.BasicSetting.AreaDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="warehouseSortRelationDao" type="RFD.FMS.DAL.BasicSetting.WarehouseSortRelationDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="merchantDao" type="RFD.FMS.DAL.BasicSetting.MerchantDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="areaExpressLevelDao" type="RFD.FMS.DAL.BasicSetting.AreaExpressLevelDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="areaExpressLevelIncomeDao" type="RFD.FMS.DAL.BasicSetting.AreaExpressLevelIncomeDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="statusCodeInfoDao" type="RFD.FMS.DAL.BasicSetting.StatusCodeInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="typeRelationDao" type="RFD.FMS.DAL.BasicSetting.TypeRelationDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="statusInfoDao" type="RFD.FMS.DAL.BasicSetting.StatusInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="userDao" type="RFD.FMS.DAL.BasicSetting.UserDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="deliveryPriceDao" type="RFD.FMS.DAL.BasicSetting.DeliveryPriceDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="noGenerateDao" type="RFD.FMS.DAL.BasicSetting.NoGenerateDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="wareHouseDao" type="RFD.FMS.DAL.BasicSetting.WareHouseDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="menuDao" type="RFD.FMS.DAL.BasicSetting.MenuDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="iDGenerate" type="RFD.FMS.DAL.BasicSetting.IDGenerate,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="distributionDao" type="RFD.FMS.DAL.BasicSetting.DistributionDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="accountPeriodDao" type="RFD.FMS.DAL.BasicSetting.AccountPeriodDao,RFD.FMS.DAL" lazy-init="true"/>
+  
+  <!--COD-->
+  <object id="logisticsDeliveryDao" type="RFD.FMS.DAL.COD.LogisticsDeliveryDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="distributionFeeDao" type="RFD.FMS.DAL.COD.DistributionFeeDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="cODBaseInfoDao" type="RFD.FMS.DAL.COD.CODBaseInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="requisitionedFormDAL" type="RFD.FMS.DAL.COD.RequisitionedFormDAL,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="cODAccountDao" type="RFD.FMS.DAL.COD.CODAccountDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="accountOperatorLogDao" type="RFD.FMS.DAL.COD.AccountOperatorLogDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="fMS_CODDao" type="RFD.FMS.DAL.COD.FMS_CODDao,RFD.FMS.DAL" lazy-init="true"/>
+  <!--查询统计-->
+  <object id="cODTransferDao" type="RFD.FMS.DAL.QueryStatistics.CODTransferDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="goodsCategoryDao" type="RFD.FMS.DAL.BasicSetting.GoodsCategoryDao,RFD.FMS.DAL" lazy-init="true"/>
+
+  <object id="cODWaybillFeeCheckDao" type="RFD.FMS.DAL.QueryStatistics.CODWaybillFeeCheckDao,RFD.FMS.DAL" lazy-init="true"/>
+
+  <object id="waybillDao" type="RFD.FMS.DAL.FinancialManage.WaybillDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="waybillForIncomeBaseInfoDao" type="RFD.FMS.DAL.FinancialManage.WaybillForIncomeBaseInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="incomeBaseInfoDao" type="RFD.FMS.DAL.FinancialManage.IncomeBaseInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="incomeFeeInfoDao" type="RFD.FMS.DAL.FinancialManage.IncomeFeeInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="incomeAccountDao" type="RFD.FMS.DAL.FinancialManage.IncomeAccountDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="deliverFeeStatDao" type="RFD.FMS.DAL.FinancialManage.DeliverFeeStatDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="fMS_DeductBaseInfoDao" type="RFD.FMS.DAL.FinancialManage.FMS_DeductBaseInfoDao,RFD.FMS.DAL" lazy-init="false"/>
+  <object id="merchantDeliverFeeDao" type="RFD.FMS.DAL.FinancialManage.MerchantDeliverFeeDao,RFD.FMS.DAL" lazy-init="false"/>
+  <object id="fMS_MerchantDeliverFeeDao" type="RFD.FMS.DAL.FinancialManage.FMS_MerchantDeliverFeeDao,RFD.FMS.DAL" lazy-init="false"/>
+  <object id="fMS_StationDailyFinanceDetailsDao" type="RFD.FMS.DAL.FinancialManage.FMS_StationDailyFinanceDetailsDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="fMS_StationDailyFinanceSumDao" type="RFD.FMS.DAL.FinancialManage.FMS_StationDailyFinanceSumDao,RFD.FMS.DAL" lazy-init="true"/>
+  
+  <object id="bankPosCheckDao" type="RFD.FMS.DAL.AudiMgmt.BankPosCheckDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="moneyStoreDao" type="RFD.FMS.DAL.AudiMgmt.MoneyStoreDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="financeDao" type="RFD.FMS.DAL.AudiMgmt.FinanceDao,RFD.FMS.DAL" lazy-init="true"/>
+  
+  <!--拣运-->
+  <object id="sortingTransferDetailDao" type="RFD.FMS.DAL.FinancialManage.SortingTransferDetailDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="sortingTransferSearchingDao" type="RFD.FMS.DAL.FinancialManage.SortingTransferSearchingDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="fMS_SortingTransferDetailDao" type="RFD.FMS.DAL.Oracle.FinancialManage.SortingTransferDetailDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+
+  <object id="fMS_ReceiveFeeInfoDao" type="RFD.FMS.DAL.Oracle.FinancialManage.FMS_ReceiveFeeInfoDao,RFD.FMS.DAL.Oracle" lazy-init="true"/>
+  <object id="waybillStatusChangeLogDao" type="RFD.FMS.DAL.BasicSetting.WaybillStatusChangeLogDao,RFD.FMS.DAL" lazy-init="true"/>
+  <object id="receiveFeeInfoDao" type="RFD.FMS.DAL.FinancialManage.ReceiveFeeInfoDao,RFD.FMS.DAL" lazy-init="true"/>
+      
+</objects>

@@ -1,0 +1,33 @@
+﻿.pager
+{
+    padding-top: 3px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.pager a
+{
+    color: #000000;
+    padding: 0px 3px 0px 3px;
+    background-color: #FFFFFF;
+}
+.pager a:hover
+{
+    color: #FFFFFF;
+    background-color: #3352CC;
+    padding: 0px 3px 0px 3px;
+    font-weight: bolder;
+}
+.pager .record
+{
+    color: #D54D2B;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+.pager .cpb
+{
+    border: solid 1px #D54D2B;
+    padding: 0px 3px 0px 3px;
+    background-color: #D54D2B;
+    color: #FFFFFF;
+}

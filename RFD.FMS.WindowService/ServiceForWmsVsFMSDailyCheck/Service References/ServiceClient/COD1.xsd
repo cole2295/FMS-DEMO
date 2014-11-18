@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vfss.vancldb.com/ExternalApp/COD.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" />
+  <xs:element name="GetCODDelivery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="codPar" nillable="true" type="q1:CODParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODDeliveryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="GetCODDeliveryResult" nillable="true" type="q2:ArrayOfCODDELIVERY" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODDeliveryDaily">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="codPar" nillable="true" type="q3:CODParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODDeliveryDailyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="GetCODDeliveryDailyResult" nillable="true" type="q4:ArrayOfCODDaily" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODReturns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="codPara" nillable="true" type="q5:CODParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODReturnsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="GetCODReturnsResult" nillable="true" type="q6:ArrayOfCODRETURNS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODReturnsDaily">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="codPara" nillable="true" type="q7:CODParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODReturnsDailyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="GetCODReturnsDailyResult" nillable="true" type="q8:ArrayOfCODDaily" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODVisit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="codPar" nillable="true" type="q9:CODParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODVisitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="GetCODVisitResult" nillable="true" type="q10:ArrayOfCODVISIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODVisitDaily">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="codPar" nillable="true" type="q11:CODParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCODVisitDailyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" minOccurs="0" name="GetCODVisitDailyResult" nillable="true" type="q12:ArrayOfCODVISIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

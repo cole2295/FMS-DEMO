@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Databases type="正式环境配置">
+	<Database type="SCM主库">
+		<EnumValue>Vancl</EnumValue>
+		<DatabaseName>SCM</DatabaseName>
+		<WarehouseId />
+		<WebCookieValue />
+		<ConnectionString>
+			OaUiMMBYnrbLZoFW5p16cqTfXIJ769t1pxMY9LAvsgq34NBWEgb7YF03TzKMGr5Q5zGYAo7s2WH9PtIE45u6ZsMLxV0F4LlT7ypcmqMpXeuGVwQ1H1vxwFHwcDQgJCvNt7N1quv+6snJvfE0yWpsqjat99vb7y7c
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="SCM只读">
+		<EnumValue>Vancl</EnumValue>
+		<DatabaseName>SCM</DatabaseName>
+		<WarehouseId />
+		<WebCookieValue />
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWNKYi8nEfC2SljwlMipZKas=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_GZ主库">
+		<EnumValue>WMS_GZ</EnumValue>
+		<DatabaseName>WMS_GZ</DatabaseName>
+		<WarehouseId>0301</WarehouseId>
+		<WebCookieValue>0301</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZTS+oaLGraN+n0L/3mqL7YPD9D9VfOoIHZpEEqUetc0MTYrD9NHFcpR6+r8tgvwR/9oV7s2o0Fq05XRauCkEOQdMGo42rGF/Wj5r9cl5SB+L6E4fC/MS9fiYe5VXaVvqY=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_GZ只读">
+		<EnumValue>WMS_GZ</EnumValue>
+		<DatabaseName>WMS_GZ</DatabaseName>
+		<WarehouseId>0301</WarehouseId>
+		<WebCookieValue>0301</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1pecc+UNGvw0=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_GZC主库">
+		<EnumValue>WMS_GZC</EnumValue>
+		<DatabaseName>WMS_GZC</DatabaseName>
+		<WarehouseId>0309</WarehouseId>
+		<WebCookieValue>0309</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrar0X8eiwbRvS+ta+Rckt2bQTGRqEqt4i/Mdj+N3aNYrd8WegcUKC0Ba3jTHsWNwInDnxc1pXq7+P5lVOAEw80Vac1UHOD40pZQgCEk9dCqL1Y2JyuUXi3ikc57NWmX2hM=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_GZC只读">
+		<EnumValue>WMS_GZC</EnumValue>
+		<DatabaseName>WMS_GZ</DatabaseName>
+		<WarehouseId>0309</WarehouseId>
+		<WebCookieValue>0309</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1Yrcf+VEdywc=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_BJ主库">
+		<EnumValue>WMS_BJ</EnumValue>
+		<DatabaseName>WMS_BJ</DatabaseName>
+		<WarehouseId>0101</WarehouseId>
+		<WebCookieValue>0101</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZTS+oaLGraN+n0L/3mqL7YPD9D9VfOoIHZpEEqUetc0MTYrD9NHFcpR6+r8tgvwR/9oV7s2o0Fq05XRauCkEOQdMGo42rGF/Wj5r9cl5SB+EXE9kuobR/6iYe5VXaVvqY=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_BJ只读">
+		<EnumValue>WMS_BJ</EnumValue>
+		<DatabaseName>WMS_BJ</DatabaseName>
+		<WarehouseId>0101</WarehouseId>
+		<WebCookieValue>0101</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A13jcJ91DMnJU=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_BJC主库">
+		<EnumValue>WMS_BJC</EnumValue>
+		<DatabaseName>WMS_BJC</DatabaseName>
+		<WarehouseId>0109</WarehouseId>
+		<WebCookieValue>0109</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrar0X8eiwbRvS+ta+Rckt2bQTGRqEqt4i/Mdj+N3aNYrd8WegcUKC0Ba3jTHsWNwInDnxc1pXq7+P5lVOAEw80Vac1UHOD40pZQgCEk9dCqLyvEqmnRS16W8ISPI3LNTyw=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_BJC只读">
+		<EnumValue>WMS_BJC</EnumValue>
+		<DatabaseName>WMS_BJC</DatabaseName>
+		<WarehouseId>0109</WarehouseId>
+		<WebCookieValue>0109</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1J3YNrnIsty8=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_SH主库">
+		<EnumValue>WMS_SH</EnumValue>
+		<DatabaseName>WMS_SH</DatabaseName>
+		<WarehouseId>0201</WarehouseId>
+		<WebCookieValue>0201</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZTS+oaLGraN+n0L/3mqL7YPD9D9VfOoIHZpEEqUetc0MTYrD9NHFcpR6+r8tgvwR/9oV7s2o0Fq05XRauCkEOQdMGo42rGF/Wj5r9cl5SB+OuLBwsRIjRyiYe5VXaVvqY=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_SH只读">
+		<EnumValue>WMS_SH</EnumValue>
+		<DatabaseName>WMS_SH</DatabaseName>
+		<WarehouseId>0201</WarehouseId>
+		<WebCookieValue>0201</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1+1DZXaIjYvs=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_SHC主库">
+		<EnumValue>WMS_SHC</EnumValue>
+		<DatabaseName>WMS_SHC</DatabaseName>
+		<WarehouseId>0209</WarehouseId>
+		<WebCookieValue>0209</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrar0X8eiwbRvS+ta+Rckt2bQTGRqEqt4i/Mdj+N3aNYrd8WegcUKC0Ba3jTHsWNwInDnxc1pXq7+P5lVOAEw80Vac1UHOD40pZQgCEk9dCqL3cS8LCTadpeR5sGNKMT+is=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_SHC只读">
+		<EnumValue>WMS_SHC</EnumValue>
+		<DatabaseName>WMS_SHC</DatabaseName>
+		<WarehouseId>0209</WarehouseId>
+		<WebCookieValue>0209</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1fPzWcbaFqYo=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_WH主库">
+		<EnumValue>WMS_WH</EnumValue>
+		<DatabaseName>WMS_WH</DatabaseName>
+		<WarehouseId>0401</WarehouseId>
+		<WebCookieValue>0401</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrar0X8eiwbRvS+ta+Rckt2bQTGRqEqt4i/Mdj+N3aNYrd8WegcUKC0Ba3jTHsWNwInDnxc1pXq7+P5lVOAEw80Vac1UHOD40pZQgCEk9dCqL5VPOclw2sHfAK3ZTIpKaW4=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_WH只读">
+		<EnumValue>WMS_WH</EnumValue>
+		<DatabaseName>WMS_WH</DatabaseName>
+		<WarehouseId>0401</WarehouseId>
+		<WebCookieValue>0401</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1lwPR8YoKeUY=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_CD主库">
+		<EnumValue>WMS_CD</EnumValue>
+		<DatabaseName>WMS_CD</DatabaseName>
+		<WarehouseId>0501</WarehouseId>
+		<WebCookieValue>0501</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrar0X8eiwbRvS+ta+Rckt2bQTGRqEqt4i/Mdj+N3aNYrd8WegcUKC0Ba3jTHsWNwInDnxc1pXq7+P5lVOAEw80Vac1UHOD40pZQgCEk9dCqL0y0OQlih3lcKBwgRJfleLU=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_CD只读">
+		<EnumValue>WMS_CD</EnumValue>
+		<DatabaseName>WMS_CD</DatabaseName>
+		<WarehouseId>0501</WarehouseId>
+		<WebCookieValue>0501</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A18tGNK166E3Q=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_XA主库">
+		<EnumValue>WMS_XA</EnumValue>
+		<DatabaseName>WMS_XA</DatabaseName>
+		<WarehouseId>0601</WarehouseId>
+		<WebCookieValue>0601</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrar0X8eiwbRvS+ta+Rckt2bQTGRqEqt4i/Mdj+N3aNYrd8WegcUKC0Ba3jTHsWNwInDnxc1pXq7+P5lVOAEw80Vac1UHOD40pZQgCEk9dCqL++hZes/7mWNnmeUBo9dvFo=
+		</ConnectionString>
+		<DbType>Execute</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+
+	<Database type="WMS_XA只读">
+		<EnumValue>WMS_XA</EnumValue>
+		<DatabaseName>WMS_XA</DatabaseName>
+		<WarehouseId>0601</WarehouseId>
+		<WebCookieValue>0601</WebCookieValue>
+		<ConnectionString>
+			OaUiMMBYnrZVOy72YqOYqtQ3pcNfSpZxcBk8I8jNtu9kC6m4/66LqypvBegF8hZAPyi/+y1PhT1DPJ1qpYNrvcT8FoBrTdCAY6N2KtlG2pLvld3U/jFGucIfZjii5E5XvlYDWj+MK1z2LcY4cGzuAbbGRNrPmz7wbu0NxcmUmzcKbIbJSd/t3j6glDzO78XNySYWHF0nyJ9L4Gy4/cHHWHy1toZCL4A1KVwZj9GV4wc=
+		</ConnectionString>
+		<DbType>Readonly</DbType>
+		<CompanySource>Vancl</CompanySource>
+	</Database>
+</Databases>

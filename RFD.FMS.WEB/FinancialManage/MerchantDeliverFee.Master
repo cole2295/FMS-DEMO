@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MerchantDeliverFee.master.cs" Inherits="RFD.FMS.WEB.FinancialManage.MerchantDeliverFee"
+	 MasterPageFile="~/Main/main.Master" %>
+
+<%@ Import Namespace="System.Data" %>
+<%@ Register Src="~/UserControl/WareHouseCheckBox.ascx" TagName="UCWareHouseCheckBox" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControl/MerchantSourceTV.ascx" TagName="UCMerchantSourceTV" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControl/GoodsCategoryCheckBox.ascx" TagName="UCGoodsCategoryCheckBox" TagPrefix="uc4" %>
+<%@ Register Src="~/UserControl/Pager.ascx" TagName="UCPager" TagPrefix="uc5" %>
+<%@ Register TagPrefix="uc6" TagName="ucexpresscompanytv" Src="~/UserControl/ExpressCompanyTV.ascx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+	<script type="text/javascript">
+		function fnCheckAllList(LE, E) {
+			LE.find('input:checkbox').attr('checked', E.checked)
+		}
+
+		function fnOpenModalDialog(url, width, height) {
+			window.showModalDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+		}
+
+		function fnOpenModelessDialog(url, width, height) {
+			window.showModelessDialog(url, window, "dialogWidth=" + width + "px;dialogHeight=" + height + "px;center:yes;resizable:no;scroll:auto;help=no;location=no;status=no;");
+		}
+
+		function fnOpenWindow(url, width, height) {
+			window.open(url, 'newwindow', 'height=' + height + ',width=' + width + ',top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no')
+		}
+
+		function ClientConfirm(msg) {
+			return !msg ? false : window.confirm(msg);
+		}
+		
+	</script>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+    <asp:HiddenField ID="download_token_name" runat="server" /> 
+    <asp:HiddenField ID="download_token_value" runat="server" />
+    <table>
+		<tr>
+			<td>商家</td>
+			<td>
+				<uc3:UCMerchantSourceTV ID="UCMerchantSourceTV" runat="server" MerchantLoadType="All" MerchantShowCheckBox="False" MerchantTypeSource="jc_Merchant_Income" />
+			</td>
+			<td>配送公司</td>
+			<td><uc6:ucexpresscompanytv ID="UCExpressCompanyTV" runat="server" 
+                 ExpressLoadType="ThirdCompany" ExpressTypeSource="nk_Express" 
+                 ExpressCompanyShowCheckBox="False" /></td>
+			<td>区域类型</td>
+			<td>
+				<asp:DropDownList ID="ddlAreaType" runat="server">
+				</asp:DropDownList>
+			</td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>分拣中心</td>
+			<td><uc2:UCWareHouseCheckBox ID="UCWareHouseCheckBox" runat="server" LoadDataType="SortCenter" HouseCheckType="all" /></td>
+			<td>审核状态</td>
+			<td>
+				<asp:DropDownList ID="ddlAuditStatus" runat="server">
+				</asp:DropDownList>
+			</td>
+            <td>货物品类</td>
+			<td>
+                <uc4:UCGoodsCategoryCheckBox ID="UCGoodsCategoryCheckBox" runat="server" />
+			</td>
+            <td>
+                <asp:CheckBox ID="cbWaitEffect" runat="server" Text="待生效" />
+				<asp:Button ID="btnSearch" runat="server" Text="查询" onclick="btnSearch_Click" />
+                <asp:Button ID="btnExport" runat="server" Text="导出" onclick="btnExport_Click" />
+            </td>
+		</tr>
+	</table>
+	
+	<asp:ContentPlaceHolder ID="OperatorArea" runat="server">
+	</asp:ContentPlaceHolder>
+	<uc5:UCPager ID="UCPager" runat="server" PageSize="20" />
+	<asp:GridView ID="gvList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
+		<Columns>
+			<asp:TemplateField HeaderText="选择">
+				<HeaderTemplate>
+					<input type="checkbox" id="cbCheckAll" onclick="fnCheckAllList($('#<%= gvList.ClientID %>'),this)" />全选
+				</HeaderTemplate>
+				<ItemTemplate>
+					<asp:CheckBox ID="cbCheck" runat="server" />
+				</ItemTemplate>
+			</asp:TemplateField>
+            <asp:BoundField HeaderText="生效时间" DataField="EffectDate" ItemStyle-ForeColor="Red" />
+			<asp:BoundField HeaderText="商家" DataField="MerchantName" />
+			<asp:BoundField HeaderText="配送公司" DataField="CompanyName" />
+			<asp:BoundField HeaderText="是否分拣中心" DataField="IsCenterSortStr" />
+			<asp:BoundField HeaderText="分拣中心" DataField="SortCenterName" />
+			<asp:BoundField HeaderText="区域类型" DataField="AreaType" />
+            <asp:BoundField HeaderText="货物品类" DataField="GoodsCategoryName" />
+            <asp:BoundField HeaderText="是否区分COD" DataField="IsCodStr" />
+			<asp:BoundField HeaderText="COD价格公式" DataField="BasicDeliverFee" />
+            <asp:BoundField HeaderText="非COD价格公式" DataField="DeliverFee" />
+			<asp:BoundField HeaderText="创建人" DataField="CreateBy" />
+			<asp:BoundField HeaderText="创建时间" DataField="CreateTime" />
+			<asp:BoundField HeaderText="更新人" DataField="UpdateBy" />
+			<asp:BoundField HeaderText="更新时间" DataField="UpdateTime" />
+			<asp:BoundField HeaderText="审核状态" DataField="AuditStatusStr" />
+			<asp:BoundField HeaderText="审核人" DataField="AuditBy" />
+			<asp:BoundField HeaderText="审核时间" DataField="AuditTime" />
+            <asp:TemplateField HeaderText="查看操作日志">
+			    <ItemTemplate>
+                <asp:PlaceHolder ID="PlaceHolder1" runat="server" Visible='<%# string.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "ID").ToString())?false:true %>'>
+				        <a href="javascript:fnOpenModalDialog('../BasicSetting/OperateLogView.aspx?PK_NO=<%#((DataRowView)Container.DataItem)["ID"] %>&LogType=<%#((DataRowView)Container.DataItem)["LogType"] %>',500,300)">查看操作日志</a>
+                    </asp:PlaceHolder>   
+			    </ItemTemplate>
+		    </asp:TemplateField>
+		</Columns>
+	</asp:GridView>
+
+</asp:Content>

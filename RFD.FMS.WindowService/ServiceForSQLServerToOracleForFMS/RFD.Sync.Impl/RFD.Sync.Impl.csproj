@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F449244D-5B16-40CE-BA90-05629B0E24AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFD.Sync.Impl</RootNamespace>
+    <AssemblyName>RFD.Sync.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\lib\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RFD.MessageCollector">
+      <HintPath>..\lib\RFD.MessageCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\Dao.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODBaseInfo_History.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeBaseInfo_History.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeFeeInfo_History.cs" />
+    <Compile Include="Master2Slave\SqlCollectionM2S.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODBaseInfo.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeBaseInfo.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeFeeInfo.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_StationDailyFinanceDetails.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_StationDailyFinanceSum.cs" />
+    <Compile Include="Master2Slave\M2S_AreaExpressLevel.cs" />
+    <Compile Include="Master2Slave\M2S_AreaExpressLevelIncome.cs" />
+    <Compile Include="Master2Slave\M2S_AreaExpressLevelIncomeLog.cs" />
+    <Compile Include="Master2Slave\M2S_AreaExpressLevelLog.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODAccount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODAccountDetail.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODDeliveryCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODLine.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODLineHistory.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODLineWaitEffect.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODOperatorLog.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODReturnsCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CodStatsLog.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_CODVisitReturnsCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeAccount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeAccountDetail.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeDeliveryCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeOtherFeeCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeReturnsCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeStatLog.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_IncomeVisitReturnsCount.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_NoGenerateEx.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_OperateLog.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_SortingTransferDetail.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_StationDeliverFee.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_TypeRelation.cs" />
+    <Compile Include="Master2Slave\M2S_StatusCodeInfo.cs" />
+    <Compile Include="Master2Slave\M2S_FMS_MerchantDeliverFee.cs" />
+    <Compile Include="Master2Slave\M2S_FMSTableColumnDic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncData.cs" />
+    <Compile Include="Tool\SyncSelectParam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oracle.ApplicationBlocks.Data\Oracle.ApplicationBlocks.Data.csproj">
+      <Project>{77AEFE9A-2029-4E7B-A868-B057BE4E85EA}</Project>
+      <Name>Oracle.ApplicationBlocks.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.Sync.AdoNet\RFD.Sync.AdoNet.csproj">
+      <Project>{2891CD68-B81C-41A9-BE36-CC4439ADDE9A}</Project>
+      <Name>RFD.Sync.AdoNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFD.SyncData\RFD.SyncSQL.csproj">
+      <Project>{364E34B2-C673-4064-AC7B-B9EAFFB01948}</Project>
+      <Name>RFD.SyncSQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

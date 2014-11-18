@@ -1,0 +1,46 @@
+body,html{ padding:0; margin:0 auto; background-color:#949596;}
+img{ border:none;}
+h1,h2,h3,h4,h5,h6,hr,blockquote,form,ul,ol,li,p,pre,dl,dt,dd,fieldset,legend,button,input,textarea,th,td{ padding:0; margin:0;}
+ul,ol,li{ list-style:none;}
+sup{ vertical-align:text-top;}
+sub{ vertical-align:text-bottom;}
+legend { color:#000;}
+fieldset{ border:0;} 
+button,input,select,textarea { font-size:100%;}
+table{ border-collapse:collapse; border-spacing:0;}
+.clear{ clear:both; line-height:0px; font-size:0px;}
+.clearfix:after{ content:".";display:block; height:0; clear:both; visibility:hidden;}
+.clearfix{display:inline-block;overflow:hidden;}
+.left{ float:left; _display:inline;}
+.right{ float:right;}
+.hr_10{ clear:both; height:10px; overflow:hidden; font-size:1px; line-height:1px;}
+
+body,button,input,select,textarea{ font-family:"宋体"; color:#000; font-size:12px;}
+h1,h2,h3,h4,h5,h6{ font-size:100%;}
+address,cite,dfn,em,var{ font-style:normal }
+code,kbd,pre,samp{ font-family:courier new, courier, monospace;}
+.bold{ font-weight:bold;}
+a{ color:#000; text-decoration:none;}
+a:hover{ color:#CC0000; text-decoration:underline;}
+
+.topMargin5{ margin-top:5px;}
+.topMargin10{ margin-top:10px;}
+.topMargin8{ margin-top:8px;}
+.topMargin20{ margin-top:20px;}
+.leftMargin5{ margin-left:5px;}
+.leftMargin10{ margin-left:10px;}
+
+
+.wrapper	{ width:454px; height:276px; margin:0 auto; margin-top:146px; background:url(../images/yuanjiao.gif) bottom center no-repeat; background-color:#fff;}
+.logo	{ font-size:0;}
+.information	{ width:275px; margin:0 auto; margin-top:10px;}
+.information tr	{ padding-top:11px;}
+.information th	{ font-weight:normal; color:#989898; width:50px;}
+.information th a	{ color:#A20000; text-decoration: underline;}
+.information th a:hover	{ color:#c00;}
+.information td	{ height:35px; line-height:35px;}
+.information input { width:207px; height:23px; line-height:23px; border:1px solid #A4AFC3; background:url(../images/jianbian.jpg) left top repeat-x;}
+.information input.bt	{ width:79px; height:25px; background:url(../images/button_bg.jpg) center no-repeat; color:#fff; margin-top:10px; border:0; cursor:pointer; margin-left:36px; display:inline-block;}
+.information input[type=radio] {width:13px; height:13px; }
+
+

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<objects xmlns="http://www.springframework.net">
+
+  <!--基础信息设置-->
+  <object id="expressCompanyService" type="RFD.FMS.WEBLOGIC.BasicSetting.ExpressCompanyService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="expressCompanyDao"  ref="expressCompanyDao"></property>
+    <property name="OracleService" ref="oracle_expressCompanyService"></property>
+  </object>
+  <object id="province" type="RFD.FMS.WEBLOGIC.BasicSetting.Province,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_provinceDao"  ref="provinceDao"></property>
+    <property name="OracleService" ref="oracle_province"/>
+  </object>
+  <object id="cityService" type="RFD.FMS.WEBLOGIC.BasicSetting.CityService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_cityDao"  ref="cityDao"></property>
+    <property name="OracleService" ref="oracle_cityService"/>
+  </object>
+  <object id="areaService" type="RFD.FMS.WEBLOGIC.BasicSetting.AreaService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_areaDao"  ref="areaDao"></property>
+    <property name="OracleService" ref="oracle_areaService"/>
+  </object>
+  <object id="warehouseSortRelationService" type="RFD.FMS.WEBLOGIC.BasicSetting.WarehouseSortRelationService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_warehouseSortRelationDao"  ref="warehouseSortRelationDao"></property>
+  </object>
+  <object id="merchantService" type="RFD.FMS.WEBLOGIC.BasicSetting.MerchantService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_merchantDao"  ref="merchantDao"></property>
+    <property name="OracleService" ref="oracle_merchantService"/>
+  </object>
+  <object id="areaExpressLevelService" type="RFD.FMS.WEBLOGIC.BasicSetting.AreaExpressLevelService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_areaExpressLevelDao"  ref="areaExpressLevelDao"></property>
+    <property name="OracleService"  ref="oracle_areaExpressLevelService"></property>
+  </object>
+  <object id="areaExpressLevelIncomeService" type="RFD.FMS.WEBLOGIC.BasicSetting.AreaExpressLevelIncomeService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_areaExpressLevelIncomeDao"  ref="areaExpressLevelIncomeDao"/>
+    <property name="OracleService"  ref="oracle_areaExpressLevelIncomeService"/>
+  </object>
+  <object id="goodsCategoryService" type="RFD.FMS.WEBLOGIC.BasicSetting.GoodsCategoryService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="Dao"  ref="goodsCategoryDao"/>
+  </object>
+  <object id="statusCodeService" type="RFD.FMS.WEBLOGIC.BasicSetting.StatusCodeService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_statusCodeInfoDao"  ref="statusCodeInfoDao"/>
+    <property name="OracleService"  ref="oracle_statusCodeService"/>
+  </object>
+  <object id="typeRelationService" type="RFD.FMS.WEBLOGIC.BasicSetting.TypeRelationService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_typeRelationDao"  ref="typeRelationDao"/>
+    <property name="OracleService"  ref="oracle_typeRelationService"></property>
+  </object>
+
+  <object id="statusInfoService" type="RFD.FMS.WEBLOGIC.BasicSetting.StatusInfoService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_statusInfoDao"  ref="statusInfoDao"/>
+    <property name="OracleService" ref="oracle_statusInfoService"/>
+  </object>
+  <object id="deliverFeeService" type="RFD.FMS.WEBLOGIC.BasicSetting.DeliverFeeService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_fMS_MerchantDeliverFeeDao"  ref="fMS_MerchantDeliverFeeDao"/>
+    <property name="_accountOperatorLogDao"  ref="accountOperatorLogDao"/>
+    <property name="OracleService"  ref="oracle_deliverFeeService"/>
+  </object>
+  <object id="deliveryPriceService" type="RFD.FMS.WEBLOGIC.BasicSetting.DeliveryPriceService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_deliveryPriceDao"  ref="deliveryPriceDao"/>
+    <property name="OracleService"  ref="oracle_deliveryPriceService"/>
+  </object>
+  <object id="noGenerate" type="RFD.FMS.WEBLOGIC.BasicSetting.NoGenerate,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_noGenerateDao"  ref="noGenerateDao"/>
+  </object>
+  <object id="userService" type="RFD.FMS.WEBLOGIC.BasicSetting.UserService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_userDao"  ref="userDao"/>
+  </object>
+  <object id="wareHouseService" type="RFD.FMS.WEBLOGIC.BasicSetting.WareHouseService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_wareHouseDao"  ref="wareHouseDao"/>
+  </object>
+  <object id="roleservice" type="RFD.FMS.WEBLOGIC.BasicSetting.Roleservice,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_menuDao"  ref="menuDao"/>
+  </object>
+  <object id="iDGenerateService" type="RFD.FMS.WEBLOGIC.BasicSetting.IDGenerateService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_noGenerateDao"  ref="noGenerateDao"/>
+    <property name="OracleService"  ref="oracle_iDGenerateService"/>
+  </object>
+  <object id="accountOperatorLogService" type="RFD.FMS.WEBLOGIC.COD.AccountOperatorLogService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_accountOperatorLogDao"  ref="accountOperatorLogDao"/>
+    <property name="OracleService"  ref="oracle_accountOperatorLogService"/>
+  </object>
+
+  <object id="distributionService" type="RFD.FMS.WEBLOGIC.BasicSetting.DistributionService,RFD.FMS.WEBLOGIC" lazy-init="true" >
+    <property name="OracleService" ref="oracle_distributionService"/>
+  </object>
+
+  <object id="accountPeriodService" type="RFD.FMS.WEBLOGIC.BasicSetting.AccountPeriodService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_accountPeriodDao"  ref="accountPeriodDao"/>
+    <property name="OracleService"  ref="oracle_accountPeriodService"/>
+  </object>
+  
+  <!--财务相关-->
+  <object id="deductService" type="RFD.FMS.WEBLOGIC.FinancialManage.DeductService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_fmsDeductBaseInfoDao"  ref="fmsDeductBaseInfoDao"/>
+  </object>
+  <object id="waybillService" type="RFD.FMS.WEBLOGIC.FinancialManage.WaybillService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_waybillDao"  ref="waybillDao"/>
+  </object>
+  <object id="waybillForIncomeBaseInfoService" type="RFD.FMS.WEBLOGIC.FinancialManage.WaybillForIncomeBaseInfoService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_waybillForIncomeBaseInfoDao"  ref="waybillForIncomeBaseInfoDao"/>
+    <property name="OracleService" ref="oracle_waybillForIncomeBaseInfoService"/>
+  </object>
+  <object id="expressPriceService" type="RFD.FMS.WEBLOGIC.FinancialManage.ExpressPriceService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_expressPriceDao"  ref="expressPriceDao"/>
+  </object>
+  <object id="deliverFeeStatService" type="RFD.FMS.WEBLOGIC.FinancialManage.DeliverFeeStatService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_deliverFeeStatDao"  ref="deliverFeeStatDao"/>
+  </object>
+  <object id="incomeAccountService" type="RFD.FMS.WEBLOGIC.FinancialManage.IncomeAccountService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_incomeAccountDao"  ref="incomeAccountDao"/>
+    <property name="OracleSerivce" ref="oracle_incomeAccountService"/>
+  </object>
+  <object id="merchantDeliverFee" type="RFD.FMS.WEBLOGIC.FinancialManage.MerchantDeliverFee,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_merchantDeliverFeeDao"  ref="merchantDeliverFeeDao"></property>
+    <property name="_accountOperatorLogDao"  ref="accountOperatorLogDao"></property>
+    <property name="OracleService" ref="oracle_merchantDeliverFee"/>
+  </object>
+
+  <!--COD-->
+  <object id="logisticsDeliveryService" type="RFD.FMS.WEBLOGIC.COD.LogisticsDeliveryService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_logisticsDeliveryDao"  ref="logisticsDeliveryDao"></property>
+    <property name="OracleService" ref="oracle_logisticsDeliveryService"/>
+  </object>
+  <object id="distributionFeeService" type="RFD.FMS.WEBLOGIC.COD.DistributionFeeService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_distributionFeeDao"  ref="distributionFeeDao"></property>
+  </object>
+  <object id="cODAccountService" type="RFD.FMS.WEBLOGIC.COD.CODAccountService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_cODAccountDao"  ref="cODAccountDao"></property>
+    <property name="OracleService" ref="oracle_cODAccountService"/>
+  </object>
+  <object id="requisitionedForm" type="RFD.FMS.WEBLOGIC.COD.RequisitionedForm,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_requisitionedFormDAL"  ref="requisitionedFormDAL"></property>
+    <property name="OracleService" ref="oracle_requisitionedForm"/>
+  </object>
+  <object id="cODBaseInfoService" type="RFD.FMS.WEBLOGIC.COD.CODBaseInfoService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_cODBaseInfoDao"  ref="cODBaseInfoDao"></property>
+    <property  name ="OracleService" ref="oracle_codBaseInfoService"/>
+  </object>
+
+  <!--查询统计-->
+  <object id="cODTransferService" type="RFD.FMS.WEBLOGIC.QueryStatistics.CODTransferService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="_cODTransferDao"  ref="cODTransferDao"></property>
+    <property name ="OracleService" ref="oracle_cODTransferService"/>
+  </object>
+
+  <object id="cODWaybillFeeCheckService" type="RFD.FMS.WEBLOGIC.QueryStatistics.CODWaybillFeeCheckService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <property name="Dao"  ref="cODWaybillFeeCheckDao"></property>
+    <property name ="OracleService" ref="oracle_codWaybillFeeCheckService"/>
+  </object>
+
+  <object id="fMS_CODService" type="RFD.FMS.WEBLOGIC.COD.FMS_CODService,RFD.FMS.WEBLOGIC"  lazy-init="true">
+    <constructor-arg name="dao" ref="fMS_CODDao" />
+    <property name ="OracleService" ref="oracle_fMS_CODService"/>
+  </object>
+
+  <!--核对相关-->
+  <object id="bankPosCheckService" type="RFD.FMS.WEBLOGIC.AudiMgmt.BankPosCheckService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_bankPosCheckDao"  ref="bankPosCheckDao"></property>
+  </object>
+  <object id="moneyStoreService" type="RFD.FMS.WEBLOGIC.AudiMgmt.MoneyStoreService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_moneyStoreDao"  ref="moneyStoreDao"></property>
+  </object>
+  <object id="financeService" type="RFD.FMS.WEBLOGIC.AudiMgmt.FinanceService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_financeDao"  ref="financeDao"></property>
+  </object>
+  <object id="stationDailyService" type="RFD.FMS.WEBLOGIC.AudiMgmt.StationDailyService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_fMS_StationDailyFinanceDetailsDao"  ref="fMS_StationDailyFinanceDetailsDao"></property>
+    <property name="_fMS_StationDailyFinanceSumDao"  ref="fMS_StationDailyFinanceSumDao"></property>
+  </object>
+
+  <!--拣运-->
+  <object id="sortingTransferSearchingService" type ="RFD.FMS.WEBLOGIC.FinancialManage.SortingTransferSearchingService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_sortingTransferSearchingDao" ref="sortingTransferSearchingDao"/>
+    <property name="OracleService" ref="oracle_SortingTransferSearchingService"/>
+  </object>
+
+  <object id="sortingTransferDetailService" type ="RFD.FMS.WEBLOGIC.FinancialManage.SortingTransferDetailService,RFD.FMS.WEBLOGIC" lazy-init="true">
+    <property name="_sortingTransferDetailDao" ref="sortingTransferDetailDao"/>
+    <property name="OracleService" ref="oracle_SortingTransferDetailService"/>
+  </object>
+  
+  <!--邮件-->
+  <object id="mail" type="RFD.FMS.WEBLOGIC.Mail.Mail,RFD.FMS.WEBLOGIC" lazy-init="true"/>
+  <object id ="oracle_merchantService" type="RFD.FMS.ServiceImpl.BasicSetting.MerchantService,RFD.FMS.ServiceImpl" lazy-init="true">
+    <property name="_merchantDao" ref="oracle_merchantDao"/>
+  </object>
+
+  <object id="incomeBaseInfoService" type="RFD.FMS.WEBLOGIC.FinancialManage.IncomeBaseInfoService,RFD.FMS.WEBLOGIC">
+    <property name="Dao" ref="incomeBaseInfoDao"/>
+    <property name="OracleService" ref ="oracle_IncomeBaseInfoService"/>
+  </object>
+
+  <object id="sortingFeeService" type="RFD.FMS.WEBLOGIC.SortingManage.SortingFeeService,RFD.FMS.WEBLOGIC " lazy-init ="true">
+    <property name="OracleService" ref="oracle_sortingFeeService"/>
+  </object>
+   
+</objects>

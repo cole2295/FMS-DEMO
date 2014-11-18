@@ -1,0 +1,19 @@
+﻿html, body
+{
+    height: 100%;
+    padding: 0px;
+}
+body
+{
+    margin: 7px 0px 0px 10px;
+    overflow: hidden;
+}
+#container
+{
+    height: 100%;
+    width: 100%;
+}
+#page
+{
+    overflow: auto;
+}

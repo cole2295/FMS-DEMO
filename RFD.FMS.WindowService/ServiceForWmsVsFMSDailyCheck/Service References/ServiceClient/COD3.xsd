@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vancl.Finance.Model.Cash" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CODParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DtFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DtTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpressId" type="xs:int" />
+      <xs:element minOccurs="0" name="FormCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HouseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HouseWhere" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToHouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CODParameter" nillable="true" type="tns:CODParameter" />
+  <xs:complexType name="ArrayOfCODDELIVERY">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CODDELIVERY" nillable="true" type="tns:CODDELIVERY" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCODDELIVERY" nillable="true" type="tns:ArrayOfCODDELIVERY" />
+  <xs:complexType name="CODDELIVERY">
+    <xs:sequence>
+      <xs:element name="_areatype" nillable="true" type="xs:int" />
+      <xs:element name="_boxmodel" nillable="true" type="xs:string" />
+      <xs:element name="_dateno" nillable="true" type="xs:dateTime" />
+      <xs:element name="_express" nillable="true" type="xs:string" />
+      <xs:element name="_expressid" nillable="true" type="xs:int" />
+      <xs:element name="_fulladdress" nillable="true" type="xs:string" />
+      <xs:element name="_historydate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_historyid" nillable="true" type="xs:int" />
+      <xs:element name="_ismainbranth" nillable="true" type="xs:int" />
+      <xs:element name="_key_id" type="xs:int" />
+      <xs:element name="_orderno" nillable="true" type="xs:string" />
+      <xs:element name="_ordertotalprice" nillable="true" type="xs:decimal" />
+      <xs:element name="_orderweight" nillable="true" type="xs:decimal" />
+      <xs:element name="_receivable" nillable="true" type="xs:decimal" />
+      <xs:element name="_received" nillable="true" type="xs:decimal" />
+      <xs:element name="_storage" nillable="true" type="xs:string" />
+      <xs:element name="_warehousename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CODDELIVERY" nillable="true" type="tns:CODDELIVERY" />
+  <xs:complexType name="ArrayOfCODDaily">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CODDaily" nillable="true" type="tns:CODDaily" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCODDaily" nillable="true" type="tns:ArrayOfCODDaily" />
+  <xs:complexType name="CODDaily">
+    <xs:sequence>
+      <xs:element name="_deliverydate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_express" nillable="true" type="xs:string" />
+      <xs:element name="_expressid" nillable="true" type="xs:int" />
+      <xs:element name="_key_id" type="xs:int" />
+      <xs:element name="_orderQuantity" nillable="true" type="xs:int" />
+      <xs:element name="_ordertotalprice" nillable="true" type="xs:decimal" />
+      <xs:element name="_orderweight" nillable="true" type="xs:decimal" />
+      <xs:element name="_receivable" nillable="true" type="xs:decimal" />
+      <xs:element name="_receivableOrderQuantity" nillable="true" type="xs:int" />
+      <xs:element name="_received" nillable="true" type="xs:decimal" />
+      <xs:element name="_storage" nillable="true" type="xs:string" />
+      <xs:element name="_warehousename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CODDaily" nillable="true" type="tns:CODDaily" />
+  <xs:complexType name="ArrayOfCODRETURNS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CODRETURNS" nillable="true" type="tns:CODRETURNS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCODRETURNS" nillable="true" type="tns:ArrayOfCODRETURNS" />
+  <xs:complexType name="CODRETURNS">
+    <xs:sequence>
+      <xs:element name="_areatype" nillable="true" type="xs:int" />
+      <xs:element name="_boxmodel" nillable="true" type="xs:string" />
+      <xs:element name="_consigneeaddress" nillable="true" type="xs:string" />
+      <xs:element name="_dateno" nillable="true" type="xs:dateTime" />
+      <xs:element name="_deliverydate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_express" nillable="true" type="xs:string" />
+      <xs:element name="_expressid" nillable="true" type="xs:int" />
+      <xs:element name="_historydate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_historyid" nillable="true" type="xs:int" />
+      <xs:element name="_instoragedate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_ismainbranch" nillable="true" type="xs:int" />
+      <xs:element name="_isreceivableorder" nillable="true" type="xs:int" />
+      <xs:element name="_isreturned" nillable="true" type="xs:int" />
+      <xs:element name="_key_id" type="xs:int" />
+      <xs:element name="_orderno" nillable="true" type="xs:string" />
+      <xs:element name="_ordertotalprice" nillable="true" type="xs:decimal" />
+      <xs:element name="_orderweight" nillable="true" type="xs:decimal" />
+      <xs:element name="_receivable" nillable="true" type="xs:decimal" />
+      <xs:element name="_received" nillable="true" type="xs:decimal" />
+      <xs:element name="_returnscode" nillable="true" type="xs:string" />
+      <xs:element name="_sourcefrom" nillable="true" type="xs:string" />
+      <xs:element name="_storage" nillable="true" type="xs:string" />
+      <xs:element name="_tohousecode" nillable="true" type="xs:string" />
+      <xs:element name="_tohousedate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_tohousename" nillable="true" type="xs:string" />
+      <xs:element name="_warehousename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CODRETURNS" nillable="true" type="tns:CODRETURNS" />
+  <xs:complexType name="ArrayOfCODVISIT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CODVISIT" nillable="true" type="tns:CODVISIT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCODVISIT" nillable="true" type="tns:ArrayOfCODVISIT" />
+  <xs:complexType name="CODVISIT">
+    <xs:sequence>
+      <xs:element name="_areatype" nillable="true" type="xs:int" />
+      <xs:element name="_consigneeaddress" nillable="true" type="xs:string" />
+      <xs:element name="_dateno" nillable="true" type="xs:dateTime" />
+      <xs:element name="_deliverydate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_express" nillable="true" type="xs:string" />
+      <xs:element name="_expressid" nillable="true" type="xs:int" />
+      <xs:element name="_instoragedate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_ismainbranch" nillable="true" type="xs:int" />
+      <xs:element name="_isreturned" nillable="true" type="xs:int" />
+      <xs:element name="_key_id" type="xs:int" />
+      <xs:element name="_orderno" nillable="true" type="xs:string" />
+      <xs:element name="_orderquantity" nillable="true" type="xs:int" />
+      <xs:element name="_ordertotalprice" nillable="true" type="xs:decimal" />
+      <xs:element name="_payabledate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_payableid" nillable="true" type="xs:int" />
+      <xs:element name="_refunded" nillable="true" type="xs:decimal" />
+      <xs:element name="_shouldrefund" nillable="true" type="xs:decimal" />
+      <xs:element name="_storage" nillable="true" type="xs:string" />
+      <xs:element name="_tohousecode" nillable="true" type="xs:string" />
+      <xs:element name="_tohousedate" nillable="true" type="xs:dateTime" />
+      <xs:element name="_tohousename" nillable="true" type="xs:string" />
+      <xs:element name="_visittype" nillable="true" type="xs:string" />
+      <xs:element name="_warehousename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CODVISIT" nillable="true" type="tns:CODVISIT" />
+</xs:schema>

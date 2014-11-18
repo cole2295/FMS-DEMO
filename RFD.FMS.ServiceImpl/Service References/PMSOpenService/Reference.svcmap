@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f7df8a58-69da-4386-b07f-18ab1b7c183a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.253.6.46:8882/PMSOpenService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PMSOpenService.xsd" MetadataType="Schema" ID="c1f2a9d3-bb2b-4474-ab38-f4fa62a80288" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PMSOpenService.disco" MetadataType="Disco" ID="eac12b26-a1f4-4245-a1e5-c99474a348a8" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?disco" />
+    <MetadataFile FileName="PermissionOpenService.wsdl" MetadataType="Wsdl" ID="36192813-cd81-4442-98fe-b1f811d602dc" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?wsdl" />
+    <MetadataFile FileName="PMSOpenService1.xsd" MetadataType="Schema" ID="400c3963-4e59-4574-a1de-4c6dfb4989b6" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PMSOpenService2.xsd" MetadataType="Schema" ID="b6f9bf15-83ac-4eab-9aaa-d46546d3e8b8" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PMSOpenService3.xsd" MetadataType="Schema" ID="bc0290f1-1253-44da-a07a-dca42ae1bd3c" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PMSOpenService4.xsd" MetadataType="Schema" ID="637f7038-ad0e-46e5-a3c3-b2efb275c2dd" SourceId="1" SourceUrl="http://10.253.6.46:8882/PMSOpenService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
